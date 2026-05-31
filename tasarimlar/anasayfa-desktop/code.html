@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#fbf9f7"/>
+<title>Atelier Anatolia · 3D Mobilya Kataloğu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=EB+Garamond:ital,wght@0,400..700;1,400..600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,200..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors:{surface:'#fbf9f7','surface-c-low':'#f5f3f1','surface-c':'#efedec','surface-c-high':'#eae8e6','on-surface':'#1b1c1b','on-surface-v':'#4e4545',outline:'#7f7475','outline-v':'#d1c3c4',primary:'#332829','on-primary':'#ffffff','primary-c':'#4a3e3f',secondary:'#6b5c4c','secondary-c':'#f4dfcb',tertiary:'#442306','tertiary-c':'#5e3819',whatsapp:'#25D366'},
+  fontFamily:{display:['"EB Garamond"','serif'],body:['"DM Sans"','sans-serif']}
+}}}
+</script>
+<style>
+  html,body{background:#fbf9f7;color:#1b1c1b;-webkit-font-smoothing:antialiased}
+  body{background-image:radial-gradient(rgba(74,62,63,.025) 1px,transparent 1.5px),radial-gradient(rgba(74,62,63,.018) 1px,transparent 1.5px);background-size:6px 6px,13px 13px;background-position:0 0,3px 4px}
+  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 350,'GRAD' 0,'opsz' 24;vertical-align:middle}
+  .icon-fill{font-variation-settings:'FILL' 1,'wght' 400}
+  model-viewer{width:100%;height:100%;--poster-color:transparent;background:linear-gradient(180deg,#f5f3f1,#eae8e6)}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+  .reveal{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
+  .d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.3s}.d4{animation-delay:.45s}
+  .ambient{box-shadow:0 30px 60px -20px rgba(74,62,63,.18)}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .marquee-track{animation:marquee 45s linear infinite}
+  .card-3d:hover .card-img{transform:scale(1.05)}
+  .card-img{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+  .nav-link{position:relative}
+  .nav-link::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:1px;background:#332829;transform:scaleX(0);transform-origin:right;transition:transform .35s cubic-bezier(.7,0,.2,1)}
+  .nav-link:hover::after,.nav-link.active::after{transform:scaleX(1);transform-origin:left}
+</style>
+</head>
+<body class="font-body text-[15px]">
+
+<!-- Top bar -->
+<header class="sticky top-0 z-40 bg-surface/85 backdrop-blur-xl border-b border-outline-v/30">
+  <div class="max-w-[1320px] mx-auto px-12 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="block w-2 h-2 rounded-full bg-primary"></span>
+      <span class="font-display italic text-[22px] tracking-tight">Atelier Anatolia</span>
+    </div>
+    <nav class="flex items-center gap-10 text-[12px] uppercase tracking-[0.18em] font-bold">
+      <a href="#" class="nav-link active text-primary">Ana sayfa</a>
+      <a href="#" class="nav-link text-on-surface-v hover:text-primary">Koleksiyonlar</a>
+      <a href="#" class="nav-link text-on-surface-v hover:text-primary">Showroom</a>
+      <a href="#" class="nav-link text-on-surface-v hover:text-primary">Hakkımızda</a>
+      <a href="#" class="nav-link text-on-surface-v hover:text-primary">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <button class="w-10 h-10 grid place-items-center hover:bg-surface-c rounded-full transition"><span class="material-symbols-outlined">search</span></button>
+      <a href="https://wa.me/902125551234" class="inline-flex items-center gap-2 bg-primary text-on-primary py-2.5 px-4 rounded-full text-[11px] uppercase tracking-widest font-bold hover:opacity-90 transition">
+        <span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero — editorial split with featured 3D -->
+  <section class="max-w-[1320px] mx-auto px-12 pt-16 pb-24 grid grid-cols-12 gap-10 items-end">
+    <div class="col-span-5 reveal d1">
+      <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-on-surface-v">No. 24 · Sezon 2024</span>
+      <h1 class="font-display text-[88px] leading-[0.95] tracking-[-0.02em] mt-6">
+        Sakinlik<br><span class="italic text-on-surface-v">ve</span><br>Güven.
+      </h1>
+      <p class="font-display italic text-[22px] text-on-surface-v mt-7 leading-snug max-w-md">Anadolu'nun zanaat geleneğini modern minimalizmle buluşturan bir mobilya kataloğu — her parça 3D olarak incelenebilir.</p>
+      <div class="mt-10 flex items-center gap-5">
+        <a href="#kolleksiyon" class="inline-flex items-center gap-3 bg-primary text-on-primary py-4 px-7 rounded-full text-[12px] uppercase tracking-[0.22em] font-bold hover:opacity-90 transition">
+          Koleksiyonu keşfet
+          <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+        </a>
+        <a href="#" class="text-[12px] uppercase tracking-[0.22em] font-bold border-b border-primary pb-1">Showroom</a>
+      </div>
+    </div>
+
+    <div class="col-span-7 reveal d2 relative">
+      <div class="absolute -top-8 -left-8 w-44 h-44 rounded-full bg-secondary-c/60 blur-3xl"></div>
+      <div class="relative rounded-3xl overflow-hidden ambient" style="aspect-ratio: 5/6;">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuACb7zpbO1GLRM4wGWWNFAtiT9KkhZJ1wjORW0SOBG2ci_7YsEfz6ripExr7aqMqBjRWCpDOPFfooE7d8ObBZMQ-7sXPF4yeZ_0RMB0jJ5bHXHSH91pIDZmXn9-bZ4FWND6sOEUn5rXh1p5v--dseEvuR2oi9C77mvOvgZMCk-xA1AxRLJawmtyWKkQcR6Aaq13RZ53kIPrFxvVq2EwgFv2c6SDPZs2-9zgcY9GG0X9mAva2Jul1scChjzLcpT6OejXtkc6kNQ8Ws8b" class="absolute inset-0 w-full h-full object-cover" alt=""/>
+        <div class="absolute inset-0 bg-gradient-to-tr from-black/55 via-black/10 to-black/5"></div>
+        <div class="absolute top-6 left-6 inline-flex items-center gap-1.5 bg-surface/90 backdrop-blur-md px-3.5 py-2 rounded-full text-[11px] tracking-widest uppercase font-bold">
+          <span class="material-symbols-outlined text-[16px]">view_in_ar</span> 3D Vitrin
+        </div>
+        <div class="absolute bottom-7 left-7 right-7 text-white">
+          <div class="text-[10px] tracking-[0.25em] uppercase opacity-80 mb-2">Sezon ürünü</div>
+          <h2 class="font-display text-[44px] leading-tight">Defne Koltuk Takımı</h2>
+          <p class="text-[14px] opacity-85 mt-2">240 × 105 × 75 cm · Masif meşe, doğal keten</p>
+          <a href="urun/defne" class="mt-5 inline-flex items-center gap-2 bg-surface text-primary py-3 px-5 rounded-full text-[12px] uppercase tracking-widest font-bold hover:bg-secondary-c transition">
+            3D'de incele <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <!-- Floating stat -->
+      <div class="absolute -bottom-8 -right-4 bg-surface rounded-2xl p-5 ambient flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-secondary-c grid place-items-center">
+          <span class="material-symbols-outlined text-tertiary icon-fill">handyman</span>
+        </div>
+        <div>
+          <div class="font-display text-[24px] leading-none">32 yıl</div>
+          <div class="text-[10.5px] tracking-widest uppercase text-on-surface-v mt-1">usta zanaat</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee divider -->
+  <section class="overflow-hidden border-y border-outline-v/40 py-7 bg-surface-c-low">
+    <div class="marquee-track inline-flex gap-16 whitespace-nowrap font-display italic text-[34px] text-on-surface-v">
+      <span>Sakinlik <span class="text-primary">ve</span> Güven</span>
+      <span class="text-on-surface-v/40">✦</span>
+      <span>Anadolu zanaatından modern evlere</span>
+      <span class="text-on-surface-v/40">✦</span>
+      <span>3D'de inceleyin — evinizde hayal edin</span>
+      <span class="text-on-surface-v/40">✦</span>
+      <span>Sakinlik <span class="text-primary">ve</span> Güven</span>
+      <span class="text-on-surface-v/40">✦</span>
+      <span>Anadolu zanaatından modern evlere</span>
+      <span class="text-on-surface-v/40">✦</span>
+    </div>
+  </section>
+
+  <!-- Vitrin grid -->
+  <section id="kolleksiyon" class="max-w-[1320px] mx-auto px-12 py-24">
+    <div class="flex items-end justify-between mb-12">
+      <div>
+        <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-on-surface-v">Seçkilerimiz</span>
+        <h2 class="font-display text-[52px] leading-tight mt-3 tracking-tight">Vitrin <span class="italic">eserleri</span></h2>
+      </div>
+      <a href="#" class="text-[12px] uppercase tracking-[0.22em] font-bold border-b border-primary pb-1 hover:opacity-70 transition">Tümünü gör →</a>
+    </div>
+    <div class="grid grid-cols-4 gap-6">
+      <a href="#" class="card-3d group">
+        <div class="aspect-[3/4] rounded-2xl overflow-hidden bg-surface-c relative mb-4">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDswmEC2txkoByO2MrjyBvyi-Fw2TvTXI_Zii-guVgSRCECW9jQ6H7TDYM_1e0pSrEOuy2mSiSAVC4q5E2nYdZIPtLobZuz4ij4h-OQwvXBPPLyYq2TzE4HadYJJtulVyKo10BOE4P6kdmbdQfzFpa4NFgiNrpqFjNZ1ioCr8afFKy1fnKaj8_LuIhXsD3KMrnzcsfQJ1lNSWTJv4krPgC28s1tFLLXRmRPXubqh1q9_Th3dh4IFe8f1LM2GX752NWK82ZAGNkFCF59" class="card-img w-full h-full object-cover" alt=""/>
+          <span class="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-surface/95 backdrop-blur-md px-2.5 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold">
+            <span class="material-symbols-outlined text-[13px]">view_in_ar</span> 3D
+          </span>
+          <div class="absolute inset-x-4 bottom-4 opacity-0 group-hover:opacity-100 transition">
+            <div class="bg-surface/95 backdrop-blur-md text-primary py-2.5 rounded-lg text-center text-[11px] uppercase tracking-widest font-bold">
+              3D'de incele →
+            </div>
+          </div>
+        </div>
+        <h3 class="font-display text-[22px] leading-tight">Zeugma Koltuk</h3>
+        <p class="text-[12px] text-on-surface-v mt-1">85 × 90 × 75 cm</p>
+        <p class="text-[11.5px] uppercase tracking-widest mt-2 font-bold">Yeni · Masif meşe</p>
+      </a>
+      <a href="#" class="card-3d group">
+        <div class="aspect-[3/4] rounded-2xl overflow-hidden bg-surface-c relative mb-4">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBIUN_o-hZI6_WMR4XLSuBzxdD6ExCGTMtGOnURiaG8NIZNPmBqcotH-QgRoBOEkqFzFbjB3TDzB0uAk5Jsi4y95ImCSzNoibrrTawi_MIgGb47pnmQW0oFZ9q1qG9RDrYum73BRUTDe6C0R3OVtHj8W0xF8-sJe8teICE6osR81bZ5sN7HPzmnwIU7981O5cIVLjvkc-i18j2mN4aud2WrVDjgBnP85P8weZ5oy8CinjtBWRJYEb7IscYjMXksFcGf3KfHgAJ9X_-" class="card-img w-full h-full object-cover" alt=""/>
+          <span class="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-surface/95 backdrop-blur-md px-2.5 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold">
+            <span class="material-symbols-outlined text-[13px]">view_in_ar</span> 3D
+          </span>
+        </div>
+        <h3 class="font-display text-[22px] leading-tight">Artemis Yemek Masası</h3>
+        <p class="text-[12px] text-on-surface-v mt-1">220 × 100 × 76 cm</p>
+        <p class="text-[11.5px] uppercase tracking-widest mt-2 font-bold">Ceviz · El oyma</p>
+      </a>
+      <a href="#" class="card-3d group">
+        <div class="aspect-[3/4] rounded-2xl overflow-hidden bg-surface-c relative mb-4">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACJUwM3qgVeJ4C17Y8Tn7ACMCxMtkU6rnDORgLLcYdP0jhh-YQMzxao546d_wByBdHx6iETlztMTKFOU_APFTkgbytU9LmFJhJH3gyS1qe03aXSa6rCwiuxIKKX3l-5yMqZzagBIy2LaTLJODXAH-QbEhB1FpIjTctG2myDqEockwJo5itRsIhrqmC-unC9yGMxEsJEJzV5MHQz_1S7Nmi5gTpoxDyxSGF1l6uoqjufM-2eCbxbtvmkHtwwXNYyxR16Gxtfk3m6a-8" class="card-img w-full h-full object-cover" alt=""/>
+          <span class="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-surface/95 backdrop-blur-md px-2.5 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold">
+            <span class="material-symbols-outlined text-[13px]">view_in_ar</span> 3D
+          </span>
+        </div>
+        <h3 class="font-display text-[22px] leading-tight">Lidya Yatak Başlığı</h3>
+        <p class="text-[12px] text-on-surface-v mt-1">180 × 200 cm</p>
+        <p class="text-[11.5px] uppercase tracking-widest mt-2 font-bold">Kadife · Antrasit</p>
+      </a>
+      <a href="#" class="card-3d group">
+        <div class="aspect-[3/4] rounded-2xl overflow-hidden bg-surface-c relative mb-4">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApCX1dUnVjeJb-BkrYbo-maagFY_w5G75GxYV1CJ8TsPIO_oc63ne0vnp61fz5r4ZuPSTz08kVoxavgQJNjYoyoDFN2khsWoHNgl5bm4C8CTIA64s07Qf04eB09VQolp9Tqnl70IB7Qt7gwdlPYB0Eer87p_EsySpwebPQYzRiJy_LSsOKwte46hq4LC5mW9oAgKsmzCHcOEUL-QHZiLBRV3guhcEyE_AACuyJHnqfAELSN7nBAkNHemvkr_0XKwLAXTJc8HHWcJp3" class="card-img w-full h-full object-cover" alt=""/>
+          <span class="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-surface/95 backdrop-blur-md px-2.5 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold">
+            <span class="material-symbols-outlined text-[13px]">view_in_ar</span> 3D
+          </span>
+        </div>
+        <h3 class="font-display text-[22px] leading-tight">Karia Konsol</h3>
+        <p class="text-[12px] text-on-surface-v mt-1">160 × 45 × 85 cm</p>
+        <p class="text-[11.5px] uppercase tracking-widest mt-2 font-bold">Teak · Oyma</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Categories — 3 large editorial cards -->
+  <section class="bg-surface-c-low py-24">
+    <div class="max-w-[1320px] mx-auto px-12">
+      <div class="grid grid-cols-12 gap-6 items-end mb-12">
+        <div class="col-span-5">
+          <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-on-surface-v">Odadan odaya</span>
+          <h2 class="font-display text-[52px] leading-tight mt-3 tracking-tight">Koleksiyonlar</h2>
+        </div>
+        <p class="col-span-5 col-start-7 font-display italic text-[18px] text-on-surface-v leading-relaxed">Her oda için titizlikle seçilmiş eserler. Tasarımdan, doğal malzeme seçimine, masif iskelete kadar her detay düşünüldü.</p>
+      </div>
+      <div class="grid grid-cols-3 gap-6">
+        <a href="#" class="group relative aspect-[4/5] rounded-2xl overflow-hidden ambient">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAahmwwwaiiswKzqpJ8r4pXdYVViUm974_sDbZiw09g-uhpsl9bOjjSdZvHuQtvkYaolZrPIieVXD1cWkDhMnkl_GBhU68QlhYywdqgnl2W6xIcuUgFX_cJoIO8ATC3hSGYcrW39Lv6TGJT9F7Qv2yY9AOAJRaIfadEJ-JaGK6OI3fXhmRTt0QRIfjvCExSZLW0qNEAjJ4eR6BryZUxKVgFzPw2iKOR7jEdidn3El0YR_ehLv8NecHc3yg8F6au26Z_zoxVmQ7oF9QX" class="card-img absolute inset-0 w-full h-full object-cover" alt=""/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+          <div class="absolute bottom-7 left-7 right-7 text-white">
+            <div class="text-[10px] tracking-[0.25em] uppercase opacity-80 mb-2">24 ürün</div>
+            <h3 class="font-display text-[34px] leading-tight">Oturma Grubu</h3>
+            <p class="text-[13px] opacity-85 mt-2">Konforun en zarif hali.</p>
+            <span class="mt-5 inline-flex items-center gap-2 text-[11px] uppercase tracking-widest font-bold border-b border-white pb-1">Keşfet <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+          </div>
+        </a>
+        <a href="#" class="group relative aspect-[4/5] rounded-2xl overflow-hidden ambient">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOLUVupSgYElSqI-OcdF9S_8B-F58O0JO4hDB3E6RpgU3yn2rsr6lZq7ma3gFew9-FWL9z34WzqN1NmFriqj1oV0bc-C_rVGgkGeDLsogTtqcN1j1wHRxJTjQM4K5sZ7EvgUBl4c7X4LLUk2ag09vzZP28-Fe7GgsZ0fc_UXyDlwXGycg2XtTTK4aYdHsSefhuPwN-T4iOZaOVaHaeDl0TYjQixoDETf8OVbJhqtykB51wW3CrHKbVddMAS5KzMHMnDvUjfL4RKDaF" class="card-img absolute inset-0 w-full h-full object-cover" alt=""/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+          <div class="absolute bottom-7 left-7 right-7 text-white">
+            <div class="text-[10px] tracking-[0.25em] uppercase opacity-80 mb-2">12 ürün</div>
+            <h3 class="font-display text-[34px] leading-tight">Yatak Odası</h3>
+            <p class="text-[13px] opacity-85 mt-2">Huzurlu bir uyku alanı.</p>
+            <span class="mt-5 inline-flex items-center gap-2 text-[11px] uppercase tracking-widest font-bold border-b border-white pb-1">Keşfet <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+          </div>
+        </a>
+        <a href="#" class="group relative aspect-[4/5] rounded-2xl overflow-hidden ambient">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvgGZPSlbWq6dQ5wK6kmU6SQ-1fBy19XPVC4EpgFtUZIcqOYinPg6V-UzaNtO9qsYnoPHD9D_fhptfFJg-D1ffWXbL0qeH43ianfoZM7aQ_qtQeIE7ryELpfKpP36W4Gnjkk16Yml-1okf1LznHvGhlaCN53HG-aXhEOyTzRQ7VqEurnj1Uy0M6qbvpaSKE2e7FYFRKw3Q0129iqHKV4OYdLvi6UVvH9187jFhE8GBuzHgVTl9zao_-AoG_pjuLd_5CabgHkhQ3swD" class="card-img absolute inset-0 w-full h-full object-cover" alt=""/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+          <div class="absolute bottom-7 left-7 right-7 text-white">
+            <div class="text-[10px] tracking-[0.25em] uppercase opacity-80 mb-2">18 ürün</div>
+            <h3 class="font-display text-[34px] leading-tight">Yemek Odası</h3>
+            <p class="text-[13px] opacity-85 mt-2">Anıların paylaşıldığı yer.</p>
+            <span class="mt-5 inline-flex items-center gap-2 text-[11px] uppercase tracking-widest font-bold border-b border-white pb-1">Keşfet <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AR teaser big -->
+  <section class="max-w-[1320px] mx-auto px-12 py-24">
+    <div class="relative overflow-hidden rounded-3xl bg-primary text-on-primary p-16 ambient">
+      <div class="absolute -top-24 -right-16 w-96 h-96 rounded-full bg-primary-c/40 blur-3xl"></div>
+      <div class="absolute -bottom-24 -left-16 w-80 h-80 rounded-full bg-tertiary-c/30 blur-3xl"></div>
+      <div class="relative grid grid-cols-12 gap-10 items-center">
+        <div class="col-span-7">
+          <span class="text-[10px] uppercase tracking-[0.3em] opacity-70 font-bold">Faz 2 — Yakında</span>
+          <h3 class="font-display text-[64px] italic leading-[1.02] mt-4 tracking-tight">Telefonu kaldırın,<br>mobilyayı evinizde görün.</h3>
+          <p class="text-[16px] opacity-80 mt-5 leading-relaxed max-w-xl">Artırılmış gerçeklik desteğiyle her ürünü gerçek boyutunda salonunuza yerleştirin. iOS Quick Look, Android Scene Viewer ve WebXR uyumlu.</p>
+          <button class="mt-8 inline-flex items-center gap-3 border border-on-primary/40 hover:bg-on-primary/10 py-4 px-7 rounded-full text-[12px] tracking-[0.22em] uppercase font-bold transition">
+            <span class="material-symbols-outlined text-[20px]">view_in_ar</span> Bana haber ver
+          </button>
+        </div>
+        <div class="col-span-5 grid grid-cols-2 gap-4 text-on-primary">
+          <div class="border border-on-primary/20 rounded-2xl p-5">
+            <span class="material-symbols-outlined text-secondary-c text-[28px]">phone_iphone</span>
+            <div class="font-display text-[20px] mt-2">iOS Quick Look</div>
+            <div class="text-[11px] opacity-60 mt-1">USDZ otomatik</div>
+          </div>
+          <div class="border border-on-primary/20 rounded-2xl p-5">
+            <span class="material-symbols-outlined text-secondary-c text-[28px]">android</span>
+            <div class="font-display text-[20px] mt-2">Scene Viewer</div>
+            <div class="text-[11px] opacity-60 mt-1">GLB native</div>
+          </div>
+          <div class="border border-on-primary/20 rounded-2xl p-5">
+            <span class="material-symbols-outlined text-secondary-c text-[28px]">straighten</span>
+            <div class="font-display text-[20px] mt-2">Gerçek ölçek</div>
+            <div class="text-[11px] opacity-60 mt-1">1 birim = 1 metre</div>
+          </div>
+          <div class="border border-on-primary/20 rounded-2xl p-5">
+            <span class="material-symbols-outlined text-secondary-c text-[28px]">share</span>
+            <div class="font-display text-[20px] mt-2">QR ile paylaş</div>
+            <div class="text-[11px] opacity-60 mt-1">Mağaza etiketi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showroom map -->
+  <section class="max-w-[1320px] mx-auto px-12 py-24 grid grid-cols-12 gap-12 items-center">
+    <div class="col-span-7 relative rounded-3xl overflow-hidden ambient" style="aspect-ratio: 4/3;">
+      <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAh2Gd-Fu0Hm-QvzEKYQpMuIe09GvGSHvM9i3EwRnamN0BJWL0FQezvQsh3_eYmRhSgZfteEvcFpCjGbZk0bBA_S6SeEK1hMbJQacrp5hZD79HcAT4F1ASGNwouloHPHzLWDm_E26Or_uEXzpO6fSFzmHWUOwQfGLjtpbeLC-jKd_IoIbbB6khPyAfNBwJK0e877YetqUBXKNtw5X936wxu4AxEkDdbjV8_sDw6tnZl5TXQTtwmmLr1edy0EVXCd0s2Uz6zdsKj_h5" class="absolute inset-0 w-full h-full object-cover grayscale opacity-90" alt=""/>
+      <div class="absolute inset-0 bg-primary/8"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="relative">
+          <div class="w-16 h-16 rounded-full bg-primary text-on-primary grid place-items-center shadow-2xl">
+            <span class="material-symbols-outlined icon-fill">storefront</span>
+          </div>
+          <div class="absolute inset-0 rounded-full border-2 border-primary animate-ping"></div>
+        </div>
+      </div>
+      <div class="absolute bottom-6 left-6 bg-surface/95 backdrop-blur-md rounded-2xl px-5 py-4 max-w-xs">
+        <div class="text-[10px] tracking-widest uppercase font-bold text-on-surface-v">Nişantaşı Showroom</div>
+        <div class="font-display text-[20px] leading-tight mt-1">Harbiye Mah. Teşvikiye Cd.</div>
+        <div class="text-[12px] text-on-surface-v mt-1">Şişli / İstanbul</div>
+      </div>
+    </div>
+    <div class="col-span-5">
+      <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-on-surface-v">Bizi ziyaret edin</span>
+      <h3 class="font-display text-[44px] leading-tight mt-3 tracking-tight">Showroom <span class="italic">deneyimi</span></h3>
+      <p class="font-display italic text-[18px] text-on-surface-v mt-5 leading-relaxed">Tasarımlarımızı yakından görmek, dokuyu hissetmek ve usta ekibimizden danışmanlık almak için Nişantaşı'ndaki atölyemize bekliyoruz.</p>
+      <div class="mt-7 space-y-4">
+        <div class="flex items-center gap-4 border-b border-outline-v/40 pb-4">
+          <span class="material-symbols-outlined text-primary">call</span>
+          <div>
+            <div class="text-[10.5px] tracking-widest uppercase text-on-surface-v font-bold">Telefon</div>
+            <div class="font-display text-[18px]">+90 (212) 555 12 34</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 border-b border-outline-v/40 pb-4">
+          <span class="material-symbols-outlined text-primary">schedule</span>
+          <div>
+            <div class="text-[10.5px] tracking-widest uppercase text-on-surface-v font-bold">Çalışma saatleri</div>
+            <div class="font-display text-[18px]">Pzt-Cts 10:00 — 20:00</div>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="mt-7 inline-flex items-center gap-3 bg-primary text-on-primary py-4 px-7 rounded-full text-[12px] uppercase tracking-[0.22em] font-bold hover:opacity-90 transition">
+        Randevu alın <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary text-on-primary mt-12">
+  <div class="max-w-[1320px] mx-auto px-12 py-16 grid grid-cols-12 gap-10">
+    <div class="col-span-5">
+      <span class="font-display italic text-[36px] tracking-tight">Atelier Anatolia</span>
+      <p class="font-display italic text-[18px] opacity-70 mt-3 max-w-sm leading-snug">Sakinlik ve Güven — geleneksel zanaatı modern yaşamla buluşturuyoruz.</p>
+      <div class="mt-7 flex gap-3">
+        <a href="#" class="w-10 h-10 grid place-items-center rounded-full border border-on-primary/30 hover:bg-on-primary/10 transition"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a>
+        <a href="#" class="w-10 h-10 grid place-items-center rounded-full border border-on-primary/30 hover:bg-on-primary/10 transition"><span class="material-symbols-outlined text-[20px]">public</span></a>
+        <a href="#" class="w-10 h-10 grid place-items-center rounded-full border border-on-primary/30 hover:bg-on-primary/10 transition"><span class="material-symbols-outlined text-[20px]">mail</span></a>
+      </div>
+    </div>
+    <div class="col-span-2">
+      <div class="text-[10.5px] tracking-[0.25em] uppercase font-bold opacity-70 mb-5">Kurumsal</div>
+      <ul class="space-y-3 text-[14px]">
+        <li><a href="#" class="hover:opacity-70 transition">Hakkımızda</a></li>
+        <li><a href="#" class="hover:opacity-70 transition">Showroom</a></li>
+        <li><a href="#" class="hover:opacity-70 transition">İletişim</a></li>
+      </ul>
+    </div>
+    <div class="col-span-2">
+      <div class="text-[10.5px] tracking-[0.25em] uppercase font-bold opacity-70 mb-5">Koleksiyon</div>
+      <ul class="space-y-3 text-[14px]">
+        <li><a href="#" class="hover:opacity-70 transition">Oturma Grubu</a></li>
+        <li><a href="#" class="hover:opacity-70 transition">Yatak Odası</a></li>
+        <li><a href="#" class="hover:opacity-70 transition">Yemek Odası</a></li>
+      </ul>
+    </div>
+    <div class="col-span-3">
+      <div class="text-[10.5px] tracking-[0.25em] uppercase font-bold opacity-70 mb-5">İletişim</div>
+      <div class="font-display text-[18px] leading-tight">Harbiye Mah. Teşvikiye Cd. No:42</div>
+      <div class="text-[13px] opacity-80 mt-1">Şişli / İstanbul</div>
+      <div class="font-display text-[18px] leading-tight mt-3">+90 (212) 555 12 34</div>
+      <a href="https://wa.me/902125551234" class="mt-5 inline-flex items-center gap-2 bg-whatsapp text-white py-2.5 px-4 rounded-full text-[11px] uppercase tracking-widest font-bold hover:opacity-90 transition">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+  <div class="border-t border-on-primary/15">
+    <div class="max-w-[1320px] mx-auto px-12 py-6 flex justify-between text-[11px] opacity-60">
+      <span>© 2024 Atelier Anatolia. Tüm hakları saklıdır.</span>
+      <span>Sakinlik ve Güven.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

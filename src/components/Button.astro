@@ -1,0 +1,77 @@
+---
+/**
+ * brand-guide "Buttons"
+ * Variants:
+ *   - primary  → Deep Walnut bg, pill, ana CTA
+ *   - secondary → Sand Linen bg, rounded-xl, ikincil
+ *   - ghost-underline → underline link button
+ *   - icon → circular 44-48px
+ *   - whatsapp → brand green pill
+ *   - dark-ghost → primary bg üzerinde outline
+ */
+interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary' | 'ghost-underline' | 'icon' | 'whatsapp' | 'dark-ghost';
+  size?: 'sm' | 'md' | 'lg';
+  icon?: string;
+  iconPosition?: 'left' | 'right';
+  iconFill?: boolean;
+  type?: 'button' | 'submit';
+  ariaLabel?: string;
+  class?: string;
+}
+
+const {
+  href,
+  variant = 'primary',
+  size = 'md',
+  icon,
+  iconPosition = 'right',
+  iconFill = false,
+  type = 'button',
+  ariaLabel,
+  class: extraClass = '',
+} = Astro.props;
+
+const Tag = href ? 'a' : 'button';
+
+const baseInteractive = 'inline-flex items-center justify-center gap-2 transition active:scale-95 select-none';
+const fontTracking = 'text-[11px] md:text-[12px] uppercase tracking-[0.22em] font-bold';
+
+const variantMap: Record<string, string> = {
+  primary: `${baseInteractive} ${fontTracking} bg-primary text-on-primary rounded-full hover:opacity-90`,
+  secondary: `${baseInteractive} ${fontTracking} bg-secondary-c text-on-secondary-c rounded-xl hover:bg-secondary-c/80`,
+  'ghost-underline': `${baseInteractive} ${fontTracking} text-primary border-b border-primary pb-1 hover:opacity-70`,
+  icon: `${baseInteractive} bg-surface-c text-primary rounded-full hover:bg-surface-c-high`,
+  whatsapp: `${baseInteractive} ${fontTracking} bg-whatsapp text-white rounded-full hover:opacity-90`,
+  'dark-ghost': `${baseInteractive} ${fontTracking} border border-on-primary/40 text-on-primary rounded-full hover:bg-on-primary/10`,
+};
+
+const sizeMap: Record<string, string> = {
+  sm: variant === 'icon' ? 'w-10 h-10' : 'py-2.5 px-4',
+  md: variant === 'icon' ? 'w-11 h-11' : 'py-3 px-6',
+  lg: variant === 'icon' ? 'w-12 h-12' : 'py-4 px-7',
+};
+
+const cls = `${variantMap[variant]} ${sizeMap[size]} ${extraClass}`;
+const iconSize = size === 'sm' ? 'text-[16px]' : size === 'md' ? 'text-[18px]' : 'text-[20px]';
+---
+
+<Tag
+  class={cls}
+  href={href}
+  type={!href ? type : undefined}
+  aria-label={ariaLabel}
+>
+  {icon && iconPosition === 'left' && (
+    <span class={`material-symbols-outlined ${iconSize} ${iconFill ? 'icon-fill' : ''}`}>{icon}</span>
+  )}
+  {variant !== 'icon' && <slot />}
+  {variant === 'icon' && icon && !iconPosition && (
+    <span class={`material-symbols-outlined ${iconSize} ${iconFill ? 'icon-fill' : ''}`}>{icon}</span>
+  )}
+  {icon && iconPosition === 'right' && (
+    <span class={`material-symbols-outlined ${iconSize} ${iconFill ? 'icon-fill' : ''}`}>{icon}</span>
+  )}
+  {variant === 'icon' && !icon && <slot />}
+</Tag>

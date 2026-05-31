@@ -1,0 +1,1820 @@
+[
+  {
+    "slug": "defne-koltuk-takimi",
+    "name": "Defne",
+    "italicWord": "Koltuk Takımı",
+    "category": "oturma-grubu",
+    "dimensions": {
+      "w": 240,
+      "d": 105,
+      "h": 75
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "45 — 60 gün",
+    "modelUrl": "/models/couch.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1400&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=1400&q=80&auto=format&fit=crop"
+    ],
+    "description": {
+      "eyebrow": "Sezon ürünü",
+      "dropcap": "M",
+      "body": "odern çizgili, kadife döşemeli L köşe koltuk takımı. Masif meşe iskelet üzerine yüksek yoğunluklu sünger ve doğal keten karışımı kumaş. Üç kişilik ana koltuk ve yataklı modül; yan modül sandıklı."
+    },
+    "features": [
+      "Yataklı modül",
+      "Sandıklı yan",
+      "5 yıl iskelet garantisi",
+      "Masif meşe",
+      "Çıkarılabilir kılıf"
+    ],
+    "fabrics": [
+      {
+        "slug": "kum-keten",
+        "name": "Kum Keten",
+        "hex": "#d8c9b6",
+        "rgb": [
+          0.847,
+          0.788,
+          0.714
+        ]
+      },
+      {
+        "slug": "toprak",
+        "name": "Toprak",
+        "hex": "#8b6f57",
+        "rgb": [
+          0.545,
+          0.435,
+          0.341
+        ]
+      },
+      {
+        "slug": "antrasit",
+        "name": "Antrasit",
+        "hex": "#3a3a3a",
+        "rgb": [
+          0.227,
+          0.227,
+          0.227
+        ]
+      },
+      {
+        "slug": "zeytin",
+        "name": "Zeytin",
+        "hex": "#5e6a4b",
+        "rgb": [
+          0.369,
+          0.416,
+          0.294
+        ]
+      }
+    ],
+    "specs": {
+      "technical": [
+        {
+          "label": "İskelet",
+          "value": "Masif meşe + kontrplak destek"
+        },
+        {
+          "label": "Dolgu",
+          "value": "45 dns yüksek yoğunluk sünger + kuş tüyü"
+        },
+        {
+          "label": "Döşeme",
+          "value": "Doğal keten %78 + pamuk %22"
+        },
+        {
+          "label": "Mekanizma",
+          "value": "Çek-yat, alman menteşeli"
+        },
+        {
+          "label": "Ayaklar",
+          "value": "Masif meşe, ceviz tonu"
+        }
+      ],
+      "care": [
+        {
+          "label": "Temizlik",
+          "value": "Profesyonel kuru temizleme önerilir"
+        },
+        {
+          "label": "Günlük bakım",
+          "value": "Yumuşak fırça ile vakum, ayda bir"
+        },
+        {
+          "label": "Garanti",
+          "value": "5 yıl iskelet, 2 yıl mekanizma"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim süresi",
+          "value": "45 — 60 gün"
+        },
+        {
+          "label": "Teslimat",
+          "value": "İstanbul içi ücretsiz · Yurt geneli ücretli"
+        },
+        {
+          "label": "Montaj",
+          "value": "Bizim ekibimiz, ücretsiz"
+        }
+      ]
+    },
+    "artisan": {
+      "name": "Mehmet Yıldız",
+      "role": "Döşeme Ustası · 28 yıl",
+      "quote": "Defne'nin sırrı iskelette. Üç ay kuruttuğumuz meşeyi, sadece doğru kuşağında kesiyoruz."
+    },
+    "similarSlugs": [
+      "zeugma-koltuk",
+      "urartu-uclu",
+      "lykia-tekli"
+    ],
+    "isFeatured": true,
+    "isNew": true,
+    "badges": [
+      "Yeni",
+      "Masif meşe"
+    ]
+  },
+  {
+    "slug": "zeugma-koltuk",
+    "name": "Zeugma",
+    "italicWord": "Koltuk",
+    "category": "oturma-grubu",
+    "dimensions": {
+      "w": 85,
+      "d": 90,
+      "h": 75
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "30 — 45 gün",
+    "modelUrl": "/models/couch.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Tekli koltuk",
+      "dropcap": "B",
+      "body": "ağımsız tekli koltuk. Yumuşak hatlı sırt yastığı, masif meşe taban. Okuma köşeniz için tasarlandı — ışık doğru açıdan geldiğinde, saatler farkına varmazsınız."
+    },
+    "features": [
+      "Masif meşe taban",
+      "Yıkanabilir kılıf",
+      "Yüksek yoğunluk sünger",
+      "5 yıl garanti"
+    ],
+    "fabrics": [
+      {
+        "slug": "kum-keten",
+        "name": "Kum Keten",
+        "hex": "#d8c9b6",
+        "rgb": [
+          0.847,
+          0.788,
+          0.714
+        ]
+      },
+      {
+        "slug": "kiremit",
+        "name": "Kiremit",
+        "hex": "#a5634a",
+        "rgb": [
+          0.647,
+          0.388,
+          0.29
+        ]
+      },
+      {
+        "slug": "antrasit",
+        "name": "Antrasit",
+        "hex": "#3a3a3a",
+        "rgb": [
+          0.227,
+          0.227,
+          0.227
+        ]
+      }
+    ],
+    "specs": {
+      "technical": [
+        {
+          "label": "İskelet",
+          "value": "Masif meşe"
+        },
+        {
+          "label": "Dolgu",
+          "value": "40 dns sünger + elyaf"
+        },
+        {
+          "label": "Döşeme",
+          "value": "Doğal keten + pamuk"
+        }
+      ],
+      "care": [
+        {
+          "label": "Temizlik",
+          "value": "Yıkanabilir kılıf, 30°C"
+        },
+        {
+          "label": "Garanti",
+          "value": "5 yıl iskelet"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim süresi",
+          "value": "30 — 45 gün"
+        },
+        {
+          "label": "Teslimat",
+          "value": "İstanbul içi ücretsiz"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "defne-koltuk-takimi",
+      "lykia-tekli",
+      "urartu-uclu"
+    ],
+    "isNew": true,
+    "badges": [
+      "Yeni",
+      "Masif meşe"
+    ]
+  },
+  {
+    "slug": "urartu-uclu",
+    "name": "Urartu",
+    "italicWord": "Üçlü",
+    "category": "oturma-grubu",
+    "dimensions": {
+      "w": 215,
+      "d": 95,
+      "h": 78
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "45 — 60 gün",
+    "modelUrl": "/models/couch-medium.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1550226891-ef816aed4a98?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Üçlü koltuk",
+      "dropcap": "K",
+      "body": "lasik üçlü kanepe, yumuşak yastıklı sırt. Dökme pirinç ayakları ve elle dikilmiş kapitone arkalığı ile odanın ana karakterini taşır."
+    },
+    "features": [
+      "Kapitone arkalık",
+      "Pirinç ayak",
+      "Doğal kuş tüyü dolgu",
+      "Tek parça çerçeve"
+    ],
+    "fabrics": [
+      {
+        "slug": "zeytin",
+        "name": "Zeytin",
+        "hex": "#5e6a4b",
+        "rgb": [
+          0.369,
+          0.416,
+          0.294
+        ]
+      },
+      {
+        "slug": "kum-keten",
+        "name": "Kum Keten",
+        "hex": "#d8c9b6",
+        "rgb": [
+          0.847,
+          0.788,
+          0.714
+        ]
+      },
+      {
+        "slug": "lacivert",
+        "name": "Lacivert",
+        "hex": "#2a3a55",
+        "rgb": [
+          0.165,
+          0.227,
+          0.333
+        ]
+      }
+    ],
+    "specs": {
+      "technical": [
+        {
+          "label": "İskelet",
+          "value": "Masif meşe + huş kontrplak"
+        },
+        {
+          "label": "Dolgu",
+          "value": "Kuş tüyü + 50 dns sünger"
+        },
+        {
+          "label": "Ayaklar",
+          "value": "Dökme pirinç, mat lake"
+        }
+      ],
+      "care": [
+        {
+          "label": "Temizlik",
+          "value": "Kuru temizleme"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim süresi",
+          "value": "45 — 60 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "defne-koltuk-takimi",
+      "zeugma-koltuk",
+      "lykia-tekli"
+    ],
+    "badges": [
+      "El dikim"
+    ]
+  },
+  {
+    "slug": "lykia-tekli",
+    "name": "Lykia",
+    "italicWord": "Tekli",
+    "category": "oturma-grubu",
+    "dimensions": {
+      "w": 78,
+      "d": 82,
+      "h": 92
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "30 — 45 gün",
+    "modelUrl": "/models/couch-small.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Kanat koltuk",
+      "dropcap": "Y",
+      "body": "uksek arkalıklı klasik kanat koltuk. Akşamın son saatleri için, bir kitap ve bir abajurun arasında yerini almak üzere."
+    },
+    "features": [
+      "Yüksek arkalık",
+      "Masif meşe ayak",
+      "Yana dönen kanatlar"
+    ],
+    "fabrics": [
+      {
+        "slug": "kadife-bordo",
+        "name": "Kadife Bordo",
+        "hex": "#6b1f2a",
+        "rgb": [
+          0.42,
+          0.122,
+          0.165
+        ]
+      },
+      {
+        "slug": "kum-keten",
+        "name": "Kum Keten",
+        "hex": "#d8c9b6",
+        "rgb": [
+          0.847,
+          0.788,
+          0.714
+        ]
+      },
+      {
+        "slug": "antrasit",
+        "name": "Antrasit",
+        "hex": "#3a3a3a",
+        "rgb": [
+          0.227,
+          0.227,
+          0.227
+        ]
+      }
+    ],
+    "specs": {
+      "technical": [
+        {
+          "label": "İskelet",
+          "value": "Masif meşe"
+        },
+        {
+          "label": "Döşeme",
+          "value": "İtalyan kadife veya keten"
+        }
+      ],
+      "care": [
+        {
+          "label": "Garanti",
+          "value": "5 yıl iskelet"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "30 — 45 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "urartu-uclu",
+      "zeugma-koltuk",
+      "defne-koltuk-takimi"
+    ]
+  },
+  {
+    "slug": "kerkenes-puf",
+    "name": "Kerkenes",
+    "italicWord": "Puf",
+    "category": "oturma-grubu",
+    "dimensions": {
+      "w": 60,
+      "d": 60,
+      "h": 42
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "20 — 30 gün",
+    "modelUrl": "/models/couch.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Yardımcı oturma",
+      "dropcap": "K",
+      "body": "are formlu, doğal yün dolgu puf. Sehpa olarak da, ek koltuk olarak da işlev görür. Tek parça keten kılıf, çıkarılabilir."
+    },
+    "features": [
+      "Yün dolgu",
+      "Çıkarılabilir kılıf",
+      "Çok amaçlı"
+    ],
+    "fabrics": [
+      {
+        "slug": "kum-keten",
+        "name": "Kum Keten",
+        "hex": "#d8c9b6"
+      },
+      {
+        "slug": "zeytin",
+        "name": "Zeytin",
+        "hex": "#5e6a4b"
+      },
+      {
+        "slug": "kiremit",
+        "name": "Kiremit",
+        "hex": "#a5634a"
+      }
+    ],
+    "specs": {
+      "technical": [
+        {
+          "label": "Dolgu",
+          "value": "Doğal yün + pamuk"
+        },
+        {
+          "label": "Kılıf",
+          "value": "Yıkanabilir keten"
+        }
+      ],
+      "care": [
+        {
+          "label": "Temizlik",
+          "value": "30°C makine"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "20 — 30 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "lykia-tekli",
+      "zeugma-koltuk",
+      "kibele-sehpa"
+    ]
+  },
+  {
+    "slug": "lidya-yatak-basligi",
+    "name": "Lidya",
+    "italicWord": "Yatak Başlığı",
+    "category": "yatak-odasi",
+    "dimensions": {
+      "w": 180,
+      "d": 12,
+      "h": 130
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "30 — 45 gün",
+    "modelUrl": "/models/bed-single.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Kapitone başlık",
+      "dropcap": "E",
+      "body": "ll dikiminin tüm sabrıyla işlenmiş kapitone yatak başlığı. Kadife veya keten döşeme. Çift kişilik 160 ve 180 cm yataklara uygun."
+    },
+    "features": [
+      "El dikim kapitone",
+      "Duvara monte",
+      "Iki ölçü"
+    ],
+    "fabrics": [
+      {
+        "slug": "antrasit",
+        "name": "Antrasit Kadife",
+        "hex": "#3a3a3a",
+        "rgb": [
+          0.227,
+          0.227,
+          0.227
+        ]
+      },
+      {
+        "slug": "kum-keten",
+        "name": "Kum Keten",
+        "hex": "#d8c9b6",
+        "rgb": [
+          0.847,
+          0.788,
+          0.714
+        ]
+      },
+      {
+        "slug": "yesil",
+        "name": "Çağla Yeşili",
+        "hex": "#7a8a5e",
+        "rgb": [
+          0.478,
+          0.541,
+          0.369
+        ]
+      },
+      {
+        "slug": "petrol",
+        "name": "Petrol Mavisi",
+        "hex": "#2f4a52",
+        "rgb": [
+          0.184,
+          0.29,
+          0.322
+        ]
+      }
+    ],
+    "specs": {
+      "technical": [
+        {
+          "label": "Yüzey",
+          "value": "İtalyan kadife veya keten"
+        },
+        {
+          "label": "Dolgu",
+          "value": "Yüksek yoğunluk sünger + elyaf"
+        },
+        {
+          "label": "Montaj",
+          "value": "Duvar braketi (dahil)"
+        }
+      ],
+      "care": [
+        {
+          "label": "Temizlik",
+          "value": "Kuru temizleme"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "30 — 45 gün"
+        },
+        {
+          "label": "Montaj",
+          "value": "Bizim ekibimiz"
+        }
+      ]
+    },
+    "artisan": {
+      "name": "Ayşe Karaca",
+      "role": "Tekstil Atölye Şefi · 19 yıl",
+      "quote": "Lidya'nın her bir kapitone düğümü el dikimdir. Otuz bir, bazen otuz dokuz düğüm — kumaşa göre değişir."
+    },
+    "similarSlugs": [
+      "frigya-baza",
+      "miletos-komodin",
+      "asur-gardirop"
+    ],
+    "isFeatured": true,
+    "badges": [
+      "El dikim",
+      "Kadife"
+    ]
+  },
+  {
+    "slug": "frigya-baza",
+    "name": "Frigya",
+    "italicWord": "Baza",
+    "category": "yatak-odasi",
+    "dimensions": {
+      "w": 160,
+      "d": 200,
+      "h": 45
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "30 — 45 gün",
+    "modelUrl": "/models/bed-single.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Sandıklı baza",
+      "dropcap": "S",
+      "body": "andıklı yatak bazası. Pistonlu kaldırma mekanizması, gizli aydınlatma. 30 cm derinliğinde saklama alanı."
+    },
+    "features": [
+      "Pistonlu mekanizma",
+      "Gizli LED",
+      "30 cm sandık"
+    ],
+    "fabrics": [
+      {
+        "slug": "kum-keten",
+        "name": "Kum Keten",
+        "hex": "#d8c9b6"
+      },
+      {
+        "slug": "antrasit",
+        "name": "Antrasit",
+        "hex": "#3a3a3a"
+      }
+    ],
+    "specs": {
+      "technical": [
+        {
+          "label": "Mekanizma",
+          "value": "Alman pistonlu, sessiz"
+        },
+        {
+          "label": "İskelet",
+          "value": "Masif meşe + MDF panel"
+        }
+      ],
+      "care": [
+        {
+          "label": "Garanti",
+          "value": "3 yıl mekanizma"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "30 — 45 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "lidya-yatak-basligi",
+      "miletos-komodin",
+      "asur-gardirop"
+    ]
+  },
+  {
+    "slug": "miletos-komodin",
+    "name": "Miletos",
+    "italicWord": "Komodin",
+    "category": "yatak-odasi",
+    "dimensions": {
+      "w": 50,
+      "d": 40,
+      "h": 55
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "20 — 30 gün",
+    "modelUrl": "/models/bed-single.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1551298370-9d3d53740c72?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Iki çekmece",
+      "dropcap": "M",
+      "body": "asif ceviz iki çekmeceli komodin. Sessiz raylı mekanizma, dökme pirinç kulplar. Yatağın yanına yıllarca yakışacak."
+    },
+    "features": [
+      "Masif ceviz",
+      "Pirinç kulp",
+      "Yumuşak kapatma"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Malzeme",
+          "value": "Masif ceviz"
+        },
+        {
+          "label": "Yüzey",
+          "value": "Doğal sert yağ"
+        }
+      ],
+      "care": [
+        {
+          "label": "Bakım",
+          "value": "Yılda bir doğal yağ"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "20 — 30 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "lidya-yatak-basligi",
+      "frigya-baza",
+      "asur-gardirop"
+    ]
+  },
+  {
+    "slug": "asur-gardirop",
+    "name": "Asur",
+    "italicWord": "Gardırop",
+    "category": "yatak-odasi",
+    "dimensions": {
+      "w": 220,
+      "d": 60,
+      "h": 235
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "60 — 75 gün",
+    "modelUrl": "/models/bed-single.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Dört kapı",
+      "dropcap": "D",
+      "body": "ört kapılı modüler gardırop. Tam boy ayna, iç aydınlatma, ayarlanabilir raf sistemi. Ölçü değişikliği mümkün."
+    },
+    "features": [
+      "İç LED",
+      "Tam boy ayna",
+      "Ayarlanabilir raf",
+      "Özel ölçü"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Gövde",
+          "value": "Meşe kaplamalı MDF"
+        },
+        {
+          "label": "Kapı",
+          "value": "Masif meşe panel"
+        },
+        {
+          "label": "Aydınlatma",
+          "value": "Sensörlü LED"
+        }
+      ],
+      "care": [
+        {
+          "label": "Bakım",
+          "value": "Nemli bez yeterli"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "60 — 75 gün"
+        },
+        {
+          "label": "Montaj",
+          "value": "Bizim ekibimiz"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "lidya-yatak-basligi",
+      "frigya-baza",
+      "halikarnas-kitaplik"
+    ]
+  },
+  {
+    "slug": "artemis-yemek-masasi",
+    "name": "Artemis",
+    "italicWord": "Yemek Masası",
+    "category": "yemek-odasi",
+    "dimensions": {
+      "w": 220,
+      "d": 100,
+      "h": 76
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "45 — 60 gün",
+    "modelUrl": "/models/chair.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "El oyma yemek masası",
+      "dropcap": "T",
+      "body": "ek parça ceviz tablalı yemek masası. Ayakları el oyma, doğal sert yağ ile bitirildi. 8 kişiye kadar rahat oturuş."
+    },
+    "features": [
+      "Tek parça ceviz",
+      "El oyma ayak",
+      "Doğal sert yağ",
+      "Özel ölçü mümkün"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Tabla",
+          "value": "Tek parça masif ceviz, 6 cm"
+        },
+        {
+          "label": "Ayaklar",
+          "value": "Masif meşe, el oyma"
+        },
+        {
+          "label": "Yüzey",
+          "value": "Osmo doğal sert yağ"
+        }
+      ],
+      "care": [
+        {
+          "label": "Bakım",
+          "value": "Yılda iki kez doğal yağ uygulaması"
+        },
+        {
+          "label": "Lekelere karşı",
+          "value": "Sıcak içecekleri altlık ile"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "45 — 60 gün"
+        },
+        {
+          "label": "Garanti",
+          "value": "10 yıl yapısal"
+        }
+      ]
+    },
+    "artisan": {
+      "name": "İbrahim Çelik",
+      "role": "Marangoz Usta · 35 yıl",
+      "quote": "Cevizi sadece kış kesiyoruz. Ağaç dinlenmiş olur, su çekmez, çatlamaz. Sabır, tablayı uzun ömürlü kılar."
+    },
+    "similarSlugs": [
+      "hattusa-yemek-masasi",
+      "troya-sandalye",
+      "bergama-konsol"
+    ],
+    "isFeatured": true,
+    "badges": [
+      "El oyma",
+      "Masif ceviz"
+    ]
+  },
+  {
+    "slug": "hattusa-yemek-masasi",
+    "name": "Hattuşa",
+    "italicWord": "Açılır Masa",
+    "category": "yemek-odasi",
+    "dimensions": {
+      "w": 180,
+      "d": 95,
+      "h": 76
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "45 — 60 gün",
+    "modelUrl": "/models/chair.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1577140917170-285929fb55b7?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Açılır masa",
+      "dropcap": "K",
+      "body": "alabalık günler için açılan, sade günler için toplanan masa. 180 cm'den 260 cm'ye uzayan tabla, gizli mekanizma."
+    },
+    "features": [
+      "180 → 260 cm",
+      "Gizli uzatma",
+      "Masif meşe"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Tabla",
+          "value": "Masif meşe lamine"
+        },
+        {
+          "label": "Mekanizma",
+          "value": "İtalyan, kilitli ray"
+        }
+      ],
+      "care": [
+        {
+          "label": "Bakım",
+          "value": "Yıllık yağ"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "45 — 60 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "artemis-yemek-masasi",
+      "troya-sandalye",
+      "bergama-konsol"
+    ]
+  },
+  {
+    "slug": "troya-sandalye",
+    "name": "Troya",
+    "italicWord": "Sandalye",
+    "category": "yemek-odasi",
+    "dimensions": {
+      "w": 48,
+      "d": 52,
+      "h": 88
+    },
+    "priceNote": "Fiyat için iletişim · adet",
+    "deliveryTime": "30 — 45 gün",
+    "modelUrl": "/models/chair.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Yemek sandalyesi",
+      "dropcap": "D",
+      "body": "öşemeli oturak, masif meşe iskelet, eğimli sırt. Uzun yemekler için ergonomik açı."
+    },
+    "features": [
+      "Ergonomik sırt",
+      "Yıkanabilir kılıf",
+      "Masif meşe"
+    ],
+    "fabrics": [
+      {
+        "slug": "kum-keten",
+        "name": "Kum Keten",
+        "hex": "#d8c9b6",
+        "rgb": [
+          0.847,
+          0.788,
+          0.714
+        ]
+      },
+      {
+        "slug": "zeytin",
+        "name": "Zeytin",
+        "hex": "#5e6a4b",
+        "rgb": [
+          0.369,
+          0.416,
+          0.294
+        ]
+      },
+      {
+        "slug": "antrasit",
+        "name": "Antrasit",
+        "hex": "#3a3a3a",
+        "rgb": [
+          0.227,
+          0.227,
+          0.227
+        ]
+      }
+    ],
+    "specs": {
+      "technical": [
+        {
+          "label": "İskelet",
+          "value": "Masif meşe"
+        },
+        {
+          "label": "Döşeme",
+          "value": "Keten + pamuk"
+        }
+      ],
+      "care": [
+        {
+          "label": "Temizlik",
+          "value": "Çıkarılabilir kılıf"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "30 — 45 gün, set halinde"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "artemis-yemek-masasi",
+      "hattusa-yemek-masasi",
+      "mira-sandalye"
+    ]
+  },
+  {
+    "slug": "bergama-konsol",
+    "name": "Bergama",
+    "italicWord": "Yemek Konsolu",
+    "category": "yemek-odasi",
+    "dimensions": {
+      "w": 180,
+      "d": 45,
+      "h": 85
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "45 — 60 gün",
+    "modelUrl": "/models/chair.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1532372576444-dda954194ad0?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Servis konsolu",
+      "dropcap": "Y",
+      "body": "emek odasının sessiz hizmetkârı. Üç çekmece, iki kapaklı bölme. Pirinç çekmece kulplarıyla."
+    },
+    "features": [
+      "Üç çekmece",
+      "Pirinç kulp",
+      "Masif meşe gövde"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Gövde",
+          "value": "Masif meşe + meşe kaplama"
+        }
+      ],
+      "care": [
+        {
+          "label": "Bakım",
+          "value": "Yıllık yağ"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "45 — 60 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "artemis-yemek-masasi",
+      "karia-konsol",
+      "hattusa-yemek-masasi"
+    ]
+  },
+  {
+    "slug": "ksanthos-vitrin",
+    "name": "Ksanthos",
+    "italicWord": "Vitrin",
+    "category": "yemek-odasi",
+    "dimensions": {
+      "w": 110,
+      "d": 42,
+      "h": 195
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "60 — 75 gün",
+    "modelUrl": "/models/chair.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Camlı vitrin",
+      "dropcap": "C",
+      "body": "amlı vitrin dolap, üç raf, içten LED. Porselenleriniz için, dededen kalan kâseleriniz için."
+    },
+    "features": [
+      "İç LED",
+      "Cam kapı",
+      "Üç raf"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Gövde",
+          "value": "Masif meşe"
+        },
+        {
+          "label": "Cam",
+          "value": "Temperli, 6 mm"
+        }
+      ],
+      "care": [
+        {
+          "label": "Temizlik",
+          "value": "Nemli bez"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "60 — 75 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "bergama-konsol",
+      "asur-gardirop",
+      "halikarnas-kitaplik"
+    ]
+  },
+  {
+    "slug": "efes-calisma-masasi",
+    "name": "Efes",
+    "italicWord": "Çalışma Masası",
+    "category": "calisma",
+    "dimensions": {
+      "w": 160,
+      "d": 70,
+      "h": 75
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "30 — 45 gün",
+    "modelUrl": "/models/chair.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Ev ofisi",
+      "dropcap": "G",
+      "body": "izli kablo kanallı, üç çekmeceli çalışma masası. Doğal deri yüzey opsiyonu. Evden çalışmanın olgunlaşmış hali."
+    },
+    "features": [
+      "Gizli kablo kanalı",
+      "Üç çekmece",
+      "Deri yüzey opsiyonu"
+    ],
+    "fabrics": [
+      {
+        "slug": "kum-keten",
+        "name": "Keten Yüzey",
+        "hex": "#d8c9b6"
+      },
+      {
+        "slug": "konyak-deri",
+        "name": "Konyak Deri",
+        "hex": "#8b5a3c"
+      },
+      {
+        "slug": "siyah-deri",
+        "name": "Siyah Deri",
+        "hex": "#1a1a1a"
+      }
+    ],
+    "specs": {
+      "technical": [
+        {
+          "label": "Gövde",
+          "value": "Masif meşe + meşe kaplama"
+        },
+        {
+          "label": "Yüzey",
+          "value": "Keten veya doğal deri"
+        }
+      ],
+      "care": [
+        {
+          "label": "Bakım",
+          "value": "Yıllık yağ veya deri kremi"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "30 — 45 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "halikarnas-kitaplik",
+      "mira-sandalye",
+      "artemis-yemek-masasi"
+    ]
+  },
+  {
+    "slug": "halikarnas-kitaplik",
+    "name": "Halikarnas",
+    "italicWord": "Kitaplık",
+    "category": "calisma",
+    "dimensions": {
+      "w": 240,
+      "d": 38,
+      "h": 230
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "60 — 75 gün",
+    "modelUrl": "/models/chair.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Açık kitaplık",
+      "dropcap": "K",
+      "body": "itapseverler için, kitapsız da güzel duran kitaplık. 12 raf, ayarlanabilir yükseklik, alt iki bölme kapaklı."
+    },
+    "features": [
+      "12 ayarlanabilir raf",
+      "Alt depolama",
+      "Duvar sabitleme"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Gövde",
+          "value": "Masif meşe"
+        },
+        {
+          "label": "Raflar",
+          "value": "2.5 cm kalınlık, taşıma kapasitesi 40 kg/raf"
+        }
+      ],
+      "care": [
+        {
+          "label": "Bakım",
+          "value": "Nemli bez"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "60 — 75 gün"
+        },
+        {
+          "label": "Montaj",
+          "value": "Bizim ekibimiz"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "efes-calisma-masasi",
+      "asur-gardirop",
+      "ksanthos-vitrin"
+    ]
+  },
+  {
+    "slug": "mira-sandalye",
+    "name": "Mira",
+    "italicWord": "Çalışma Sandalyesi",
+    "category": "calisma",
+    "dimensions": {
+      "w": 55,
+      "d": 58,
+      "h": 95
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "30 — 45 gün",
+    "modelUrl": "/models/chair.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1592078615290-033ee584e267?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Ergonomik sandalye",
+      "dropcap": "S",
+      "body": "ekiz saat oturmak için tasarlandı. Yükseklik ayarı, döner taban, deri veya keten döşeme."
+    },
+    "features": [
+      "Yükseklik ayarı",
+      "Döner taban",
+      "Lomber destek"
+    ],
+    "fabrics": [
+      {
+        "slug": "konyak-deri",
+        "name": "Konyak Deri",
+        "hex": "#8b5a3c"
+      },
+      {
+        "slug": "antrasit",
+        "name": "Antrasit Keten",
+        "hex": "#3a3a3a"
+      }
+    ],
+    "specs": {
+      "technical": [
+        {
+          "label": "İskelet",
+          "value": "Masif meşe + alüminyum baz"
+        },
+        {
+          "label": "Döşeme",
+          "value": "Doğal deri veya keten"
+        }
+      ],
+      "care": [
+        {
+          "label": "Garanti",
+          "value": "5 yıl mekanizma"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "30 — 45 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "efes-calisma-masasi",
+      "troya-sandalye",
+      "halikarnas-kitaplik"
+    ]
+  },
+  {
+    "slug": "karia-konsol",
+    "name": "Karia",
+    "italicWord": "Konsol",
+    "category": "aksesuar",
+    "dimensions": {
+      "w": 160,
+      "d": 45,
+      "h": 85
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "45 — 60 gün",
+    "modelUrl": "/models/couch-small.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1532372576444-dda954194ad0?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Giriş konsolu",
+      "dropcap": "G",
+      "body": "iriş holünüzün sessiz karşılayıcısı. Teak tabla, el oyma destekler, çekmeceleri pirinç kulplu."
+    },
+    "features": [
+      "Teak ahşap",
+      "El oyma",
+      "Üç çekmece"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Tabla",
+          "value": "Masif teak"
+        },
+        {
+          "label": "Yüzey",
+          "value": "Doğal yağ"
+        }
+      ],
+      "care": [
+        {
+          "label": "Bakım",
+          "value": "Yıllık yağ"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "45 — 60 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "bergama-konsol",
+      "kibele-sehpa",
+      "demir-ayna"
+    ],
+    "isFeatured": true,
+    "badges": [
+      "El oyma",
+      "Teak"
+    ]
+  },
+  {
+    "slug": "kibele-sehpa",
+    "name": "Kibele",
+    "italicWord": "Orta Sehpa",
+    "category": "aksesuar",
+    "dimensions": {
+      "w": 120,
+      "d": 65,
+      "h": 38
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "30 — 45 gün",
+    "modelUrl": "/models/couch-small.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1532372576444-dda954194ad0?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Salon sehpası",
+      "dropcap": "Y",
+      "body": "uvarlak köşeli oval sehpa. Alt rafıyla pratik. Tabla ceviz, ayaklar dökme pirinç."
+    },
+    "features": [
+      "Pirinç ayak",
+      "Alt raf",
+      "Yuvarlatılmış köşe"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Tabla",
+          "value": "Masif ceviz"
+        },
+        {
+          "label": "Ayaklar",
+          "value": "Dökme pirinç"
+        }
+      ],
+      "care": [
+        {
+          "label": "Bakım",
+          "value": "Yıllık yağ"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "30 — 45 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "karia-konsol",
+      "kerkenes-puf",
+      "demir-ayna"
+    ]
+  },
+  {
+    "slug": "demir-ayna",
+    "name": "Demir",
+    "italicWord": "Boy Aynası",
+    "category": "aksesuar",
+    "dimensions": {
+      "w": 75,
+      "d": 4,
+      "h": 180
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "20 — 30 gün",
+    "modelUrl": "/models/chair.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1618220252344-8ec99ec624b1?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Tam boy ayna",
+      "dropcap": "M",
+      "body": "asif demir çerçeveli tam boy ayna. Duvara monte veya yere yaslı kullanım. Endüstriyel ile sıcağın buluşması."
+    },
+    "features": [
+      "Masif demir çerçeve",
+      "Iki kullanım şekli",
+      "Tam boy"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Çerçeve",
+          "value": "Masif demir, mat siyah lake"
+        },
+        {
+          "label": "Ayna",
+          "value": "4 mm kalınlık"
+        }
+      ],
+      "care": [
+        {
+          "label": "Temizlik",
+          "value": "Cam temizleyici"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "20 — 30 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "karia-konsol",
+      "kibele-sehpa",
+      "dolunay-battaniye"
+    ]
+  },
+  {
+    "slug": "dolunay-battaniye",
+    "name": "Dolunay",
+    "italicWord": "Yün Battaniye",
+    "category": "aksesuar",
+    "dimensions": {
+      "w": 130,
+      "d": 1,
+      "h": 180
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "Stoktan, 3 — 5 gün",
+    "modelUrl": "/models/couch-small.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Tezgah dokuma",
+      "dropcap": "K",
+      "body": "aradeniz yünü, tezgâhta dokunmuş battaniye. Bir kanepenin köşesinde, bir yatağın ucunda — sıcaklık kadar dokuyu da getirir."
+    },
+    "features": [
+      "Tezgah dokuma",
+      "%100 doğal yün",
+      "Karadeniz menşeli"
+    ],
+    "fabrics": [
+      {
+        "slug": "kum",
+        "name": "Kum",
+        "hex": "#d8c9b6"
+      },
+      {
+        "slug": "antrasit",
+        "name": "Antrasit",
+        "hex": "#3a3a3a"
+      },
+      {
+        "slug": "kiremit",
+        "name": "Kiremit",
+        "hex": "#a5634a"
+      }
+    ],
+    "specs": {
+      "technical": [
+        {
+          "label": "Malzeme",
+          "value": "%100 doğal koyun yünü"
+        },
+        {
+          "label": "Dokuma",
+          "value": "El tezgâhı"
+        }
+      ],
+      "care": [
+        {
+          "label": "Yıkama",
+          "value": "Profesyonel yün temizleme"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Stok",
+          "value": "3 — 5 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "kerkenes-puf",
+      "kibele-sehpa",
+      "demir-ayna"
+    ]
+  },
+  {
+    "slug": "kandil-pirinc",
+    "name": "Kandil",
+    "italicWord": "Pirinç",
+    "category": "aksesuar",
+    "dimensions": {
+      "w": 22,
+      "d": 22,
+      "h": 38
+    },
+    "priceNote": "Fiyat için iletişim",
+    "deliveryTime": "15 — 25 gün",
+    "modelUrl": "/models/chair.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Masa lambası",
+      "dropcap": "P",
+      "body": "irinç dökümden masa lambası, keten abajur. Bir konsolun üzerinde, bir kitaplığın yanında — sıcak ışık için tasarlandı."
+    },
+    "features": [
+      "Pirinç döküm",
+      "Keten abajur",
+      "E27 duy"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Gövde",
+          "value": "Dökme pirinç, mat lake"
+        },
+        {
+          "label": "Abajur",
+          "value": "Keten"
+        }
+      ],
+      "care": [
+        {
+          "label": "Temizlik",
+          "value": "Yumuşak bez"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Üretim",
+          "value": "15 — 25 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "kibele-sehpa",
+      "demir-ayna",
+      "dolunay-battaniye"
+    ]
+  },
+  {
+    "slug": "atolye-projesi-mutfak-adasi",
+    "name": "Atölye",
+    "italicWord": "Mutfak Adası",
+    "category": "ozel-uretim",
+    "dimensions": {
+      "w": 280,
+      "d": 90,
+      "h": 92
+    },
+    "priceNote": "Fiyat için iletişim · özel ölçü",
+    "deliveryTime": "90 gün",
+    "modelUrl": "/models/couch.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Özel proje · 2025",
+      "dropcap": "B",
+      "body": "ir Boğaz villası için özel tasarlanmış mutfak adası. Tek parça mermer tabla, masif meşe gövde, dökme pirinç kulplar. Sizin proje de buradan başlayabilir."
+    },
+    "features": [
+      "Tek parça mermer",
+      "Özel ölçü",
+      "Entegre depolama"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Tabla",
+          "value": "Tek parça Bursa mermeri"
+        },
+        {
+          "label": "Gövde",
+          "value": "Masif meşe"
+        }
+      ],
+      "care": [
+        {
+          "label": "Bakım",
+          "value": "Mermer yağ uygulaması yılda 2 kez"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Süre",
+          "value": "90 gün"
+        },
+        {
+          "label": "Montaj",
+          "value": "Bizim ekibimiz, bölgenize göre"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "atolye-projesi-yatak-odasi",
+      "artemis-yemek-masasi",
+      "halikarnas-kitaplik"
+    ],
+    "badges": [
+      "Özel üretim",
+      "Tek parça mermer"
+    ]
+  },
+  {
+    "slug": "atolye-projesi-yatak-odasi",
+    "name": "Atölye",
+    "italicWord": "Yatak Odası Takımı",
+    "category": "ozel-uretim",
+    "dimensions": {
+      "w": 0,
+      "d": 0,
+      "h": 0
+    },
+    "priceNote": "Fiyat için iletişim · 8 parça",
+    "deliveryTime": "90 — 120 gün",
+    "modelUrl": "/models/bed-single.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Özel proje · 2024",
+      "dropcap": "B",
+      "body": "ir Ankara çiftliği için özel üretim yatak odası takımı. 8 parça: karyola, baza, iki komodin, gardırop, şifonyer, makyaj masası, puf. Tüm parçalar aynı meşe ağacından."
+    },
+    "features": [
+      "8 parça takım",
+      "Tek ağaç",
+      "Özel ölçü"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Malzeme",
+          "value": "Tek bir Bolu meşesinden"
+        }
+      ],
+      "care": [
+        {
+          "label": "Bakım",
+          "value": "Yıllık doğal yağ"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Süre",
+          "value": "90 — 120 gün"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "atolye-projesi-mutfak-adasi",
+      "lidya-yatak-basligi",
+      "asur-gardirop"
+    ],
+    "badges": [
+      "Özel üretim",
+      "Tek ağaç"
+    ]
+  },
+  {
+    "slug": "tarama-kullu",
+    "name": "Küllük",
+    "italicWord": "Atölye Taraması",
+    "category": "aksesuar",
+    "dimensions": {
+      "w": 12,
+      "d": 13,
+      "h": 10
+    },
+    "priceNote": "Deneme ürünü · iletişim",
+    "deliveryTime": "Stoktan",
+    "modelUrl": "/models/kullu.glb",
+    "posterUrl": "https://images.unsplash.com/photo-1592978122077-2625be96f6a4?w=1400&q=80&auto=format&fit=crop",
+    "galleryImages": [],
+    "description": {
+      "eyebrow": "Atölye taraması · test ürünü",
+      "dropcap": "B",
+      "body": "ir küllük objesinin LiDAR taranıp 3D model olarak siteye aktarılması denemesi. Gerçek dünyadan dijital katalog akışını test etmek için."
+    },
+    "features": [
+      "3D tarama",
+      "Gerçek doku",
+      "AR uyumlu"
+    ],
+    "fabrics": [],
+    "specs": {
+      "technical": [
+        {
+          "label": "Yöntem",
+          "value": "LiDAR fotogrametri tarama"
+        },
+        {
+          "label": "Poligon",
+          "value": "17.000"
+        },
+        {
+          "label": "Texture",
+          "value": "JPG embedded, 1.6 MB GLB"
+        }
+      ],
+      "care": [
+        {
+          "label": "Not",
+          "value": "Bu bir test ürünüdür — gerçek satışta değildir"
+        }
+      ],
+      "shipping": [
+        {
+          "label": "Durum",
+          "value": "Test/deneme amaçlı"
+        }
+      ]
+    },
+    "similarSlugs": [
+      "karia-konsol",
+      "kibele-sehpa",
+      "kandil-pirinc"
+    ],
+    "isNew": true,
+    "badges": [
+      "Tarama",
+      "Yeni"
+    ]
+  }
+]

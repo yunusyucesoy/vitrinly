@@ -1,0 +1,22 @@
+---
+/**
+ * brand-guide "Editorial Eyebrow Label"
+ * Her major section heading'in üzerinde kullanılır.
+ */
+interface Props {
+  text: string;
+  /** Önündeki hairline çizgi */
+  hairline?: boolean;
+  /** Renk override */
+  tone?: 'default' | 'light';
+  class?: string;
+}
+
+const { text, hairline = false, tone = 'default', class: extraClass = '' } = Astro.props;
+const colorClass = tone === 'light' ? 'opacity-70' : 'text-on-surface-v';
+---
+
+<span class={`inline-flex items-center gap-3 text-[10px] uppercase tracking-[0.3em] font-bold ${colorClass} ${extraClass}`}>
+  {hairline && <span class="inline-block w-6 h-px bg-primary"></span>}
+  {text}
+</span>

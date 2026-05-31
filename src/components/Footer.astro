@@ -1,0 +1,75 @@
+---
+import { getCustomer, getCategories, buildWhatsAppLink } from '@lib/data';
+
+const customer = getCustomer();
+const categories = getCategories().slice(0, 3);
+const waLink = buildWhatsAppLink(customer.contact.whatsapp);
+const showroom = customer.locations.find((l) => l.type === 'showroom') ?? customer.locations[0];
+---
+
+<footer class="bg-primary text-on-primary mt-16">
+  <div class="max-w-[1320px] mx-auto px-5 md:px-12 py-12 md:py-16 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
+    {/* Brand */}
+    <div class="md:col-span-5">
+      <span class="font-display italic text-[28px] md:text-[36px] tracking-tight">{customer.brand.name}</span>
+      <p class="font-display italic text-[16px] md:text-[18px] opacity-70 mt-3 max-w-sm leading-snug">
+        {customer.brand.tagline} — geleneksel zanaatı modern yaşamla buluşturuyoruz.
+      </p>
+      <div class="mt-6 flex gap-3">
+        {customer.social.map((s) => (
+          <a
+            href={s.url}
+            class="w-10 h-10 grid place-items-center rounded-full border border-on-primary/30 hover:bg-on-primary/10 transition"
+            aria-label={s.platform}
+          >
+            <span class="material-symbols-outlined text-[20px]">{s.icon}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+
+    {/* Kurumsal */}
+    <div class="md:col-span-2">
+      <div class="text-[10.5px] tracking-[0.25em] uppercase font-bold opacity-70 mb-4 md:mb-5">Kurumsal</div>
+      <ul class="space-y-3 text-[14px]">
+        <li><a href="/hakkimizda" class="hover:opacity-70 transition">Hakkımızda</a></li>
+        <li><a href="/iletisim#showroom" class="hover:opacity-70 transition">Showroom</a></li>
+        <li><a href="/iletisim" class="hover:opacity-70 transition">İletişim</a></li>
+      </ul>
+    </div>
+
+    {/* Koleksiyon */}
+    <div class="md:col-span-2">
+      <div class="text-[10.5px] tracking-[0.25em] uppercase font-bold opacity-70 mb-4 md:mb-5">Koleksiyon</div>
+      <ul class="space-y-3 text-[14px]">
+        {categories.map((c) => (
+          <li><a href={`/kategori/${c.slug}`} class="hover:opacity-70 transition">{c.shortLabel}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    {/* Iletişim */}
+    <div class="md:col-span-3">
+      <div class="text-[10.5px] tracking-[0.25em] uppercase font-bold opacity-70 mb-4 md:mb-5">İletişim</div>
+      <div class="font-display text-[16px] md:text-[18px] leading-tight">{showroom.addressLines[0]}</div>
+      <div class="text-[13px] opacity-80 mt-1">{showroom.district} / {showroom.city}</div>
+      <div class="font-display text-[16px] md:text-[18px] leading-tight mt-3">{customer.contact.whatsappFormatted}</div>
+      <a
+        href={waLink}
+        class="mt-4 inline-flex items-center gap-2 bg-whatsapp text-white py-2.5 px-4 rounded-full text-[11px] uppercase tracking-widest font-bold hover:opacity-90 transition"
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/>
+        </svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <div class="border-t border-on-primary/15">
+    <div class="max-w-[1320px] mx-auto px-5 md:px-12 py-5 md:py-6 flex flex-col md:flex-row justify-between gap-2 text-[11px] opacity-60">
+      <span>© {new Date().getFullYear()} {customer.brand.name}. Tüm hakları saklıdır.</span>
+      <span>{customer.brand.tagline}.</span>
+    </div>
+  </div>
+</footer>

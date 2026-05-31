@@ -1,0 +1,72 @@
+---
+/**
+ * brand-guide "Dimension Communication · Sketch SVG card"
+ * Hand-drawn hissi veren minimal silüet + dashed dimension lines.
+ * Faz 1'de generic mobilya silüeti (dikdörtgen) — Faz 6'da ürüne özgü SVG'ler.
+ */
+interface Props {
+  width: number;
+  depth: number;
+  height: number;
+  class?: string;
+}
+
+const { width: w, depth: d, height: h, class: extraClass = '' } = Astro.props;
+const hasDims = w > 0 && d > 0 && h > 0;
+---
+
+{hasDims && (
+  <figure class={`bg-surface-c-low rounded-2xl p-6 md:p-8 ${extraClass}`}>
+    <div class="text-[10px] uppercase tracking-[0.3em] font-bold text-on-surface-v mb-4">Ölçü krokisi</div>
+
+    <svg viewBox="0 0 400 260" class="w-full h-auto" role="img" aria-label={`Ölçü krokisi: ${w} × ${d} × ${h} cm`}>
+      <defs>
+        <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="6" stroke="#4e4545" stroke-width="0.5" opacity="0.15"/>
+        </pattern>
+      </defs>
+
+      {/* Mobilya silüeti — basit dikdörtgen + ayak */}
+      <rect x="80" y="80" width="240" height="100" fill="url(#hatch)" stroke="#332829" stroke-width="1.5" rx="6" />
+      {/* Ayaklar */}
+      <line x1="100" y1="180" x2="100" y2="210" stroke="#332829" stroke-width="1.5" />
+      <line x1="300" y1="180" x2="300" y2="210" stroke="#332829" stroke-width="1.5" />
+
+      {/* Width dimension (alt) */}
+      <line x1="80" y1="230" x2="320" y2="230" stroke="#4e4545" stroke-width="0.5" stroke-dasharray="3 3" />
+      <line x1="80" y1="225" x2="80" y2="235" stroke="#4e4545" stroke-width="0.5" />
+      <line x1="320" y1="225" x2="320" y2="235" stroke="#4e4545" stroke-width="0.5" />
+      <text x="200" y="248" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="600" fill="#332829">
+        {w} cm
+      </text>
+
+      {/* Height dimension (sağ) */}
+      <line x1="345" y1="80" x2="345" y2="180" stroke="#4e4545" stroke-width="0.5" stroke-dasharray="3 3" />
+      <line x1="340" y1="80" x2="350" y2="80" stroke="#4e4545" stroke-width="0.5" />
+      <line x1="340" y1="180" x2="350" y2="180" stroke="#4e4545" stroke-width="0.5" />
+      <text x="362" y="135" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="600" fill="#332829" transform="rotate(90, 362, 135)">
+        {h} cm
+      </text>
+
+      {/* Depth dimension (üst, italic info) */}
+      <text x="200" y="50" text-anchor="middle" font-family="EB Garamond, serif" font-size="13" font-style="italic" fill="#4e4545">
+        derinlik {d} cm
+      </text>
+    </svg>
+
+    <div class="mt-4 grid grid-cols-3 gap-3 text-center">
+      <div>
+        <div class="text-[10px] uppercase tracking-widest font-bold text-on-surface-v">En</div>
+        <div class="font-display text-[18px] md:text-[20px] mt-1">{w} cm</div>
+      </div>
+      <div>
+        <div class="text-[10px] uppercase tracking-widest font-bold text-on-surface-v">Derinlik</div>
+        <div class="font-display text-[18px] md:text-[20px] mt-1">{d} cm</div>
+      </div>
+      <div>
+        <div class="text-[10px] uppercase tracking-widest font-bold text-on-surface-v">Yükseklik</div>
+        <div class="font-display text-[18px] md:text-[20px] mt-1">{h} cm</div>
+      </div>
+    </div>
+  </figure>
+)}

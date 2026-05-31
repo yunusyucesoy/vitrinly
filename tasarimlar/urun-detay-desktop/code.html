@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#fbf9f7"/>
+<title>Defne Koltuk Takımı · Atelier Anatolia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=EB+Garamond:ital,wght@0,400..700;1,400..600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,200..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={theme:{extend:{
+colors:{surface:'#fbf9f7','surface-c-low':'#f5f3f1','surface-c':'#efedec','surface-c-high':'#eae8e6','on-surface':'#1b1c1b','on-surface-v':'#4e4545',outline:'#7f7475','outline-v':'#d1c3c4',primary:'#332829','on-primary':'#ffffff','primary-c':'#4a3e3f',secondary:'#6b5c4c','secondary-c':'#f4dfcb',tertiary:'#442306','tertiary-c':'#5e3819',whatsapp:'#25D366'},
+fontFamily:{display:['"EB Garamond"','serif'],body:['"DM Sans"','sans-serif']}
+}}}
+</script>
+<style>
+html,body{background:#fbf9f7;color:#1b1c1b;-webkit-font-smoothing:antialiased}
+body{background-image:radial-gradient(rgba(74,62,63,.025) 1px,transparent 1.5px),radial-gradient(rgba(74,62,63,.018) 1px,transparent 1.5px);background-size:6px 6px,13px 13px;background-position:0 0,3px 4px}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 350,'GRAD' 0,'opsz' 24;vertical-align:middle}
+.icon-fill{font-variation-settings:'FILL' 1,'wght' 400}
+model-viewer{width:100%;height:100%;--poster-color:transparent;--progress-bar-color:#332829;background:linear-gradient(180deg,#f5f3f1,#eae8e6)}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+.shimmer{background:linear-gradient(90deg,#efedec,#f5f3f1,#efedec);background-size:200% 100%;animation:shimmer 1.8s ease-in-out infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.8);opacity:0}}
+.pulse-ring::before,.pulse-ring::after{content:'';position:absolute;inset:0;border-radius:9999px;border:1.5px solid rgba(51,40,41,.4);animation:ring 2.4s cubic-bezier(.4,0,.6,1) infinite}
+.pulse-ring::after{animation-delay:1.2s}
+.swatch{transition:transform .25s,box-shadow .25s}
+.swatch[data-active="true"]{box-shadow:0 0 0 2px #fbf9f7,0 0 0 4px #332829;transform:scale(1.05)}
+.swatch:active{transform:scale(.95)}
+.ambient{box-shadow:0 30px 60px -20px rgba(74,62,63,.18)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.reveal{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.3s}
+.dropcap::first-letter{font-family:"EB Garamond",serif;float:left;font-size:5.5rem;line-height:.85;padding:.3rem .6rem .15rem 0;color:#332829;font-style:italic}
+details[open] .chev{transform:rotate(180deg)}.chev{transition:transform .25s}
+.card-img{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.product-card:hover .card-img{transform:scale(1.05)}
+</style>
+</head>
+<body class="font-body text-[15px]">
+
+<header class="sticky top-0 z-40 bg-surface/85 backdrop-blur-xl border-b border-outline-v/30">
+  <div class="max-w-[1320px] mx-auto px-12 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="block w-2 h-2 rounded-full bg-primary"></span>
+      <span class="font-display italic text-[22px] tracking-tight">Atelier Anatolia</span>
+    </div>
+    <nav class="flex items-center gap-10 text-[12px] uppercase tracking-[0.18em] font-bold">
+      <a href="#" class="text-on-surface-v hover:text-primary">Ana sayfa</a>
+      <a href="#" class="text-on-surface-v hover:text-primary">Koleksiyonlar</a>
+      <a href="#" class="text-on-surface-v hover:text-primary">Showroom</a>
+      <a href="#" class="text-on-surface-v hover:text-primary">İletişim</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button onclick="shareProduct()" class="w-10 h-10 grid place-items-center hover:bg-surface-c rounded-full transition"><span class="material-symbols-outlined">ios_share</span></button>
+      <a href="https://wa.me/902125551234" class="bg-primary text-on-primary py-2.5 px-4 rounded-full text-[11px] uppercase tracking-widest font-bold inline-flex items-center gap-2 hover:opacity-90 transition">
+        <span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="max-w-[1320px] mx-auto px-12 pt-8 pb-24">
+
+  <!-- Breadcrumb -->
+  <nav class="mb-8 flex items-center gap-2 text-[11px] uppercase tracking-wide text-on-surface-v/80">
+    <a href="#" class="hover:text-primary">Mağaza</a>
+    <span class="material-symbols-outlined text-[14px] opacity-50">chevron_right</span>
+    <a href="#" class="hover:text-primary">Oturma Grupları</a>
+    <span class="material-symbols-outlined text-[14px] opacity-50">chevron_right</span>
+    <span class="text-primary">Defne Koltuk Takımı</span>
+  </nav>
+
+  <!-- Hero split -->
+  <div class="grid grid-cols-12 gap-12 items-start">
+
+    <!-- LEFT: 3D viewer sticky -->
+    <div class="col-span-7 sticky top-24 reveal d1">
+      <div class="relative aspect-square w-full bg-surface-c-low rounded-3xl overflow-hidden border border-outline-v/30 ambient">
+
+        <!-- Poster state -->
+        <div id="viewer-poster" class="absolute inset-0 z-20">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8XTqHb8Dl8B8-XWVcKNZk5iZRf_U5nColMEaerN7KTE6wmqBrwp82kVQBjLEaz3bbe50-NwbgtgDivShvVC0ikQ3mla3f2qUduEyIJgA7Vb3sCQLPHAwNUQmZiIVXRGY5Jxkq7e6U7dv_zuGdBFa1yBptiWU5jZKQYUI_3yLc3iLRQ9Y9RhNGgUyPtaH9Gexq3HucywRomaUMa3LZ3Sh-2Ny6H0BFF17CJKOn_xCAlJpDW4tWwQjokWFuFoJCmH5DYxAa0i7fI5Q6" fetchpriority="high" class="w-full h-full object-contain p-16" alt=""/>
+          <!-- AR placeholder -->
+          <button onclick="toastAr()" class="absolute top-6 right-6 inline-flex items-center gap-2 bg-surface/95 backdrop-blur-md pl-3 pr-3.5 py-2 rounded-full border border-outline-v/40 hover:bg-surface transition">
+            <span class="material-symbols-outlined text-[18px] text-primary">view_in_ar</span>
+            <span class="text-[11px] tracking-widest uppercase font-bold text-primary">Evimde Gör</span>
+            <span class="text-[9px] bg-tertiary-c text-white px-1.5 py-0.5 rounded-full font-bold tracking-wider">YAKINDA</span>
+          </button>
+          <!-- Dim chip -->
+          <div class="absolute top-6 left-6 bg-surface/90 backdrop-blur-md text-primary text-[11px] tracking-wide rounded-full px-3 py-1.5 border border-outline-v/40 inline-flex items-center gap-1.5 font-bold uppercase">
+            <span class="material-symbols-outlined text-[14px]">straighten</span>
+            240 × 105 × 75 cm
+          </div>
+          <!-- Center CTA -->
+          <button onclick="load3D()" class="absolute inset-x-0 bottom-10 mx-auto w-fit flex flex-col items-center gap-3 group">
+            <div class="relative pulse-ring">
+              <div class="relative bg-primary text-on-primary rounded-full w-24 h-24 grid place-items-center shadow-2xl group-active:scale-95 transition">
+                <span class="material-symbols-outlined" style="font-size:46px">360</span>
+              </div>
+            </div>
+            <span class="font-display italic text-[26px] text-primary leading-none">3D'de inceleyin</span>
+            <span class="text-[11px] tracking-[0.22em] uppercase font-bold text-on-surface-v">Sürükle · Yakınlaştır · Döndür</span>
+          </button>
+          <!-- Lifestyle attr -->
+          <div class="absolute bottom-6 left-6 text-on-surface-v/70 text-[10px] tracking-[0.2em] uppercase">
+            Showroom · Nişantaşı 2024
+          </div>
+        </div>
+
+        <!-- Skeleton -->
+        <div id="viewer-skeleton" class="hidden absolute inset-0 z-10 grid place-items-center">
+          <div class="w-3/4 h-3/4 shimmer rounded-2xl"></div>
+          <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-[11px] tracking-[0.22em] uppercase text-on-surface-v font-bold">Model yükleniyor…</div>
+        </div>
+
+        <!-- Live mount -->
+        <div id="viewer-mount" class="absolute inset-0 z-0"></div>
+
+        <!-- Controls -->
+        <div id="viewer-controls" class="hidden absolute bottom-6 right-6 z-30 flex flex-col gap-2">
+          <button onclick="window.mv && mv.resetTurntableRotation()" class="w-11 h-11 grid place-items-center rounded-full bg-surface/95 backdrop-blur-md border border-outline-v/40 shadow-md hover:scale-105 transition" aria-label="Sıfırla"><span class="material-symbols-outlined text-[20px]">refresh</span></button>
+          <button onclick="goFullscreen()" class="w-11 h-11 grid place-items-center rounded-full bg-surface/95 backdrop-blur-md border border-outline-v/40 shadow-md hover:scale-105 transition" aria-label="Tam ekran"><span class="material-symbols-outlined text-[20px]">fullscreen</span></button>
+        </div>
+        <div id="viewer-live" class="hidden absolute bottom-6 left-6 z-30 bg-primary text-on-primary px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.18em] font-bold inline-flex items-center gap-2">
+          <span class="block w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+          Canlı 3D
+        </div>
+      </div>
+
+      <!-- Editorial card under viewer -->
+      <div class="mt-6 grid grid-cols-2 gap-4">
+        <div class="bg-secondary-c/40 rounded-2xl p-5 border border-outline-v/30">
+          <span class="material-symbols-outlined text-tertiary text-[24px]">handyman</span>
+          <h4 class="font-display italic text-[20px] text-tertiary mt-2 leading-tight">Zanaatkar işçiliği</h4>
+          <p class="text-[12.5px] text-tertiary/80 mt-2 leading-snug">Her birleşim, masif meşeden elde işlenir. 5 yıl yapısal garanti.</p>
+        </div>
+        <div class="bg-secondary-c/40 rounded-2xl p-5 border border-outline-v/30">
+          <span class="material-symbols-outlined text-tertiary text-[24px]">eco</span>
+          <h4 class="font-display italic text-[20px] text-tertiary mt-2 leading-tight">Doğal malzeme</h4>
+          <p class="text-[12.5px] text-tertiary/80 mt-2 leading-snug">%100 doğal keten kumaş, FSC sertifikalı fırınlı meşe.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Details -->
+    <div class="col-span-5 reveal d2">
+      <div class="text-[10px] uppercase tracking-[0.28em] font-bold text-on-surface-v mb-4 inline-flex items-center gap-2">
+        <span class="inline-block w-6 h-px bg-primary"></span> Yeni Sezon · Masif Meşe
+      </div>
+      <h1 class="font-display text-[56px] leading-[1.02] tracking-tight">Defne <span class="italic font-normal">Koltuk Takımı</span></h1>
+      <p class="font-display italic text-[20px] text-on-surface-v mt-4">Fiyat için iletişime geçin · 3 hafta teslim</p>
+
+      <p class="dropcap mt-8 text-[16px] leading-[1.75] text-on-surface-v">
+        Anadolu'nun kadim marangozluk geleneğini modern minimalizmle buluşturan Defne serisi, fırınlanmış masif meşe iskelet ve %100 doğal keten dokusuyla yaşam alanınıza sakinlik getirir. Her birleşim yeri, ömürlük dayanım için elde işlenir.
+      </p>
+
+      <!-- Fabric swatches -->
+      <div class="mt-10">
+        <div class="flex items-baseline justify-between mb-4">
+          <h3 class="text-[11px] uppercase tracking-[0.22em] text-primary font-bold">Kumaş seçenekleri</h3>
+          <span id="fabric-name" class="font-display italic text-[17px] text-on-surface-v">Kum Keten</span>
+        </div>
+        <div class="flex gap-4">
+          <button class="swatch flex flex-col items-center gap-1.5" data-fabric="kum" data-color="#E5D3B3" data-active="true" onclick="pickFabric(this)">
+            <span class="block w-14 h-14 rounded-full" style="background:linear-gradient(135deg,#E5D3B3,#d4be96);box-shadow:inset 0 -10px 18px rgba(0,0,0,.08)"></span>
+            <span class="text-[10px] tracking-wider uppercase">Kum</span>
+          </button>
+          <button class="swatch flex flex-col items-center gap-1.5" data-fabric="toprak" data-color="#7D6E5D" onclick="pickFabric(this)">
+            <span class="block w-14 h-14 rounded-full" style="background:linear-gradient(135deg,#8c7d6c,#6d5e4e);box-shadow:inset 0 -10px 18px rgba(0,0,0,.12)"></span>
+            <span class="text-[10px] tracking-wider uppercase opacity-60">Toprak</span>
+          </button>
+          <button class="swatch flex flex-col items-center gap-1.5" data-fabric="komur" data-color="#3D3D3F" onclick="pickFabric(this)">
+            <span class="block w-14 h-14 rounded-full" style="background:linear-gradient(135deg,#4a4a4c,#2d2d2f);box-shadow:inset 0 -10px 18px rgba(0,0,0,.18)"></span>
+            <span class="text-[10px] tracking-wider uppercase opacity-60">Kömür</span>
+          </button>
+          <button class="swatch flex flex-col items-center gap-1.5" data-fabric="yesim" data-color="#5B6B5C" onclick="pickFabric(this)">
+            <span class="block w-14 h-14 rounded-full" style="background:linear-gradient(135deg,#6b7b6c,#4b5b4c);box-shadow:inset 0 -10px 18px rgba(0,0,0,.1)"></span>
+            <span class="text-[10px] tracking-wider uppercase opacity-60">Yeşim</span>
+          </button>
+          <a href="#" class="ml-auto self-center text-[12px] underline underline-offset-4 text-on-surface-v hover:text-primary transition">Numune iste →</a>
+        </div>
+      </div>
+
+      <!-- Specs collapsible -->
+      <div class="mt-10">
+        <details open class="border-t border-outline-v/40 py-5 group">
+          <summary class="list-none flex items-center justify-between cursor-pointer">
+            <span class="text-[11px] uppercase tracking-[0.22em] text-primary font-bold">Teknik özellikler</span>
+            <span class="chev material-symbols-outlined text-on-surface-v">expand_more</span>
+          </summary>
+          <dl class="mt-5 grid grid-cols-2 gap-y-3 text-[14px]">
+            <dt class="text-on-surface-v">İskelet</dt><dd class="text-right font-medium">Fırınlanmış masif meşe</dd>
+            <dt class="text-on-surface-v">Dolgu</dt><dd class="text-right font-medium">35 DNS HR sünger</dd>
+            <dt class="text-on-surface-v">Kumaş</dt><dd class="text-right font-medium">%100 doğal keten</dd>
+            <dt class="text-on-surface-v">Mekanizma</dt><dd class="text-right font-medium">Yataklı · Sandıklı</dd>
+            <dt class="text-on-surface-v">Ölçüler</dt><dd class="text-right font-medium">240 × 105 × 75 cm</dd>
+            <dt class="text-on-surface-v">Üretim yeri</dt><dd class="text-right font-medium">İnegöl, Bursa</dd>
+          </dl>
+        </details>
+        <details class="border-t border-outline-v/40 py-5 group">
+          <summary class="list-none flex items-center justify-between cursor-pointer">
+            <span class="text-[11px] uppercase tracking-[0.22em] text-primary font-bold">Bakım & garanti</span>
+            <span class="chev material-symbols-outlined text-on-surface-v">expand_more</span>
+          </summary>
+          <p class="mt-5 text-[14px] text-on-surface-v leading-relaxed">Kuru toz alma haftalık. Leke için ılık su + nötr sabun. 5 yıl yapısal garanti, 2 yıl kumaş garantisi.</p>
+        </details>
+        <details class="border-t border-b border-outline-v/40 py-5 group">
+          <summary class="list-none flex items-center justify-between cursor-pointer">
+            <span class="text-[11px] uppercase tracking-[0.22em] text-primary font-bold">Teslimat & kurulum</span>
+            <span class="chev material-symbols-outlined text-on-surface-v">expand_more</span>
+          </summary>
+          <p class="mt-5 text-[14px] text-on-surface-v leading-relaxed">İstanbul içi 3 hafta. Türkiye geneli 4-5 hafta. Ücretsiz montaj. Asansörsüz binalarda ek çıkarma ücreti.</p>
+        </details>
+      </div>
+
+      <!-- Actions -->
+      <div class="mt-8 flex gap-3">
+        <a id="wa-cta" href="https://wa.me/902125551234?text=Defne%20Koltuk%20Takımı%20hakkında%20bilgi%20almak%20istiyorum%20(Kum%20Keten)" class="flex-1 bg-whatsapp text-white py-4 px-6 rounded-full text-[12px] uppercase tracking-widest font-bold inline-flex items-center justify-center gap-2 hover:opacity-90 transition shadow-[0_10px_28px_-10px_rgba(37,211,102,0.6)]">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/></svg>
+          WhatsApp ile bilgi al
+        </a>
+        <a href="tel:+902125551234" class="w-14 h-14 rounded-full grid place-items-center bg-surface-c text-primary hover:bg-surface-c-high transition" aria-label="Ara"><span class="material-symbols-outlined">call</span></a>
+        <button onclick="shareProduct()" class="w-14 h-14 rounded-full grid place-items-center bg-surface-c text-primary hover:bg-surface-c-high transition" aria-label="Paylaş"><span class="material-symbols-outlined">share</span></button>
+      </div>
+
+      <!-- Trust row -->
+      <div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 pt-6 border-t border-outline-v/40">
+        <div class="inline-flex items-center gap-2 text-[12.5px] text-on-surface-v"><span class="material-symbols-outlined text-primary text-[18px]">eco</span> Sürdürülebilir</div>
+        <div class="inline-flex items-center gap-2 text-[12.5px] text-on-surface-v"><span class="material-symbols-outlined text-primary text-[18px]">handyman</span> El işçiliği</div>
+        <div class="inline-flex items-center gap-2 text-[12.5px] text-on-surface-v"><span class="material-symbols-outlined text-primary text-[18px]">verified</span> 5 yıl garanti</div>
+        <div class="inline-flex items-center gap-2 text-[12.5px] text-on-surface-v"><span class="material-symbols-outlined text-primary text-[18px]">local_shipping</span> Ücretsiz kurulum</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Atölye quote -->
+  <section class="mt-32 reveal d3">
+    <div class="relative overflow-hidden rounded-3xl bg-primary text-on-primary p-16">
+      <div class="absolute -top-24 -right-16 w-80 h-80 rounded-full bg-primary-c/40 blur-3xl"></div>
+      <div class="relative grid grid-cols-12 gap-10 items-center">
+        <div class="col-span-8">
+          <span class="text-[10px] uppercase tracking-[0.3em] opacity-70 font-bold">Atölyeden</span>
+          <h3 class="font-display italic text-[44px] leading-tight mt-3">"Bir koltuğun ömrü, birleşim yerlerinde saklıdır. Defne'de hiçbir vida yoktur — sadece geçmeli geleneksel marangozluk."</h3>
+        </div>
+        <div class="col-span-4 text-on-primary">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-secondary-c grid place-items-center">
+              <span class="font-display italic text-tertiary text-[22px]">MA</span>
+            </div>
+            <div>
+              <div class="font-display text-[20px]">Mehmet Aydın</div>
+              <div class="text-[11.5px] opacity-70 tracking-wider uppercase">Usta marangoz · 32 yıl</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Similar -->
+  <section class="mt-24">
+    <div class="flex items-end justify-between mb-10">
+      <div>
+        <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-on-surface-v">Koleksiyondan</span>
+        <h2 class="font-display text-[44px] leading-tight mt-3 tracking-tight">Benzer eserler</h2>
+      </div>
+      <a href="#" class="text-[12px] uppercase tracking-[0.22em] font-bold border-b border-primary pb-1">Tümünü gör →</a>
+    </div>
+    <div class="grid grid-cols-3 gap-6">
+      <a href="#" class="product-card group">
+        <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-surface-c relative mb-4">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmadjtcBrwr7jNhvJnvpjk9saNtnIUflkEER6lpHGmpS_oZyIe08pc1k-TD7oh5mS05NfsEGNAiz-7ldjpFYgrlbZG1Wqg0HgOGplGQIIElaWG7ZJpSre3TKnybky-MLS1ClS9Z0xqxxgCVYbgK3qzUVlKL4F_RYW61UasUW9IgVPPthPuLIZCP8vkv9ZiKSzlqIEPo1gUJb05SqyeyQlacs3_1ImPZhCWdh3_eCtlatltJi5me2xkH6VJPDDp7-HvRnO0fy0Yjvc7" class="card-img w-full h-full object-cover" alt=""/>
+          <span class="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-surface/95 px-2.5 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold"><span class="material-symbols-outlined text-[13px]">view_in_ar</span> 3D</span>
+        </div>
+        <h3 class="font-display text-[22px] leading-tight">Ardıç Yemek Masası</h3>
+        <p class="text-[12px] text-on-surface-v mt-1">220 × 100 × 76 cm</p>
+      </a>
+      <a href="#" class="product-card group">
+        <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-surface-c relative mb-4">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU_-G6cbdsST9iQ4HXoaGHhkTp_nIo0eSRDkUZ7x3zU2qRrLPvcmGLFD-yYTRp--JljVKBsfNZTivqBOONtkJv_BP082q6Ev2LcmnVbhhru28Decez-0RjVol_xNBYyxmKpIpaOmQstWGGZS1gPaAuYre73Az6FDzlw32cnmgQSY_RkCQWWk2O9y9KsQVhKXYUCoX0MlF-6PwKdhRTDYiG1vJ6GB0Lv-m56DLWjjaEHqvn176MbdTVaIuLmBBAlw7iRQEDNh3yT9x0" class="card-img w-full h-full object-cover" alt=""/>
+          <span class="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-surface/95 px-2.5 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold"><span class="material-symbols-outlined text-[13px]">view_in_ar</span> 3D</span>
+        </div>
+        <h3 class="font-display text-[22px] leading-tight">Lale Tekli Koltuk</h3>
+        <p class="text-[12px] text-on-surface-v mt-1">95 × 90 × 85 cm</p>
+      </a>
+      <a href="#" class="product-card group">
+        <div class="aspect-[4/5] rounded-2xl overflow-hidden bg-surface-c relative mb-4">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKfwXp73E4lIQylyhXLCjfOWkPheR1u1kVRKE-SG35EmshYLkEACVdMJQspXD2kmneELNupgCOvt2nsgaGSbM4H832f-gwfaM9UvU45q1RRdFSr1BzyBZGpSV1eVUdVlZ71HfFVfhq70doZBgBHPU_1Ym9j-yb6DQlBPpRdL28yyrctoIegv2OU_zyNKdpyeWY_lVkvAZWvLXhoB52qFMlsZYFmuo19DDyu8bhWFjTDHePg5NuMHuNHexYSujQ_zsI3bKgBKDKWKAb" class="card-img w-full h-full object-cover" alt=""/>
+        </div>
+        <h3 class="font-display text-[22px] leading-tight">Ada Yatak Odası</h3>
+        <p class="text-[12px] text-on-surface-v mt-1">180 × 200 cm</p>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-primary text-on-primary">
+  <div class="max-w-[1320px] mx-auto px-12 py-16 grid grid-cols-12 gap-10">
+    <div class="col-span-5">
+      <span class="font-display italic text-[36px] tracking-tight">Atelier Anatolia</span>
+      <p class="font-display italic text-[18px] opacity-70 mt-3 max-w-sm leading-snug">Sakinlik ve Güven — Anadolu zanaatından modern evlere.</p>
+    </div>
+    <div class="col-span-3">
+      <div class="text-[10.5px] tracking-[0.25em] uppercase font-bold opacity-70 mb-5">Kurumsal</div>
+      <ul class="space-y-3 text-[14px]"><li><a href="#">Hakkımızda</a></li><li><a href="#">Showroom</a></li><li><a href="#">İletişim</a></li></ul>
+    </div>
+    <div class="col-span-4">
+      <div class="text-[10.5px] tracking-[0.25em] uppercase font-bold opacity-70 mb-5">İletişim</div>
+      <div class="font-display text-[18px]">Harbiye Mah. Teşvikiye Cd. No:42</div>
+      <div class="font-display text-[18px] mt-2">+90 (212) 555 12 34</div>
+    </div>
+  </div>
+  <div class="border-t border-on-primary/15"><div class="max-w-[1320px] mx-auto px-12 py-6 text-[11px] opacity-60">© 2024 Atelier Anatolia · Sakinlik ve Güven</div></div>
+</footer>
+
+<div id="toast" class="fixed left-1/2 -translate-x-1/2 bottom-10 z-[60] hidden bg-primary text-on-primary px-5 py-3 rounded-full text-[13px] shadow-2xl"></div>
+
+<script>
+const fabricNames={kum:'Kum Keten',toprak:'Toprak',komur:'Kömür',yesim:'Yeşim'};
+const toastEl=document.getElementById('toast');let toastTimer;
+function toast(m){toastEl.textContent=m;toastEl.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toastEl.classList.add('hidden'),2400)}
+function pickFabric(btn){
+  document.querySelectorAll('.swatch').forEach(s=>{s.dataset.active='false';s.querySelector('span:last-child').classList.add('opacity-60')});
+  btn.dataset.active='true';btn.querySelector('span:last-child').classList.remove('opacity-60');
+  const f=btn.dataset.fabric;document.getElementById('fabric-name').textContent=fabricNames[f];
+  const url=new URL(location.href);url.searchParams.set('renk',f);history.replaceState({},'',url);
+  document.getElementById('wa-cta').href=`https://wa.me/902125551234?text=${encodeURIComponent('Defne Koltuk Takımı hakkında bilgi almak istiyorum ('+fabricNames[f]+')')}`;
+  if(window.mv&&mv.model){try{const mat=mv.model.materials[0];if(mat){const hex=btn.dataset.color.replace('#','');mat.pbrMetallicRoughness.setBaseColorFactor([parseInt(hex.substr(0,2),16)/255,parseInt(hex.substr(2,2),16)/255,parseInt(hex.substr(4,2),16)/255,1])}}catch(e){}}
+}
+const initFab=new URLSearchParams(location.search).get('renk');if(initFab){const btn=document.querySelector(`.swatch[data-fabric="${initFab}"]`);if(btn)pickFabric(btn)}
+window.mv=null;
+function load3D(){
+  document.getElementById('viewer-poster').classList.add('hidden');
+  document.getElementById('viewer-skeleton').classList.remove('hidden');
+  const el=document.createElement('model-viewer');el.id='mv';
+  el.src='https://modelviewer.dev/shared-assets/models/glTF-Sample-Models/2.0/SheenChair/glTF-Binary/SheenChair.glb';
+  el.setAttribute('camera-controls','');el.setAttribute('auto-rotate','');el.setAttribute('auto-rotate-delay','4000');
+  el.setAttribute('shadow-intensity','1');el.setAttribute('exposure','1');el.setAttribute('camera-orbit','35deg 78deg 105%');el.setAttribute('environment-image','neutral');
+  el.addEventListener('load',()=>{document.getElementById('viewer-skeleton').classList.add('hidden');document.getElementById('viewer-controls').classList.remove('hidden');document.getElementById('viewer-live').classList.remove('hidden');window.mv=el;const a=document.querySelector('.swatch[data-active="true"]');if(a&&a.dataset.fabric!=='kum')pickFabric(a)});
+  el.addEventListener('error',()=>{document.getElementById('viewer-skeleton').classList.add('hidden');document.getElementById('viewer-poster').classList.remove('hidden');toast('Model yüklenemedi')});
+  document.getElementById('viewer-mount').appendChild(el);
+}
+function goFullscreen(){const n=document.getElementById('viewer-mount');if(!document.fullscreenElement){(n.requestFullscreen?n.requestFullscreen():Promise.reject()).catch(()=>toast('Tam ekran desteklenmiyor'))}else document.exitFullscreen()}
+function toastAr(){toast('AR yakında · WhatsApp ile haberdar olun')}
+async function shareProduct(){const d={title:'Defne Koltuk Takımı',url:location.href};if(navigator.share){try{await navigator.share(d)}catch(e){}}else{try{await navigator.clipboard.writeText(location.href);toast('Bağlantı kopyalandı')}catch(e){toast('Bağlantıyı kopyalayın')}}}
+</script>
+</body>
+</html>

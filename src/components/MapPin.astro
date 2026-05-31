@@ -1,0 +1,52 @@
+---
+/**
+ * Pulse animasyonlu harita pin'i + opsiyonel info-card.
+ * İletişim ve anasayfa showroom bölümünde kullanılır.
+ */
+import type { ShowroomLocation } from '@lib/schema';
+
+interface Props {
+  location: ShowroomLocation;
+  /** Görselin aspect-ratio. */
+  aspect?: 'video' | '4-3' | 'square';
+  showInfoCard?: boolean;
+  class?: string;
+}
+
+const { location, aspect = '4-3', showInfoCard = true, class: extraClass = '' } = Astro.props;
+
+const aspectClass =
+  aspect === 'video' ? 'aspect-video' : aspect === 'square' ? 'aspect-square' : 'aspect-[4/3]';
+---
+
+<div class={`relative rounded-3xl overflow-hidden ambient ${aspectClass} ${extraClass}`}>
+  {location.mapImage ? (
+    <img
+      loading="lazy"
+      src={location.mapImage}
+      class="absolute inset-0 w-full h-full object-cover grayscale opacity-90"
+      alt={`${location.name} haritası`}
+    />
+  ) : (
+    <div class="absolute inset-0 bg-surface-c"></div>
+  )}
+  <div class="absolute inset-0 bg-primary/[0.08]"></div>
+
+  {/* Pin */}
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+    <div class="relative">
+      <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary text-on-primary grid place-items-center shadow-2xl">
+        <span class="material-symbols-outlined icon-fill">storefront</span>
+      </div>
+      <span class="absolute inset-0 rounded-full border-2 border-primary animate-ping"></span>
+    </div>
+  </div>
+
+  {showInfoCard && (
+    <div class="absolute bottom-5 left-5 md:bottom-6 md:left-6 bg-surface/95 backdrop-blur-md rounded-2xl px-4 md:px-5 py-3 md:py-4 max-w-[80%] md:max-w-xs">
+      <div class="text-[10px] tracking-widest uppercase font-bold text-on-surface-v">{location.name}</div>
+      <div class="font-display text-[16px] md:text-[20px] leading-tight mt-1">{location.addressLines[0]}</div>
+      <div class="text-[11px] md:text-[12px] text-on-surface-v mt-1">{location.district} / {location.city}</div>
+    </div>
+  )}
+</div>

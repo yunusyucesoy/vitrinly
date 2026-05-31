@@ -1,0 +1,58 @@
+---
+/**
+ * Usta alıntı bloğu — kategori detay, ürün detay, hakkımızda.
+ * Portrait + italic quote + isim/rol.
+ */
+import type { ArtisanQuote } from '@lib/schema';
+
+interface Props {
+  quote: ArtisanQuote;
+  variant?: 'inline' | 'card';
+  class?: string;
+}
+
+const { quote, variant = 'card', class: extraClass = '' } = Astro.props;
+---
+
+{variant === 'card' ? (
+  <figure class={`bg-surface-c-low rounded-2xl p-6 md:p-8 ${extraClass}`}>
+    <span class="font-display italic text-[44px] md:text-[64px] leading-none text-primary/30 block">"</span>
+    <blockquote class="font-display italic text-[18px] md:text-[22px] leading-snug text-on-surface mt-2">
+      {quote.quote}
+    </blockquote>
+    <figcaption class="mt-5 flex items-center gap-3">
+      {quote.portrait && (
+        <img
+          src={quote.portrait}
+          alt={quote.name}
+          class="w-11 h-11 rounded-full object-cover"
+          loading="lazy"
+        />
+      )}
+      <div>
+        <div class="font-display text-[16px] md:text-[18px] leading-tight">{quote.name}</div>
+        <div class="text-[10.5px] tracking-widest uppercase text-on-surface-v font-bold mt-0.5">{quote.role}</div>
+      </div>
+    </figcaption>
+  </figure>
+) : (
+  <figure class={`flex items-start gap-4 ${extraClass}`}>
+    {quote.portrait && (
+      <img
+        src={quote.portrait}
+        alt={quote.name}
+        class="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover shrink-0"
+        loading="lazy"
+      />
+    )}
+    <div>
+      <blockquote class="font-display italic text-[16px] md:text-[18px] leading-snug text-on-surface">
+        "{quote.quote}"
+      </blockquote>
+      <figcaption class="mt-2">
+        <span class="font-display text-[15px]">{quote.name}</span>
+        <span class="text-[10.5px] tracking-widest uppercase text-on-surface-v font-bold ml-2">{quote.role}</span>
+      </figcaption>
+    </div>
+  </figure>
+)}

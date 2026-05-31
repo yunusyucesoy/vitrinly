@@ -1,0 +1,35 @@
+---
+/**
+ * AR butonu — Faz 7'de aktif edildi.
+ * Click handler: scripts/product-viewer.ts → activateAR()
+ *
+ * Mobil destekliyorsa: iOS Quick Look / Android Scene Viewer açılır.
+ * Desktop'ta: "AR sadece mobil" toast'u gösterilir.
+ */
+interface Props {
+  variant?: 'compact' | 'full';
+  class?: string;
+}
+
+const { variant = 'compact', class: extraClass = '' } = Astro.props;
+---
+
+{variant === 'compact' ? (
+  <button
+    data-ar-placeholder
+    class={`inline-flex items-center gap-1.5 bg-surface-bright/95 backdrop-blur-md px-3 py-2 rounded-full text-[10px] uppercase tracking-widest font-bold text-primary shadow-md active:scale-95 transition hover:bg-surface-bright ${extraClass}`}
+    aria-label="Bu mobilyayı AR ile evimde göster"
+  >
+    <span class="material-symbols-outlined text-[16px]">view_in_ar</span>
+    <span>Evimde gör</span>
+  </button>
+) : (
+  <button
+    data-ar-placeholder
+    class={`w-full inline-flex items-center justify-center gap-3 bg-primary text-on-primary py-4 px-5 rounded-2xl active:scale-95 transition hover:opacity-90 ${extraClass}`}
+    aria-label="Bu mobilyayı AR ile evimde göster"
+  >
+    <span class="material-symbols-outlined text-[20px]">view_in_ar</span>
+    <span class="font-display text-[16px] md:text-[18px]">Evimde gör</span>
+  </button>
+)}

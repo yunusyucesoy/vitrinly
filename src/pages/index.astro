@@ -1,0 +1,207 @@
+---
+/**
+ * Anasayfa
+ * Mock: tasarimlar/anasayfa-desktop/code.html + anasayfa-mobile/code.html
+ * Sıra: Hero → Marquee → Vitrin grid → Koleksiyonlar (3 büyük kart) → AR teaser → Showroom
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Marquee from '@components/Marquee.astro';
+import ProductCard from '@components/ProductCard.astro';
+import CategoryCard from '@components/CategoryCard.astro';
+import MapPin from '@components/MapPin.astro';
+import EyebrowLabel from '@components/EyebrowLabel.astro';
+import DisplayHeading from '@components/DisplayHeading.astro';
+import Button from '@components/Button.astro';
+import WhatsAppFAB from '@components/WhatsAppFAB.astro';
+import { getCustomer, getCategories, getProducts, getFeaturedProducts } from '@lib/data';
+
+const customer = getCustomer();
+const featured = getFeaturedProducts(4);
+const allProducts = getProducts();
+const categories = getCategories().slice(0, 3);
+const showroom = customer.locations.find((l) => l.type === 'showroom')!;
+const heroProduct = featured[0];
+const heroDim = `${heroProduct.dimensions.w} × ${heroProduct.dimensions.d} × ${heroProduct.dimensions.h} cm`;
+---
+
+<BaseLayout
+  title={`${customer.brand.name} · 3D Mobilya Kataloğu`}
+  description={`${customer.brand.tagline} — Anadolu zanaatını modern minimalizmle buluşturan mobilya kataloğu. Her parça 3D olarak incelenebilir.`}
+>
+  <Header active="home" />
+
+  <main id="main-content">
+    {/* HERO — editorial split */}
+    <section class="max-w-[1320px] mx-auto px-5 md:px-12 pt-10 md:pt-16 pb-16 md:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:items-end">
+      <div class="lg:col-span-5 reveal d1">
+        <EyebrowLabel text={`${customer.brand.seasonNumber} · ${customer.brand.seasonLabel}`} />
+        <h1 class="font-display text-[56px] sm:text-[72px] lg:text-[88px] leading-[0.95] tracking-[-0.02em] mt-5 md:mt-6">
+          Sakinlik<br /><span class="italic text-on-surface-v">ve</span><br />Güven.
+        </h1>
+        <p class="font-display italic text-[18px] md:text-[22px] text-on-surface-v mt-6 md:mt-7 leading-snug max-w-md">
+          Anadolu'nun zanaat geleneğini modern minimalizmle buluşturan bir mobilya kataloğu — her parça 3D olarak incelenebilir.
+        </p>
+        <div class="mt-8 md:mt-10 flex flex-wrap items-center gap-4 md:gap-5">
+          <Button href="/kategoriler" variant="primary" icon="arrow_forward" size="lg">Koleksiyonu keşfet</Button>
+          <Button href="/iletisim#showroom" variant="ghost-underline">Showroom</Button>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 reveal d2 relative">
+        <div class="absolute -top-8 -left-8 w-44 h-44 rounded-full bg-secondary-c/60 blur-3xl pointer-events-none"></div>
+        <a
+          href={`/urun/${heroProduct.slug}`}
+          class="relative rounded-3xl overflow-hidden ambient-hero block"
+          style="aspect-ratio: 5/6;"
+        >
+          <img
+            src={heroProduct.posterUrl}
+            class="absolute inset-0 w-full h-full object-cover"
+            alt={`${heroProduct.name} ${heroProduct.italicWord ?? ''}`.trim()}
+            fetchpriority="high"
+          />
+          <div class="absolute inset-0 bg-gradient-to-tr from-black/55 via-black/10 to-black/5"></div>
+          <div class="absolute top-5 md:top-6 left-5 md:left-6 inline-flex items-center gap-1.5 bg-surface/90 backdrop-blur-md px-3 md:px-3.5 py-1.5 md:py-2 rounded-full text-[10px] md:text-[11px] tracking-widest uppercase font-bold">
+            <span class="material-symbols-outlined text-[14px] md:text-[16px]">view_in_ar</span> 3D Vitrin
+          </div>
+          <div class="absolute bottom-6 md:bottom-7 left-5 md:left-7 right-5 md:right-7 text-white">
+            <div class="text-[10px] tracking-[0.25em] uppercase opacity-80 mb-2">Sezon ürünü</div>
+            <h2 class="font-display text-[28px] md:text-[44px] leading-tight">
+              {heroProduct.name}<span class="italic"> {heroProduct.italicWord}</span>
+            </h2>
+            <p class="text-[12px] md:text-[14px] opacity-85 mt-2">{heroDim} · Masif meşe, doğal keten</p>
+            <span class="mt-4 md:mt-5 inline-flex items-center gap-2 bg-surface text-primary py-2.5 md:py-3 px-4 md:px-5 rounded-full text-[11px] md:text-[12px] uppercase tracking-widest font-bold">
+              3D'de incele <span class="material-symbols-outlined text-[14px] md:text-[16px]">arrow_forward</span>
+            </span>
+          </div>
+        </a>
+
+        {/* Floating stat */}
+        <div class="hidden md:flex absolute -bottom-8 -right-4 bg-surface rounded-2xl p-5 ambient items-center gap-4 z-10">
+          <div class="w-12 h-12 rounded-full bg-secondary-c grid place-items-center">
+            <span class="material-symbols-outlined text-tertiary icon-fill">handyman</span>
+          </div>
+          <div>
+            <div class="font-display text-[24px] leading-none">{customer.stats[0].value}</div>
+            <div class="text-[10.5px] tracking-widest uppercase text-on-surface-v mt-1">{customer.stats[0].label}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Marquee */}
+    <Marquee lines={customer.marqueeLines} />
+
+    {/* Vitrin grid */}
+    <section id="kolleksiyon" class="max-w-[1320px] mx-auto px-5 md:px-12 py-16 md:py-24">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-10 md:mb-12">
+        <div>
+          <EyebrowLabel text="Seçkilerimiz" />
+          <DisplayHeading as="h2" name="Vitrin" italicWord="eserleri" size="lg" class="mt-3" />
+        </div>
+        <Button href="/kategoriler" variant="ghost-underline">Tümünü gör →</Button>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        {featured.map((p) => <ProductCard product={p} showHoverCta />)}
+      </div>
+    </section>
+
+    {/* Koleksiyonlar — 3 büyük kart */}
+    <section class="bg-surface-c-low py-16 md:py-24">
+      <div class="max-w-[1320px] mx-auto px-5 md:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-end mb-10 md:mb-12">
+          <div class="md:col-span-5">
+            <EyebrowLabel text="Odadan odaya" />
+            <DisplayHeading as="h2" name="Koleksiyonlar" size="lg" class="mt-3" />
+          </div>
+          <p class="md:col-span-5 md:col-start-7 font-display italic text-[16px] md:text-[18px] text-on-surface-v leading-relaxed">
+            Her oda için titizlikle seçilmiş eserler. Tasarımdan, doğal malzeme seçimine, masif iskelete kadar her detay düşünüldü.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+          {categories.map((c) => (
+            <CategoryCard
+              category={c}
+              productCount={allProducts.filter((p) => p.category === c.slug).length}
+              size="md"
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* AR teaser */}
+    <section class="max-w-[1320px] mx-auto px-5 md:px-12 py-16 md:py-24">
+      <div class="relative overflow-hidden rounded-3xl bg-primary text-on-primary p-8 md:p-16 ambient-hero">
+        <div class="absolute -top-24 -right-16 w-96 h-96 rounded-full bg-primary-c/40 blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -left-16 w-80 h-80 rounded-full bg-tertiary-c/30 blur-3xl pointer-events-none"></div>
+        <div class="relative grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-center">
+          <div class="md:col-span-7">
+            <EyebrowLabel text="Faz 2 — Yakında" tone="light" />
+            <h3 class="font-display text-[36px] md:text-[56px] lg:text-[64px] italic leading-[1.02] mt-4 tracking-tight">
+              Telefonu kaldırın,<br />mobilyayı evinizde görün.
+            </h3>
+            <p class="text-[14px] md:text-[16px] opacity-80 mt-4 md:mt-5 leading-relaxed max-w-xl">
+              Artırılmış gerçeklik desteğiyle her ürünü gerçek boyutunda salonunuza yerleştirin. iOS Quick Look, Android Scene Viewer ve WebXR uyumlu.
+            </p>
+            <div class="mt-6 md:mt-8">
+              <Button variant="dark-ghost" icon="view_in_ar" iconPosition="left" size="lg">Bana haber ver</Button>
+            </div>
+          </div>
+          <div class="md:col-span-5 grid grid-cols-2 gap-3 md:gap-4 text-on-primary">
+            {[
+              { icon: 'phone_iphone', title: 'iOS Quick Look', sub: 'USDZ otomatik' },
+              { icon: 'android', title: 'Scene Viewer', sub: 'GLB native' },
+              { icon: 'straighten', title: 'Gerçek ölçek', sub: '1 birim = 1 metre' },
+              { icon: 'share', title: 'QR ile paylaş', sub: 'Mağaza etiketi' },
+            ].map((f) => (
+              <div class="border border-on-primary/20 rounded-2xl p-4 md:p-5">
+                <span class="material-symbols-outlined text-secondary-c text-[24px] md:text-[28px]">{f.icon}</span>
+                <div class="font-display text-[16px] md:text-[20px] mt-2">{f.title}</div>
+                <div class="text-[10.5px] md:text-[11px] opacity-60 mt-1">{f.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Showroom */}
+    <section class="max-w-[1320px] mx-auto px-5 md:px-12 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
+      <div class="lg:col-span-7">
+        <MapPin location={showroom} aspect="4-3" />
+      </div>
+      <div class="lg:col-span-5">
+        <EyebrowLabel text="Bizi ziyaret edin" />
+        <DisplayHeading as="h3" name="Showroom" italicWord="deneyimi" size="md" class="mt-3" />
+        <p class="font-display italic text-[16px] md:text-[18px] text-on-surface-v mt-4 md:mt-5 leading-relaxed">
+          Tasarımlarımızı yakından görmek, dokuyu hissetmek ve usta ekibimizden danışmanlık almak için {showroom.district}'taki atölyemize bekliyoruz.
+        </p>
+        <div class="mt-6 md:mt-7 space-y-4">
+          <div class="flex items-center gap-4 border-b border-outline-v/40 pb-4">
+            <span class="material-symbols-outlined text-primary">call</span>
+            <div>
+              <div class="text-[10.5px] tracking-widest uppercase text-on-surface-v font-bold">Telefon</div>
+              <div class="font-display text-[16px] md:text-[18px]">{customer.contact.whatsappFormatted}</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 border-b border-outline-v/40 pb-4">
+            <span class="material-symbols-outlined text-primary">schedule</span>
+            <div>
+              <div class="text-[10.5px] tracking-widest uppercase text-on-surface-v font-bold">Çalışma saatleri</div>
+              <div class="font-display text-[16px] md:text-[18px]">{showroom.hours[0].days} {showroom.hours[0].range}</div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 md:mt-7">
+          <Button href="/iletisim" variant="primary" icon="arrow_forward" size="lg">Randevu alın</Button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFAB />
+</BaseLayout>

@@ -1,0 +1,106 @@
+---
+/**
+ * Sticky, backdrop-blur header.
+ * Desktop: tam nav. Mobile: marka + 3 ikon (search, menu, WhatsApp).
+ * Active link: nav-link.active sınıfı (.active::after underline).
+ */
+import { getCustomer, buildWhatsAppLink } from '@lib/data';
+
+interface Props {
+  /** Hangi link aktif olsun */
+  active?: 'home' | 'kategoriler' | 'showroom' | 'hakkimizda' | 'iletisim' | null;
+}
+
+const { active = null } = Astro.props;
+const customer = getCustomer();
+const waLink = buildWhatsAppLink(customer.contact.whatsapp);
+
+const links = [
+  { key: 'home', href: '/', label: 'Ana sayfa' },
+  { key: 'kategoriler', href: '/kategoriler', label: 'Koleksiyonlar' },
+  { key: 'showroom', href: '/iletisim#showroom', label: 'Showroom' },
+  { key: 'hakkimizda', href: '/hakkimizda', label: 'Hakkımızda' },
+  { key: 'iletisim', href: '/iletisim', label: 'İletişim' },
+];
+---
+
+<header class="sticky top-0 z-40 bg-surface/85 backdrop-blur-xl border-b border-outline-v/30">
+  <div class="max-w-[1320px] mx-auto px-5 md:px-12 h-14 md:h-16 flex items-center justify-between gap-4">
+    {/* Logo */}
+    <a href="/" class="flex items-center gap-3 shrink-0" aria-label="Ana sayfa">
+      <span class="block w-2 h-2 rounded-full bg-primary"></span>
+      <span class="font-display italic text-[18px] md:text-[22px] tracking-tight">{customer.brand.name}</span>
+    </a>
+
+    {/* Desktop nav */}
+    <nav class="hidden lg:flex items-center gap-10 text-[12px] uppercase tracking-[0.18em] font-bold">
+      {links.map((l) => (
+        <a
+          href={l.href}
+          class={`nav-link ${active === l.key ? 'active text-primary' : 'text-on-surface-v hover:text-primary'}`}
+        >
+          {l.label}
+        </a>
+      ))}
+    </nav>
+
+    {/* Actions */}
+    <div class="flex items-center gap-2 md:gap-3">
+      <button
+        class="w-11 h-11 grid place-items-center hover:bg-surface-c rounded-full transition"
+        aria-label="Ara"
+      >
+        <span class="material-symbols-outlined">search</span>
+      </button>
+
+      {/* Mobile menu button (lg altı) */}
+      <button
+        class="lg:hidden w-10 h-10 grid place-items-center hover:bg-surface-c rounded-full transition"
+        aria-label="Menü"
+        data-mobile-menu-toggle
+      >
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+
+      {/* WhatsApp CTA */}
+      <a
+        href={waLink}
+        class="hidden md:inline-flex items-center gap-2 bg-primary text-on-primary py-2.5 px-4 rounded-full text-[11px] uppercase tracking-widest font-bold hover:opacity-90 transition"
+      >
+        <span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp
+      </a>
+    </div>
+  </div>
+
+  {/* Mobile menu (collapsed) */}
+  <div
+    class="hidden lg:hidden border-t border-outline-v/30 bg-surface"
+    data-mobile-menu
+  >
+    <nav class="px-5 py-4 flex flex-col gap-1">
+      {links.map((l) => (
+        <a
+          href={l.href}
+          class={`py-3 text-[14px] uppercase tracking-[0.18em] font-bold ${active === l.key ? 'text-primary' : 'text-on-surface-v'}`}
+        >
+          {l.label}
+        </a>
+      ))}
+      <a
+        href={waLink}
+        class="mt-2 inline-flex items-center justify-center gap-2 bg-primary text-on-primary py-3 rounded-full text-[12px] uppercase tracking-widest font-bold"
+      >
+        <span class="material-symbols-outlined text-[16px]">chat</span> WhatsApp
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('[data-mobile-menu-toggle]');
+  const menu = document.querySelector<HTMLElement>('[data-mobile-menu]');
+  toggle?.addEventListener('click', () => {
+    if (!menu) return;
+    menu.classList.toggle('hidden');
+  });
+</script>

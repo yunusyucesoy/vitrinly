@@ -1,0 +1,178 @@
+---
+/**
+ * Hakkımızda sayfası.
+ * Mock: tasarimlar/hakkimizda/code.html
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import Timeline from '@components/Timeline.astro';
+import ArtisanQuote from '@components/ArtisanQuote.astro';
+import HorizontalScroller from '@components/HorizontalScroller.astro';
+import EyebrowLabel from '@components/EyebrowLabel.astro';
+import DisplayHeading from '@components/DisplayHeading.astro';
+import WhatsAppFAB from '@components/WhatsAppFAB.astro';
+import { getCustomer } from '@lib/data';
+
+const customer = getCustomer();
+const yearsActive = new Date().getFullYear() - customer.brand.foundedYear;
+---
+
+<BaseLayout
+  title={`Hakkımızda · ${customer.brand.name}`}
+  description={`${yearsActive} yıl Anadolu zanaatı. ${customer.story.paragraphs[0].slice(0, 140)}…`}
+>
+  <Header active="hakkimizda" />
+
+  <main id="main-content" class="pb-16 md:pb-24">
+    {/* Hero */}
+    <section class="max-w-[1320px] mx-auto px-5 md:px-12 pt-10 md:pt-16 pb-10 md:pb-16 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-end">
+      <div class="md:col-span-7 reveal d1">
+        <EyebrowLabel text={customer.story.eyebrow} />
+        <DisplayHeading
+          as="h1"
+          name={customer.story.heading}
+          italicWord={customer.story.italicWord}
+          size="hero"
+          class="mt-4"
+        />
+      </div>
+      <div class="md:col-span-5 reveal d2">
+        <p class="font-display italic text-[18px] md:text-[22px] text-on-surface-v leading-relaxed">
+          {customer.brand.tagline}. {yearsActive} yıl tek atölyede, tek prensiple çalışıyoruz.
+        </p>
+      </div>
+    </section>
+
+    {/* Hero image */}
+    <section class="max-w-[1320px] mx-auto px-5 md:px-12 reveal d3">
+      <div class="relative rounded-3xl overflow-hidden ambient-hero" style="aspect-ratio: 16/9;">
+        <img
+          src={customer.story.heroImage}
+          alt={`${customer.brand.name} atölyesi`}
+          class="absolute inset-0 w-full h-full object-cover"
+          fetchpriority="high"
+        />
+      </div>
+    </section>
+
+    {/* Story with dropcap */}
+    <section class="max-w-3xl mx-auto px-5 md:px-12 mt-12 md:mt-20">
+      <EyebrowLabel text="Hikayemiz" hairline />
+      <div class="mt-6 text-[16px] md:text-[18px] leading-[1.7] space-y-5">
+        {customer.story.paragraphs.map((p, i) => (
+          i === 0 ? (
+            <p>
+              <span class="float-left font-display italic text-[3.6rem] md:text-[5.5rem] leading-[0.85] pr-2 md:pr-[0.55rem] pt-1 text-primary">
+                {customer.story.dropcap}
+              </span>
+              {p}
+            </p>
+          ) : (
+            <p>{p}</p>
+          )
+        ))}
+      </div>
+    </section>
+
+    {/* Stats grid */}
+    <section class="max-w-[1320px] mx-auto px-5 md:px-12 mt-16 md:mt-24">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
+        {customer.stats.map((s) => (
+          <div class="bg-surface-c-low rounded-2xl p-5 md:p-7">
+            <span class="material-symbols-outlined text-tertiary text-[28px] md:text-[32px] icon-fill">{s.icon}</span>
+            <div class="font-display text-[28px] md:text-[40px] leading-none mt-3 md:mt-4">{s.value}</div>
+            <div class="text-[10.5px] tracking-widest uppercase text-on-surface-v font-bold mt-1 md:mt-2">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    {/* Why us */}
+    <section class="max-w-[1320px] mx-auto px-5 md:px-12 mt-16 md:mt-24">
+      <div class="mb-10 md:mb-12 max-w-2xl">
+        <EyebrowLabel text="Neden biz" hairline />
+        <DisplayHeading as="h2" name="Üç temel" italicWord="prensip" size="lg" class="mt-3" />
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        {customer.principles.map((p) => (
+          <article class="bg-surface rounded-2xl p-6 md:p-8 ambient hover:bg-surface-c-low transition">
+            <span class="material-symbols-outlined text-tertiary text-[28px] md:text-[32px] icon-fill">{p.icon}</span>
+            <h3 class="font-display text-[22px] md:text-[26px] leading-tight mt-4">{p.title}</h3>
+            <p class="text-[14px] md:text-[15px] text-on-surface-v mt-3 leading-relaxed">{p.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    {/* Timeline */}
+    <section class="max-w-[1320px] mx-auto px-5 md:px-12 mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10">
+      <div class="md:col-span-4">
+        <EyebrowLabel text="Yolculuk" hairline />
+        <DisplayHeading as="h2" name="Önemli" italicWord="anlar" size="lg" class="mt-3" />
+      </div>
+      <div class="md:col-span-7 md:col-start-6">
+        <Timeline events={customer.timeline} />
+      </div>
+    </section>
+
+    {/* Atölye photo strip */}
+    <section class="mt-16 md:mt-24">
+      <div class="max-w-[1320px] mx-auto px-5 md:px-12 mb-6 md:mb-8">
+        <EyebrowLabel text="Atölyemiz" hairline />
+        <DisplayHeading as="h2" name="Üretimin" italicWord="içinden" size="md" class="mt-3" />
+      </div>
+      <HorizontalScroller>
+        {customer.atelierPhotos.map((src) => (
+          <div class="min-w-[260px] md:min-w-[360px] aspect-[4/5] rounded-2xl overflow-hidden ambient snap-start">
+            <img src={src} class="w-full h-full object-cover" loading="lazy" alt="Atölyeden bir kare" />
+          </div>
+        ))}
+      </HorizontalScroller>
+    </section>
+
+    {/* Founder quote */}
+    {customer.atelierQuote && (
+      <section class="max-w-3xl mx-auto px-5 md:px-12 mt-16 md:mt-24">
+        <ArtisanQuote quote={customer.atelierQuote} variant="card" />
+      </section>
+    )}
+
+    {/* CTA pair */}
+    <section class="max-w-[1320px] mx-auto px-5 md:px-12 mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+      <a
+        href="/iletisim#showroom"
+        class="group bg-primary text-on-primary rounded-3xl p-8 md:p-10 ambient flex flex-col justify-between gap-6 min-h-[200px]"
+      >
+        <div>
+          <EyebrowLabel text="Showroom" tone="light" />
+          <h3 class="font-display text-[28px] md:text-[36px] leading-tight mt-3 tracking-tight">
+            Bizi <span class="italic">ziyaret edin</span>
+          </h3>
+          <p class="text-[14px] opacity-80 mt-3 leading-relaxed">Tasarımları yakından görmek için Nişantaşı'ndaki atölyemizdeyiz.</p>
+        </div>
+        <span class="inline-flex items-center gap-2 text-[11px] uppercase tracking-widest font-bold border-b border-on-primary w-fit pb-1">
+          Randevu al <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+        </span>
+      </a>
+      <a
+        href="/kategoriler"
+        class="group bg-secondary-c text-on-secondary-c rounded-3xl p-8 md:p-10 ambient flex flex-col justify-between gap-6 min-h-[200px]"
+      >
+        <div>
+          <EyebrowLabel text="Katalog" tone="light" />
+          <h3 class="font-display text-[28px] md:text-[36px] leading-tight mt-3 tracking-tight">
+            Koleksiyonu <span class="italic">keşfedin</span>
+          </h3>
+          <p class="text-[14px] opacity-80 mt-3 leading-relaxed">24 ürün, 6 koleksiyon. Her parça 3D'de incelenebilir.</p>
+        </div>
+        <span class="inline-flex items-center gap-2 text-[11px] uppercase tracking-widest font-bold border-b border-on-secondary-c w-fit pb-1">
+          Katalog → <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+        </span>
+      </a>
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFAB />
+</BaseLayout>

@@ -1,0 +1,25 @@
+---
+/**
+ * brand-guide "Marquee Divider"
+ * Italic EB Garamond slogan, ✦ separator, 35s/45s loop.
+ * lines × 2 render edilir (sonsuz akış için)
+ */
+interface Props {
+  lines: string[];
+  separator?: string;
+}
+
+const { lines, separator = '✦' } = Astro.props;
+const doubled = [...lines, ...lines];
+---
+
+<section class="overflow-hidden border-y border-outline-v/40 py-5 md:py-7 bg-surface-c-low">
+  <div class="marquee-track inline-flex gap-10 md:gap-16 whitespace-nowrap font-display italic text-[26px] md:text-[34px] text-on-surface-v">
+    {doubled.map((line, i) => (
+      <>
+        <span>{line}</span>
+        {i < doubled.length - 1 && <span class="text-on-surface-v/40">{separator}</span>}
+      </>
+    ))}
+  </div>
+</section>

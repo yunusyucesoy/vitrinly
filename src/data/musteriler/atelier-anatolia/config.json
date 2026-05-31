@@ -1,0 +1,113 @@
+{
+  "slug": "atelier-anatolia",
+  "brand": {
+    "name": "Atelier Anatolia",
+    "tagline": "Sakinlik ve Güven",
+    "foundedYear": 1992,
+    "seasonLabel": "Sezon 2026",
+    "seasonNumber": "No. 24"
+  },
+  "contact": {
+    "phone": "+902125551234",
+    "whatsapp": "902125551234",
+    "whatsappFormatted": "+90 (212) 555 12 34",
+    "email": "merhaba@atelieranatolia.com"
+  },
+  "marqueeLines": [
+    "Sakinlik ve Güven",
+    "Anadolu zanaatından modern evlere",
+    "3D'de inceleyin — evinizde hayal edin",
+    "Masif meşe, doğal keten, el oyma"
+  ],
+  "story": {
+    "eyebrow": "Hikayemiz",
+    "heading": "Anadolu'nun",
+    "italicWord": "köklerinden",
+    "dropcap": "B",
+    "paragraphs": [
+      "ir mobilyanın hikâyesi, kullanılan ağacın yetiştiği topraktan başlar. Atelier Anatolia, 1992 yılında Şişli'de küçük bir atölyede kurulduğunda tek bir prensibimiz vardı: dokunulduğunda hissedilen, oturulduğunda güvenen, zamanla daha da güzelleşen mobilyalar üretmek.",
+      "32 yıl sonra hâlâ aynı atölyedeyiz. Aynı meşeyi Bolu'dan, aynı keteni Babadağ'dan getiriyoruz. Tek değişen: dijital atölyemizde tasarımlarımızı 3D olarak da görebiliyorsunuz. Ama her parça, hâlâ aynı ustanın elinden geçiyor."
+    ],
+    "heroImage": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=80&auto=format&fit=crop"
+  },
+  "stats": [
+    { "icon": "handyman", "value": "32 yıl", "label": "Usta zanaat" },
+    { "icon": "home", "value": "1.200+", "label": "Mutlu ev" },
+    { "icon": "forest", "value": "%100", "label": "Doğal malzeme" },
+    { "icon": "square_foot", "value": "850 m²", "label": "Atölye alanı" }
+  ],
+  "principles": [
+    {
+      "icon": "spa",
+      "title": "Sürdürülebilir kaynak",
+      "body": "FSC sertifikalı masif meşe, doğal keten ve yün. Her ağaç, yerini ikinci bir fidanla bırakır."
+    },
+    {
+      "icon": "handshake",
+      "title": "Tek ustanın imzası",
+      "body": "Her ürün, başlangıçtan tesliminize kadar tek bir ustanın elinden geçer. Üretici ile sahibi arasında bir köprü."
+    },
+    {
+      "icon": "verified",
+      "title": "5 yıl iskelet garantisi",
+      "body": "Masif iskelet, vidalı geçme bağlantılar, her zamanın testinden geçen detaylar. 5 yıl koşulsuz."
+    }
+  ],
+  "timeline": [
+    { "year": "1992", "title": "Şişli atölyesi açıldı", "body": "Hasan Demir ve oğulları, üç tezgâh, beş usta." },
+    { "year": "2004", "title": "İlk ihracat", "body": "Almanya ve Hollanda'ya özel sipariş yatak odası takımları." },
+    { "year": "2018", "title": "Nişantaşı showroom", "body": "Üretimin yanına perakende kapısı eklendi." },
+    { "year": "2026", "title": "3D dijital katalog", "body": "Her parça, evinize gelmeden evinizde görülebilir." }
+  ],
+  "atelierPhotos": [
+    "https://images.unsplash.com/photo-1558901357-ca41e027e43a?w=900&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=900&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=900&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1581539250439-c96689b516dd?w=900&q=80&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=900&q=80&auto=format&fit=crop"
+  ],
+  "atelierQuote": {
+    "name": "Hasan Demir",
+    "role": "Kurucu Usta · 32 yıl",
+    "quote": "İyi bir mobilya, ilk oturduğunuzda değil, otuzuncu yılında daha güzel olandır."
+  },
+  "locations": [
+    {
+      "slug": "nisantasi-showroom",
+      "type": "showroom",
+      "name": "Nişantaşı Showroom",
+      "addressLines": ["Harbiye Mah. Teşvikiye Cd. No: 42"],
+      "district": "Şişli",
+      "city": "İstanbul",
+      "phone": "+902125551234",
+      "hours": [
+        { "days": "Pzt — Cum", "range": "10:00 — 20:00" },
+        { "days": "Cumartesi", "range": "11:00 — 19:00" },
+        { "days": "Pazar", "range": "Kapalı" }
+      ],
+      "mapImage": "https://images.unsplash.com/photo-1524813686514-a57563d77965?w=1200&q=80&auto=format&fit=crop",
+      "mapLink": "https://maps.google.com/?q=Harbiye+Mah+Teşvikiye+Cd+42+Şişli",
+      "directions": "M2 Osmanbey metrosuna 4 dakika yürüme mesafesinde."
+    },
+    {
+      "slug": "kagithane-atolye",
+      "type": "atolye",
+      "name": "Kağıthane Atölye",
+      "addressLines": ["Sanayi Mah. Üretim Sk. No: 18"],
+      "district": "Kağıthane",
+      "city": "İstanbul",
+      "phone": "+902129994567",
+      "hours": [
+        { "days": "Pzt — Cum", "range": "08:30 — 18:00" }
+      ],
+      "mapLink": "https://maps.google.com/?q=Sanayi+Mah+Kağıthane",
+      "directions": "Atölye ziyareti yalnızca randevu ile."
+    }
+  ],
+  "social": [
+    { "platform": "instagram", "icon": "photo_camera", "url": "https://instagram.com/atelieranatolia", "handle": "@atelieranatolia" },
+    { "platform": "pinterest", "icon": "push_pin", "url": "https://pinterest.com/atelieranatolia", "handle": "atelieranatolia" },
+    { "platform": "web", "icon": "public", "url": "https://atelieranatolia.com" },
+    { "platform": "mail", "icon": "mail", "url": "mailto:merhaba@atelieranatolia.com" }
+  ]
+}

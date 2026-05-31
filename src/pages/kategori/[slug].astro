@@ -1,0 +1,133 @@
+---
+/**
+ * Kategori detay sayfası.
+ * Mock: tasarimlar/kategori-detay/code.html
+ */
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import ProductCard from '@components/ProductCard.astro';
+import ArtisanQuote from '@components/ArtisanQuote.astro';
+import EyebrowLabel from '@components/EyebrowLabel.astro';
+import DisplayHeading from '@components/DisplayHeading.astro';
+import WhatsAppCTAStrip from '@components/WhatsAppCTAStrip.astro';
+import WhatsAppFAB from '@components/WhatsAppFAB.astro';
+import { getCategories, getCategory, getProductsByCategory, getCustomer } from '@lib/data';
+
+export async function getStaticPaths() {
+  return getCategories().map((c) => ({ params: { slug: c.slug } }));
+}
+
+const { slug } = Astro.params as { slug: string };
+const category = getCategory(slug);
+if (!category) {
+  return Astro.redirect('/kategoriler');
+}
+
+const products = getProductsByCategory(slug);
+const customer = getCustomer();
+const totalCount = products.length;
+const visibleProducts = products.slice(0, 9);
+const hasMore = products.length > 9;
+const insertArtisanAt = Math.min(4, visibleProducts.length); // 5. karttan önce inline artisan
+---
+
+<BaseLayout
+  title={`${category.name} ${category.italicWord ?? ''} · ${customer.brand.name}`}
+  description={`${totalCount} ürün · ${category.longDescription}`}
+>
+  <Header active="kategoriler" />
+
+  <main id="main-content" class="pb-16 md:pb-24">
+    {/* Breadcrumb */}
+    <nav class="max-w-[1320px] mx-auto px-5 md:px-12 pt-6 text-[11px] uppercase tracking-widest text-on-surface-v">
+      <a href="/" class="hover:text-primary transition">Ana sayfa</a>
+      <span class="mx-2 opacity-50">/</span>
+      <a href="/kategoriler" class="hover:text-primary transition">Koleksiyonlar</a>
+      <span class="mx-2 opacity-50">/</span>
+      <span class="text-primary">{category.name} {category.italicWord ?? ''}</span>
+    </nav>
+
+    {/* Editorial header */}
+    <header class="max-w-[1320px] mx-auto px-5 md:px-12 pt-8 md:pt-12 pb-8 md:pb-12 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-end">
+      <div class="md:col-span-7">
+        <EyebrowLabel text={`${totalCount} ürün`} />
+        <DisplayHeading
+          as="h1"
+          name={category.name}
+          italicWord={category.italicWord}
+          size="hero"
+          class="mt-4"
+        />
+      </div>
+      <div class="md:col-span-5">
+        <p class="font-display italic text-[16px] md:text-[20px] text-on-surface-v leading-relaxed">
+          {category.longDescription}
+        </p>
+      </div>
+    </header>
+
+    {/* Sticky filter bar */}
+    <div class="sticky top-14 md:top-16 z-20 bg-surface/90 backdrop-blur-xl border-y border-outline-v/30 mb-8 md:mb-10">
+      <div class="max-w-[1320px] mx-auto px-5 md:px-12 py-3 md:py-4 flex items-center justify-between gap-4">
+        <div class="overflow-x-auto no-scrollbar flex-1">
+          <div class="flex gap-2 md:gap-3 min-w-max">
+            <a href="/kategoriler" class="shrink-0 bg-surface-c-low hover:bg-surface-c px-3 md:px-4 py-2 rounded-full text-[10px] md:text-[11px] uppercase tracking-widest font-bold transition">
+              ← Tüm koleksiyonlar
+            </a>
+            <span class="shrink-0 bg-primary text-on-primary px-3 md:px-4 py-2 rounded-full text-[10px] md:text-[11px] uppercase tracking-widest font-bold">
+              {category.shortLabel}
+            </span>
+          </div>
+        </div>
+        <button class="shrink-0 inline-flex items-center gap-2 text-[11px] uppercase tracking-widest font-bold hover:opacity-70 transition">
+          Sırala
+          <span class="material-symbols-outlined text-[16px]">expand_more</span>
+        </button>
+      </div>
+    </div>
+
+    {/* Product grid + inline artisan quote */}
+    <section class="max-w-[1320px] mx-auto px-5 md:px-12">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        {visibleProducts.map((p, i) => (
+          <>
+            {category.artisanQuote && i === insertArtisanAt && (
+              <div class="col-span-2 md:col-span-3 lg:col-span-2 bg-secondary-c rounded-2xl p-6 md:p-8 flex flex-col justify-center">
+                <EyebrowLabel text="Atölyeden" hairline tone="light" />
+                <div class="mt-4">
+                  <ArtisanQuote quote={category.artisanQuote} variant="inline" />
+                </div>
+              </div>
+            )}
+            <ProductCard product={p} />
+          </>
+        ))}
+      </div>
+
+      {/* Load more (UI only — Faz 1'de gerçek paging yok) */}
+      {hasMore && (
+        <div class="mt-10 md:mt-14 text-center">
+          <p class="text-[11px] uppercase tracking-widest text-on-surface-v mb-4 font-bold">
+            {visibleProducts.length} / {totalCount} gösteriliyor
+          </p>
+          <button class="inline-flex items-center gap-2 bg-surface text-primary border border-primary py-3 px-7 rounded-full text-[12px] uppercase tracking-[0.22em] font-bold hover:bg-primary hover:text-on-primary transition active:scale-95">
+            Daha fazla göster
+            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+          </button>
+        </div>
+      )}
+    </section>
+
+    {/* WhatsApp CTA strip */}
+    <section class="max-w-[1320px] mx-auto px-5 md:px-12 mt-16 md:mt-24">
+      <WhatsAppCTAStrip
+        title={`${category.name} ${category.italicWord ?? ''} hakkında soru mu var?`}
+        subtitle="Ürün seçimi, ölçü uyumu ve teslimat detayları için satış ekibimize WhatsApp'tan ulaşın."
+      />
+    </section>
+  </main>
+
+  <Footer />
+  <WhatsAppFAB />
+</BaseLayout>

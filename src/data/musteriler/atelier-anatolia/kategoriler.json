@@ -1,0 +1,75 @@
+[
+  {
+    "slug": "oturma-grubu",
+    "name": "Oturma",
+    "italicWord": "Grubu",
+    "shortLabel": "Oturma",
+    "description": "Konforun en zarif hali.",
+    "longDescription": "Masif iskelet, doğal keten ve kadife döşeme. Her koltuk, oturulduğu ilk günden otuzuncu yılına kadar şeklini koruyacak şekilde tasarlandı.",
+    "heroImage": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1400&q=80&auto=format&fit=crop",
+    "artisanQuote": {
+      "name": "Mehmet Yıldız",
+      "role": "Döşeme Ustası · 28 yıl",
+      "quote": "Bir kanepenin ömrü, görünmeyen iskeletinde gizlidir. Biz, görünmeyeni de görünür gibi yaparız.",
+      "portrait": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80&auto=format&fit=crop"
+    }
+  },
+  {
+    "slug": "yatak-odasi",
+    "name": "Yatak",
+    "italicWord": "Odası",
+    "shortLabel": "Yatak Odası",
+    "description": "Huzurlu bir uyku alanı.",
+    "longDescription": "Sessiz mekanizma, masif baza, doğal lifli yatak başlıkları. Uyku, bir mobilyayla değil, bir atmosferle başlar.",
+    "heroImage": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1400&q=80&auto=format&fit=crop",
+    "artisanQuote": {
+      "name": "Ayşe Karaca",
+      "role": "Tekstil Atölye Şefi · 19 yıl",
+      "quote": "Yatak başlığı, odanın sessiz konuşmasıdır. Doğru kumaş, doğru gerginlik — geri kalanı uyku halleder.",
+      "portrait": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80&auto=format&fit=crop"
+    }
+  },
+  {
+    "slug": "yemek-odasi",
+    "name": "Yemek",
+    "italicWord": "Odası",
+    "shortLabel": "Yemek Odası",
+    "description": "Anıların paylaşıldığı yer.",
+    "longDescription": "Ceviz ve meşeden el oyma yemek masaları, doğal keten döşemeli sandalyeler. Bir masanın ömrü, etrafında geçirilen yemek sayısıyla ölçülür.",
+    "heroImage": "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=1400&q=80&auto=format&fit=crop",
+    "artisanQuote": {
+      "name": "İbrahim Çelik",
+      "role": "Marangoz Usta · 35 yıl",
+      "quote": "Bir masa, doğru ağaçtan, doğru kesilirse, dokuz nesil dayanır. Bu bir iddia değil, bir hatıradır.",
+      "portrait": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80&auto=format&fit=crop"
+    }
+  },
+  {
+    "slug": "calisma",
+    "name": "Çalışma",
+    "italicWord": "alanı",
+    "shortLabel": "Çalışma",
+    "description": "Düşüncenin yerleştiği oda.",
+    "longDescription": "Ergonomik ölçüler, gizli kablo kanalları, doğal deri yüzeyler. Evden çalışma, doğru bir masayla başlar.",
+    "heroImage": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=1400&q=80&auto=format&fit=crop"
+  },
+  {
+    "slug": "aksesuar",
+    "name": "Aksesuar",
+    "italicWord": "ve dekor",
+    "shortLabel": "Aksesuar",
+    "description": "Küçük detaylar.",
+    "longDescription": "Tezgâhtan kalan en güzel parçalar. El oyma sehpa, dökme pirinç kandil, doğal yünden battaniye.",
+    "heroImage": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=1400&q=80&auto=format&fit=crop"
+  },
+  {
+    "slug": "ozel-uretim",
+    "name": "Özel",
+    "italicWord": "üretim",
+    "shortLabel": "Özel Üretim",
+    "description": "Sizin için, sadece sizin için.",
+    "longDescription": "Ölçü, malzeme, renk — her şey sizin. Tek ustayla 90 günde teslim, atölyeden çıkar.",
+    "heroImage": "https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=1400&q=80&auto=format&fit=crop",
+    "isCustomOrder": true
+  }
+]

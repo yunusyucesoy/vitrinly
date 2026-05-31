@@ -1,0 +1,44 @@
+---
+/**
+ * brand-guide "WhatsApp FAB" + "Pulse on Primary WhatsApp CTA"
+ * Sağ alt köşede sabit, safe-area aware, pulse-ring animasyonlu.
+ */
+import { getCustomer, buildWhatsAppLink } from '@lib/data';
+
+interface Props {
+  /** Mobilde gizle (ürün detay'da sticky action bar var) */
+  hideOnMobile?: boolean;
+}
+
+const { hideOnMobile = false } = Astro.props;
+const customer = getCustomer();
+const waLink = buildWhatsAppLink(customer.contact.whatsapp);
+---
+
+<a
+  href={waLink}
+  class:list={[
+    'fixed z-30 right-5 bg-whatsapp text-white w-14 h-14 md:w-16 md:h-16 rounded-full grid place-items-center shadow-2xl wa-fab',
+    hideOnMobile ? 'hidden md:grid' : 'grid',
+  ]}
+  style="bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));"
+  aria-label="WhatsApp ile yazışın"
+>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/>
+  </svg>
+</a>
+
+<style>
+  @keyframes waPing {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55); }
+    70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+  }
+  .wa-fab {
+    animation: waPing 2.2s cubic-bezier(.2, .7, .2, 1) infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .wa-fab { animation: none; }
+  }
+</style>

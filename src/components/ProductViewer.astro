@@ -1,0 +1,120 @@
+---
+/**
+ * brand-guide "Product Viewer — Three States"
+ * Container: aspect-[4/5] mobile, md:aspect-square desktop.
+ *
+ * State machine:
+ *   poster (default) → user taps "360" CTA →
+ *   skeleton (warm shimmer) → model-viewer script loaded + GLB fetched →
+ *   live (interactive 3D)
+ *
+ * Logic: src/scripts/product-viewer.ts
+ */
+import type { Product } from '@lib/schema';
+import ARPlaceholder from './ARPlaceholder.astro';
+
+interface Props {
+  product: Product;
+  class?: string;
+}
+
+const { product, class: extraClass = '' } = Astro.props;
+const productName = product.italicWord ? `${product.name} ${product.italicWord}` : product.name;
+const hasDims = product.dimensions.w > 0;
+const dimText = hasDims
+  ? `${product.dimensions.w} × ${product.dimensions.d} × ${product.dimensions.h} cm`
+  : 'Özel ölçü';
+---
+
+<div
+  class={`relative w-full aspect-[4/5] md:aspect-square rounded-3xl overflow-hidden bg-surface-c ambient ${extraClass}`}
+  data-product-viewer
+  data-model-url={product.modelUrl ?? ''}
+  data-poster-url={product.posterUrl}
+  data-product-name={productName}
+>
+  {/* AR butonu — her state'te görünür (Faz 7) */}
+  <div class="absolute top-4 right-4 z-30">
+    <ARPlaceholder variant="compact" />
+  </div>
+
+  {/* POSTER state — default */}
+  <div data-state="poster" class="absolute inset-0">
+    <img
+      src={product.posterUrl}
+      alt={productName}
+      class="absolute inset-0 w-full h-full object-cover"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
+
+    {/* Dimension chip — top-left */}
+    {hasDims && (
+      <div class="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-surface/95 backdrop-blur-md px-3 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold">
+        <span class="material-symbols-outlined text-[14px]">straighten</span>
+        {dimText}
+      </div>
+    )}
+
+    {/* 360 CTA — center */}
+    <div class="absolute inset-0 grid place-items-center">
+      <div class="relative">
+        <button
+          data-load-3d
+          class="w-20 h-20 md:w-24 md:h-24 rounded-full bg-surface text-primary grid place-items-center font-display text-[20px] md:text-[24px] shadow-2xl active:scale-95 transition relative z-10"
+          aria-label="3D modeli yükle"
+        >
+          360°
+        </button>
+        <span class="absolute inset-0 rounded-full border-2 border-surface animate-pulse-ring"></span>
+        <span class="absolute inset-0 rounded-full border-2 border-surface animate-pulse-ring" style="animation-delay: 1.2s;"></span>
+      </div>
+    </div>
+
+    <div class="absolute bottom-4 left-4 right-4 text-center">
+      <p class="text-white text-[11px] tracking-widest uppercase font-bold drop-shadow-lg">
+        Tıklayın · 3D'de inceleyin
+      </p>
+    </div>
+  </div>
+
+  {/* SKELETON state */}
+  <div data-state="skeleton" hidden class="absolute inset-0 grid place-items-center bg-surface-c">
+    <div class="text-center">
+      <div class="shimmer w-48 h-48 md:w-64 md:h-64 rounded-2xl mx-auto"></div>
+      <div class="mt-6 text-[11px] uppercase tracking-[0.25em] font-bold text-on-surface-v">
+        Model yükleniyor…
+      </div>
+    </div>
+  </div>
+
+  {/* LIVE state — model-viewer mount edilir */}
+  <div data-state="live" hidden class="absolute inset-0">
+    {/* model-viewer için ayrı slot — controls/pill korunsun */}
+    <div data-mv-slot class="absolute inset-0"></div>
+
+    {/* Control cluster — bottom-right */}
+    <div class="absolute bottom-4 right-4 flex flex-col gap-2 z-10">
+      <button
+        data-control-reset
+        class="w-11 h-11 rounded-full bg-surface/90 backdrop-blur-md grid place-items-center hover:bg-surface transition"
+        aria-label="Görüntüyü sıfırla"
+      >
+        <span class="material-symbols-outlined text-[20px] text-primary">refresh</span>
+      </button>
+      <button
+        data-control-fullscreen
+        class="w-11 h-11 rounded-full bg-surface/90 backdrop-blur-md grid place-items-center hover:bg-surface transition"
+        aria-label="Tam ekran"
+      >
+        <span class="material-symbols-outlined text-[20px] text-primary">fullscreen</span>
+      </button>
+    </div>
+
+    {/* "Canlı 3D" pill — bottom-left */}
+    <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 bg-primary text-on-primary px-3 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold z-10">
+      <span class="w-2 h-2 rounded-full bg-secondary-c animate-pulse"></span>
+      Canlı 3D
+    </div>
+  </div>
+</div>

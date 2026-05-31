@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover"/><meta name="theme-color" content="#fbf9f7"/>
+<title>İletişim · Atelier Anatolia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=EB+Garamond:ital,wght@0,400..700;1,400..600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,200..700,0..1,-50..200&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{surface:'#fbf9f7','surface-c-low':'#f5f3f1','surface-c':'#efedec','on-surface':'#1b1c1b','on-surface-v':'#4e4545','outline-v':'#d1c3c4',primary:'#332829','on-primary':'#ffffff','primary-c':'#4a3e3f','secondary-c':'#f4dfcb',tertiary:'#442306','tertiary-c':'#5e3819',whatsapp:'#25D366'},fontFamily:{display:['"EB Garamond"','serif'],body:['"DM Sans"','sans-serif']}}}}</script>
+<style>
+:root{--safe-bottom:env(safe-area-inset-bottom,0px)}
+html,body{background:#fbf9f7;color:#1b1c1b;-webkit-font-smoothing:antialiased}
+body{background-image:radial-gradient(rgba(74,62,63,.025) 1px,transparent 1.5px),radial-gradient(rgba(74,62,63,.018) 1px,transparent 1.5px);background-size:6px 6px,13px 13px;background-position:0 0,3px 4px}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 350,'GRAD' 0,'opsz' 24;vertical-align:middle}
+.icon-fill{font-variation-settings:'FILL' 1,'wght' 400}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.reveal{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}
+.ambient{box-shadow:0 24px 48px -16px rgba(74,62,63,.18)}
+@keyframes pulse-loc{0%{transform:scale(1);opacity:.6}100%{transform:scale(2);opacity:0}}
+.loc-pulse::before{content:'';position:absolute;inset:0;border-radius:9999px;border:2px solid #332829;animation:pulse-loc 2.4s ease-out infinite}
+</style></head>
+<body class="font-body text-[15px]">
+
+<header class="sticky top-0 z-40 bg-surface/85 backdrop-blur-lg border-b border-outline-v/30">
+  <div class="max-w-[1320px] mx-auto px-5 md:px-12 h-14 md:h-16 flex items-center justify-between">
+    <button onclick="history.back()" class="md:hidden -ml-2 w-11 h-11 grid place-items-center"><span class="material-symbols-outlined">arrow_back_ios_new</span></button>
+    <div class="flex items-center gap-2"><span class="block w-1.5 h-1.5 rounded-full bg-primary"></span><span class="font-display italic text-[18px] md:text-[22px]">Atelier Anatolia</span></div>
+    <nav class="hidden md:flex gap-10 text-[12px] uppercase tracking-[0.18em] font-bold">
+      <a href="#" class="text-on-surface-v hover:text-primary">Ana sayfa</a>
+      <a href="#" class="text-on-surface-v hover:text-primary">Koleksiyonlar</a>
+      <a href="#" class="text-on-surface-v hover:text-primary">Hakkımızda</a>
+      <a href="#" class="text-primary border-b border-primary pb-1">İletişim</a>
+    </nav>
+    <button class="-mr-2 w-11 h-11 grid place-items-center"><span class="material-symbols-outlined">search</span></button>
+  </div>
+</header>
+
+<main class="max-w-[1320px] mx-auto px-5 md:px-12 pb-32">
+
+  <!-- Hero -->
+  <section class="reveal d1 pt-12 md:pt-20 pb-10 md:pb-16 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-end">
+    <div class="md:col-span-7">
+      <span class="text-[10px] uppercase tracking-[0.28em] font-bold text-on-surface-v">Bize ulaşın</span>
+      <h1 class="font-display text-[44px] md:text-[88px] leading-[1.02] tracking-tight mt-3 md:mt-5">İki <span class="italic">dakikada</span><br>bir cevap.</h1>
+    </div>
+    <p class="md:col-span-5 font-display italic text-[17px] md:text-[22px] text-on-surface-v leading-snug">WhatsApp'tan hızlıca yazın, ya da showroom'umuza uğrayın. Form yok, randevu zorunlu değil.</p>
+  </section>
+
+  <!-- Primary CTA cards (mobile-first thumb zone) -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-5 reveal d2 mb-12 md:mb-20">
+    <a href="https://wa.me/902125551234" class="group rounded-2xl bg-whatsapp text-white p-6 md:p-8 flex items-center gap-5 ambient hover:opacity-95 transition">
+      <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/15 grid place-items-center shrink-0">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/></svg>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="text-[10px] tracking-[0.22em] uppercase opacity-80 font-bold">En hızlı yol</div>
+        <div class="font-display text-[22px] md:text-[26px] leading-tight mt-1">WhatsApp'tan yazın</div>
+        <div class="text-[11.5px] opacity-80 mt-1">Genelde 5 dk içinde dönüyoruz</div>
+      </div>
+      <span class="material-symbols-outlined text-[24px] group-hover:translate-x-1 transition">arrow_forward</span>
+    </a>
+    <a href="tel:+902125551234" class="group rounded-2xl bg-primary text-on-primary p-6 md:p-8 flex items-center gap-5 ambient hover:opacity-95 transition">
+      <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-white/10 grid place-items-center shrink-0">
+        <span class="material-symbols-outlined text-[28px]">call</span>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="text-[10px] tracking-[0.22em] uppercase opacity-70 font-bold">Telefon</div>
+        <div class="font-display text-[22px] md:text-[26px] leading-tight mt-1">+90 212 555 12 34</div>
+        <div class="text-[11.5px] opacity-70 mt-1">Pzt-Cts 10:00 — 20:00</div>
+      </div>
+      <span class="material-symbols-outlined text-[24px] group-hover:translate-x-1 transition">arrow_forward</span>
+    </a>
+    <a href="mailto:atolye@atelieranatolia.com" class="group rounded-2xl border border-outline-v/40 p-6 md:p-8 flex items-center gap-5 hover:bg-surface-c-low transition">
+      <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-secondary-c grid place-items-center shrink-0">
+        <span class="material-symbols-outlined text-[28px] text-tertiary">mail</span>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="text-[10px] tracking-[0.22em] uppercase opacity-70 font-bold">E-posta</div>
+        <div class="font-display text-[18px] md:text-[20px] leading-tight mt-1 truncate">atolye@atelieranatolia.com</div>
+        <div class="text-[11.5px] opacity-70 mt-1">24 saat içinde yanıt</div>
+      </div>
+      <span class="material-symbols-outlined text-[24px] text-primary group-hover:translate-x-1 transition">arrow_forward</span>
+    </a>
+  </section>
+
+  <!-- Showroom + Map -->
+  <section class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10 items-stretch mb-16 md:mb-24">
+    <div class="md:col-span-7 reveal d3 relative rounded-3xl overflow-hidden ambient" style="aspect-ratio:4/3">
+      <img loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAh2Gd-Fu0Hm-QvzEKYQpMuIe09GvGSHvM9i3EwRnamN0BJWL0FQezvQsh3_eYmRhSgZfteEvcFpCjGbZk0bBA_S6SeEK1hMbJQacrp5hZD79HcAT4F1ASGNwouloHPHzLWDm_E26Or_uEXzpO6fSFzmHWUOwQfGLjtpbeLC-jKd_IoIbbB6khPyAfNBwJK0e877YetqUBXKNtw5X936wxu4AxEkDdbjV8_sDw6tnZl5TXQTtwmmLr1edy0EVXCd0s2Uz6zdsKj_h5" class="absolute inset-0 w-full h-full object-cover grayscale opacity-90" alt=""/>
+      <div class="absolute inset-0 bg-primary/8"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="relative loc-pulse">
+          <div class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary text-on-primary grid place-items-center shadow-2xl">
+            <span class="material-symbols-outlined icon-fill text-[26px]">storefront</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://www.google.com/maps/search/Harbiye+Mah.+Tesvikiye+Cd.+Sisli" target="_blank" class="absolute bottom-5 left-5 right-5 md:left-auto md:right-5 md:max-w-xs bg-surface/95 backdrop-blur-md rounded-2xl px-5 py-4 hover:bg-surface transition group">
+        <div class="text-[10px] tracking-widest uppercase font-bold text-on-surface-v">Nişantaşı Showroom</div>
+        <div class="font-display text-[20px] leading-tight mt-1">Harbiye Mah. Teşvikiye Cd. No:42</div>
+        <div class="text-[12px] text-on-surface-v mt-1">Şişli / İstanbul</div>
+        <div class="mt-3 inline-flex items-center gap-1.5 text-[11px] uppercase tracking-widest font-bold text-primary">Yol tarifi al <span class="material-symbols-outlined text-[14px] group-hover:translate-x-0.5 transition">arrow_outward</span></div>
+      </a>
+    </div>
+
+    <div class="md:col-span-5 reveal d4 space-y-4">
+      <div class="rounded-2xl border border-outline-v/40 p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="material-symbols-outlined text-primary">schedule</span>
+          <div class="text-[10.5px] tracking-[0.22em] uppercase font-bold text-on-surface-v">Çalışma saatleri</div>
+        </div>
+        <dl class="space-y-2 text-[14px]">
+          <div class="flex justify-between"><dt class="text-on-surface-v">Pazartesi — Cuma</dt><dd class="font-medium">10:00 — 20:00</dd></div>
+          <div class="flex justify-between"><dt class="text-on-surface-v">Cumartesi</dt><dd class="font-medium">10:00 — 19:00</dd></div>
+          <div class="flex justify-between text-on-surface-v/60"><dt>Pazar</dt><dd>Kapalı</dd></div>
+        </dl>
+      </div>
+      <div class="rounded-2xl bg-secondary-c/50 border border-outline-v/30 p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="material-symbols-outlined text-tertiary">event_available</span>
+          <div class="text-[10.5px] tracking-[0.22em] uppercase font-bold text-tertiary">Randevu</div>
+        </div>
+        <p class="text-[13.5px] text-tertiary/80 leading-relaxed">Şahsi danışmanlık için önceden randevu alabilirsiniz. WhatsApp'tan günü ve saati yazmanız yeterli.</p>
+        <a href="https://wa.me/902125551234?text=Randevu almak istiyorum" class="mt-4 inline-flex items-center gap-2 bg-tertiary text-white py-2.5 px-4 rounded-full text-[11px] uppercase tracking-widest font-bold">
+          Randevu al <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+        </a>
+      </div>
+      <div class="rounded-2xl border border-outline-v/40 p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="material-symbols-outlined text-primary">qr_code_2</span>
+          <div class="text-[10.5px] tracking-[0.22em] uppercase font-bold text-on-surface-v">Mağazaya geldiniz mi?</div>
+        </div>
+        <p class="text-[13.5px] text-on-surface-v leading-relaxed">Her ürünün etiketinde QR kod var. Telefonunuzla okutun, 3D modeli açılır.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Atölye (second location) -->
+  <section class="rounded-3xl bg-primary text-on-primary p-7 md:p-14 relative overflow-hidden ambient mb-16">
+    <div class="absolute -top-20 -right-10 w-72 h-72 rounded-full bg-primary-c/40 blur-3xl"></div>
+    <div class="relative grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+      <div class="md:col-span-7">
+        <span class="text-[10px] uppercase tracking-[0.3em] opacity-70 font-bold">İkinci adres</span>
+        <h3 class="font-display text-[28px] md:text-[48px] italic leading-tight mt-3">Atölyemizi gezin</h3>
+        <p class="text-[14px] md:text-[15px] opacity-80 mt-4 leading-relaxed max-w-md">İnegöl'deki üretim atölyemizi her cumartesi 14:00'da ziyarete açıyoruz. Marangozluğun nasıl yapıldığını yakından görün.</p>
+      </div>
+      <div class="md:col-span-5 grid grid-cols-2 gap-3">
+        <div class="border border-on-primary/20 rounded-xl p-4">
+          <div class="text-[10px] tracking-widest uppercase opacity-70 font-bold">Adres</div>
+          <div class="font-display text-[18px] mt-1 leading-tight">Kemalpaşa Mah. No:12</div>
+          <div class="text-[12px] opacity-80">İnegöl / Bursa</div>
+        </div>
+        <div class="border border-on-primary/20 rounded-xl p-4">
+          <div class="text-[10px] tracking-widest uppercase opacity-70 font-bold">Telefon</div>
+          <div class="font-display text-[18px] mt-1">+90 224 712 34 56</div>
+          <div class="text-[12px] opacity-80">Pzt-Cts 08-18</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social -->
+  <section class="text-center">
+    <span class="text-[10px] uppercase tracking-[0.28em] font-bold text-on-surface-v">Bizi takip edin</span>
+    <h3 class="font-display text-[28px] md:text-[40px] italic leading-tight mt-3">Atölyeden anlık paylaşımlar</h3>
+    <div class="mt-6 flex justify-center gap-3">
+      <a href="#" class="w-12 h-12 grid place-items-center rounded-full border border-outline-v/40 hover:bg-surface-c transition"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a>
+      <a href="#" class="w-12 h-12 grid place-items-center rounded-full border border-outline-v/40 hover:bg-surface-c transition"><span class="material-symbols-outlined text-[20px]">public</span></a>
+      <a href="#" class="w-12 h-12 grid place-items-center rounded-full border border-outline-v/40 hover:bg-surface-c transition"><span class="material-symbols-outlined text-[20px]">play_circle</span></a>
+      <a href="#" class="w-12 h-12 grid place-items-center rounded-full border border-outline-v/40 hover:bg-surface-c transition"><span class="material-symbols-outlined text-[20px]">music_note</span></a>
+    </div>
+    <p class="mt-10 font-display italic text-[22px] text-primary">Sakinlik ve Güven.</p>
+    <p class="text-[11px] tracking-[0.22em] uppercase text-on-surface-v mt-2 opacity-60">© 2024 Atelier Anatolia</p>
+  </section>
+
+</main>
+
+<a href="https://wa.me/902125551234" class="md:hidden fixed bottom-5 right-5 z-50 bg-whatsapp text-white rounded-full w-14 h-14 grid place-items-center shadow-[0_8px_24px_-4px_rgba(37,211,102,0.5)]" style="margin-bottom: var(--safe-bottom);">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/></svg>
+</a>
+</body></html>

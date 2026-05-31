@@ -1,0 +1,52 @@
+---
+/**
+ * brand-guide "Sticky Bottom Action Bar"
+ * Sadece ürün detay mobilde kullanılır.
+ * backdrop-blur, safe-area aware. Call + Share + WhatsApp.
+ * WhatsApp linki client-side'da swatch değişimine göre güncellenir
+ * (data-wa-link attribute).
+ */
+import type { Product } from '@lib/schema';
+import { getCustomer, buildWhatsAppLink } from '@lib/data';
+
+interface Props {
+  product: Product;
+}
+
+const { product } = Astro.props;
+const customer = getCustomer();
+const waLink = buildWhatsAppLink(customer.contact.whatsapp, product, product.fabrics[0]?.name);
+const telLink = `tel:${customer.contact.phone}`;
+---
+
+<div
+  class="md:hidden fixed inset-x-0 bottom-0 z-30 bg-surface/85 backdrop-blur-xl border-t border-outline-v/30 px-4 py-3 flex items-center gap-2"
+  style="padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));"
+  data-sticky-action-bar
+>
+  <a
+    href={telLink}
+    class="w-12 h-12 rounded-full bg-surface-c grid place-items-center shrink-0"
+    aria-label="Telefon"
+  >
+    <span class="material-symbols-outlined text-primary">call</span>
+  </a>
+  <button
+    class="w-12 h-12 rounded-full bg-surface-c grid place-items-center shrink-0"
+    data-share-button
+    data-share-title={`${product.name} ${product.italicWord ?? ''}`}
+    aria-label="Paylaş"
+  >
+    <span class="material-symbols-outlined text-primary">share</span>
+  </button>
+  <a
+    href={waLink}
+    data-wa-link
+    class="flex-1 h-12 rounded-full bg-whatsapp text-white inline-flex items-center justify-center gap-2 text-[12px] uppercase tracking-[0.22em] font-bold"
+  >
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448L.057 24z"/>
+    </svg>
+    WhatsApp ile sor
+  </a>
+</div>

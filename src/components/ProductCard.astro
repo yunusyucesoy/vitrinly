@@ -1,0 +1,68 @@
+---
+/**
+ * Anasayfa vitrin + kategori detay grid kartı.
+ * brand-guide "Cards (Product Gallery)" + "3D Badge"
+ */
+import type { Product } from '@lib/schema';
+
+interface Props {
+  product: Product;
+  /** Featured variant — daha büyük, gradient overlay */
+  featured?: boolean;
+  /** Hover'da CTA overlay göster */
+  showHoverCta?: boolean;
+  class?: string;
+}
+
+const { product, featured = false, showHoverCta = false, class: extraClass = '' } = Astro.props;
+
+// Faz 1-5'te modelUrl null — yine de rozeti gösteriyoruz (her ürün 3D planlı)
+const has3D = true;
+const dimText = product.dimensions.w > 0
+  ? `${product.dimensions.w} × ${product.dimensions.d} × ${product.dimensions.h} cm`
+  : `${product.priceNote}`;
+const aspectClass = featured ? 'aspect-[4/5]' : 'aspect-[3/4]';
+---
+
+<a href={`/urun/${product.slug}`} class={`card-3d group block ${extraClass}`}>
+  <div class={`${aspectClass} rounded-2xl overflow-hidden bg-surface-c relative mb-4`}>
+    <img
+      loading="lazy"
+      src={product.posterUrl}
+      class="card-img w-full h-full object-cover"
+      alt={`${product.name} ${product.italicWord ?? ''}`.trim()}
+    />
+
+    {/* 3D badge */}
+    {has3D && (
+      <span class="absolute top-3 left-3 md:top-4 md:left-4 inline-flex items-center gap-1.5 bg-surface/95 backdrop-blur-md px-2.5 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold">
+        <span class="material-symbols-outlined text-[13px]">view_in_ar</span> 3D
+      </span>
+    )}
+
+    {/* Status badge (Yeni vb.) */}
+    {product.isNew && (
+      <span class="absolute top-3 right-3 md:top-4 md:right-4 bg-tertiary-c text-on-tertiary-c px-2.5 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-bold">
+        Yeni
+      </span>
+    )}
+
+    {/* Hover CTA */}
+    {showHoverCta && (
+      <div class="absolute inset-x-4 bottom-4 opacity-0 group-hover:opacity-100 transition">
+        <div class="bg-surface/95 backdrop-blur-md text-primary py-2.5 rounded-lg text-center text-[11px] uppercase tracking-widest font-bold">
+          3D'de incele →
+        </div>
+      </div>
+    )}
+  </div>
+
+  <h3 class="font-display text-[20px] md:text-[22px] leading-tight">
+    {product.name}
+    {product.italicWord && <span class="italic text-on-surface-v"> {product.italicWord}</span>}
+  </h3>
+  <p class="text-[12px] text-on-surface-v mt-1">{dimText}</p>
+  {product.badges && product.badges.length > 0 && (
+    <p class="text-[11px] uppercase tracking-widest mt-2 font-bold">{product.badges.slice(0, 2).join(' · ')}</p>
+  )}
+</a>

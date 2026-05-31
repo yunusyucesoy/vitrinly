@@ -1,0 +1,50 @@
+---
+/**
+ * Anasayfa "Koleksiyonlar" + Kategoriler sayfası kartı.
+ * Tam-bleed image + gradient overlay + alt yazı.
+ */
+import type { Category } from '@lib/schema';
+
+interface Props {
+  category: Category;
+  productCount?: number;
+  size?: 'lg' | 'md' | 'sm';
+  class?: string;
+}
+
+const { category, productCount, size = 'md', class: extraClass = '' } = Astro.props;
+
+const aspectMap = {
+  lg: 'aspect-[4/5]',
+  md: 'aspect-[4/5]',
+  sm: 'aspect-[3/4]',
+};
+const headingSize = size === 'lg' ? 'text-[36px] md:text-[44px]' : size === 'md' ? 'text-[28px] md:text-[34px]' : 'text-[22px] md:text-[24px]';
+---
+
+<a
+  href={`/kategori/${category.slug}`}
+  class={`group relative ${aspectMap[size]} rounded-2xl overflow-hidden ambient block ${extraClass}`}
+>
+  <img
+    loading="lazy"
+    src={category.heroImage}
+    class="card-img absolute inset-0 w-full h-full object-cover"
+    alt={`${category.name} ${category.italicWord ?? ''}`.trim()}
+  />
+  <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
+
+  <div class="absolute bottom-5 md:bottom-7 left-5 md:left-7 right-5 md:right-7 text-white">
+    {productCount !== undefined && (
+      <div class="text-[10px] tracking-[0.25em] uppercase opacity-80 mb-2">{productCount} ürün</div>
+    )}
+    <h3 class={`font-display ${headingSize} leading-tight`}>
+      {category.name}
+      {category.italicWord && <span class="italic"> {category.italicWord}</span>}
+    </h3>
+    <p class="text-[12px] md:text-[13px] opacity-85 mt-2">{category.description}</p>
+    <span class="mt-4 md:mt-5 inline-flex items-center gap-2 text-[11px] uppercase tracking-widest font-bold border-b border-white pb-1">
+      Keşfet <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+    </span>
+  </div>
+</a>

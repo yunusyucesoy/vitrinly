@@ -1,0 +1,52 @@
+---
+/**
+ * brand-guide "Collapsible Sections"
+ * Native <details>, custom <summary> (no marker), chevron rotates.
+ */
+import type { KV } from '@lib/schema';
+
+interface Props {
+  title: string;
+  icon?: string;
+  items: KV[];
+  defaultOpen?: boolean;
+  class?: string;
+}
+
+const {
+  title,
+  icon,
+  items,
+  defaultOpen = false,
+  class: extraClass = '',
+} = Astro.props;
+---
+
+<details
+  open={defaultOpen || undefined}
+  class={`group border-b border-outline-v/40 last:border-b-0 ${extraClass}`}
+>
+  <summary class="flex items-center justify-between py-5 cursor-pointer list-none select-none">
+    <span class="flex items-center gap-3">
+      {icon && <span class="material-symbols-outlined text-on-surface-v">{icon}</span>}
+      <span class="font-display text-[18px] md:text-[20px]">{title}</span>
+    </span>
+    <span class="material-symbols-outlined text-on-surface-v transition-transform group-open:rotate-180">
+      expand_more
+    </span>
+  </summary>
+
+  <dl class="pb-5 grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-y-3 gap-x-6 text-[14px]">
+    {items.map((kv) => (
+      <>
+        <dt class="text-on-surface-v text-[12px] uppercase tracking-widest font-bold pt-0.5">{kv.label}</dt>
+        <dd>{kv.value}</dd>
+      </>
+    ))}
+  </dl>
+</details>
+
+<style>
+  /* Safari summary marker'ı gizle */
+  summary::-webkit-details-marker { display: none; }
+</style>

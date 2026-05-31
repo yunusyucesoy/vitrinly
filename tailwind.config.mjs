@@ -1,0 +1,98 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  theme: {
+    extend: {
+      colors: {
+        // Material 3 — Atelier Anatolia palette (brand-guide/DESIGN.md)
+        surface: '#fbf9f7',
+        'surface-dim': '#dbdad8',
+        'surface-bright': '#fbf9f7',
+        'surface-c-lowest': '#ffffff',
+        'surface-c-low': '#f5f3f1',
+        'surface-c': '#efedec',
+        'surface-c-high': '#eae8e6',
+        'surface-c-highest': '#e4e2e0',
+        'on-surface': '#1b1c1b',
+        'on-surface-v': '#4e4545',
+        'inverse-surface': '#30302f',
+        'inverse-on-surface': '#f2f0ee',
+        outline: '#7f7475',
+        'outline-v': '#d1c3c4',
+        'surface-tint': '#695b5c',
+        primary: '#332829',
+        'on-primary': '#ffffff',
+        'primary-c': '#4a3e3f',
+        'on-primary-c': '#baa9aa',
+        'inverse-primary': '#d4c2c3',
+        secondary: '#6b5c4c',
+        'on-secondary': '#ffffff',
+        'secondary-c': '#f4dfcb',
+        'on-secondary-c': '#716252',
+        tertiary: '#442306',
+        'on-tertiary': '#ffffff',
+        'tertiary-c': '#5e3819',
+        'on-tertiary-c': '#d8a27b',
+        error: '#ba1a1a',
+        'on-error': '#ffffff',
+        'error-c': '#ffdad6',
+        'on-error-c': '#93000a',
+        background: '#fbf9f7',
+        'on-background': '#1b1c1b',
+        'surface-variant': '#e4e2e0',
+        whatsapp: '#25D366',
+      },
+      fontFamily: {
+        display: ['"EB Garamond"', 'Georgia', 'serif'],
+        body: ['"DM Sans"', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        // brand-guide typography scale
+        'display-lg': ['64px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '500' }],
+        'headline-lg': ['40px', { lineHeight: '1.2', fontWeight: '500' }],
+        'headline-lg-m': ['32px', { lineHeight: '1.2', fontWeight: '500' }],
+        'headline-md': ['28px', { lineHeight: '1.3', fontWeight: '500' }],
+        'body-lg': ['18px', { lineHeight: '1.6' }],
+        'body-md': ['16px', { lineHeight: '1.6' }],
+        'label-md': ['14px', { lineHeight: '1.2', letterSpacing: '0.05em', fontWeight: '600' }],
+      },
+      borderRadius: {
+        DEFAULT: '0.5rem',
+        sm: '0.25rem',
+        md: '0.75rem',
+        lg: '1rem',
+        xl: '1.5rem',
+      },
+      boxShadow: {
+        ambient: '0 24px 48px -16px rgba(74, 62, 63, 0.18)',
+        'ambient-hero': '0 30px 60px -20px rgba(74, 62, 63, 0.18)',
+      },
+      animation: {
+        'fade-up': 'fadeUp 0.9s cubic-bezier(.2,.7,.2,1) both',
+        marquee: 'marquee 45s linear infinite',
+        'marquee-mobile': 'marquee 35s linear infinite',
+        shimmer: 'shimmer 1.8s linear infinite',
+        'pulse-ring': 'pulseRing 2.4s cubic-bezier(.2,.7,.2,1) infinite',
+      },
+      keyframes: {
+        fadeUp: {
+          from: { opacity: '0', transform: 'translateY(20px)' },
+          to: { opacity: '1', transform: 'none' },
+        },
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-50%)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '200% 0' },
+          '100%': { backgroundPosition: '-200% 0' },
+        },
+        pulseRing: {
+          '0%': { transform: 'scale(1)', opacity: '0.6' },
+          '100%': { transform: 'scale(1.8)', opacity: '0' },
+        },
+      },
+    },
+  },
+  plugins: [],
+};

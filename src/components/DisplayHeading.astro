@@ -1,0 +1,44 @@
+---
+/**
+ * brand-guide "Mixed-Style Display Headings"
+ * Upright + italic kelime kombinasyonu. Örn. "Defne *Koltuk Takımı*".
+ */
+interface Props {
+  name: string;
+  italicWord?: string;
+  /** h1, h2, h3, span */
+  as?: 'h1' | 'h2' | 'h3' | 'span';
+  /** Boyut paleti */
+  size?: 'hero' | 'lg' | 'md' | 'sm';
+  /** Italic word satır başında mı dursun */
+  italicOnNewLine?: boolean;
+  class?: string;
+}
+
+const {
+  name,
+  italicWord,
+  as: Tag = 'h2',
+  size = 'lg',
+  italicOnNewLine = false,
+  class: extraClass = '',
+} = Astro.props;
+
+const sizeMap: Record<NonNullable<Props['size']>, string> = {
+  hero: 'text-[44px] sm:text-[64px] md:text-[88px] leading-[0.95] tracking-[-0.02em]',
+  lg: 'text-[36px] md:text-[52px] leading-tight tracking-tight',
+  md: 'text-[28px] md:text-[36px] leading-tight tracking-tight',
+  sm: 'text-[22px] md:text-[28px] leading-tight',
+};
+---
+
+<Tag class={`font-display ${sizeMap[size]} ${extraClass}`}>
+  {name}
+  {italicWord && (
+    italicOnNewLine ? (
+      <><br /><span class="italic text-on-surface-v">{italicWord}</span></>
+    ) : (
+      <> <span class="italic text-on-surface-v">{italicWord}</span></>
+    )
+  )}
+</Tag>

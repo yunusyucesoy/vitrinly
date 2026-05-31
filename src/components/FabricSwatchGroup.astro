@@ -1,0 +1,80 @@
+---
+/**
+ * brand-guide "Fabric / Color Swatches"
+ * 50×50 dairesel swatch'lar, inset shadow, aktif çift-ring.
+ * URL state ve WhatsApp deep-link güncellemesi: scripts/fabric-swatch.ts
+ */
+import type { FabricSwatch, Product } from '@lib/schema';
+
+interface Props {
+  product: Pick<Product, 'name' | 'italicWord' | 'fabrics'>;
+  /** Aktif swatch slug — URL'den de override edilir client-side */
+  initialActive?: string;
+  /** İlk satır altındaki "kumaş örneği isteyin" CTA gizlensin mi */
+  hideSampleCta?: boolean;
+}
+
+const { product, initialActive, hideSampleCta = false } = Astro.props;
+const fabrics = product.fabrics ?? [];
+if (fabrics.length === 0) return null;
+
+const activeSlug = initialActive ?? fabrics[0].slug;
+const productName = product.italicWord ? `${product.name} ${product.italicWord}` : product.name;
+---
+
+<div data-swatch-group data-wa-name={productName}>
+  <div class="flex items-center justify-between mb-4">
+    <div>
+      <span class="text-[10px] uppercase tracking-[0.3em] font-bold text-on-surface-v">Kumaş seçimi</span>
+      <div class="font-display text-[18px] md:text-[22px] mt-1" data-fabric-name>
+        {fabrics.find((f) => f.slug === activeSlug)?.name ?? fabrics[0].name}
+      </div>
+    </div>
+    {!hideSampleCta && (
+      <a
+        href="#kumas-ornegi"
+        class="text-[11px] uppercase tracking-widest font-bold border-b border-primary pb-1 hover:opacity-70 transition"
+      >
+        Örnek iste →
+      </a>
+    )}
+  </div>
+
+  <div class="flex flex-wrap gap-3 md:gap-4">
+    {fabrics.map((f: FabricSwatch) => {
+      const isActive = f.slug === activeSlug;
+      return (
+        <button
+          data-swatch
+          data-slug={f.slug}
+          data-name={f.name}
+          data-rgb={f.rgb ? f.rgb.join(',') : undefined}
+          aria-pressed={isActive ? 'true' : 'false'}
+          class="group flex flex-col items-center gap-2"
+        >
+          <span
+            class={`relative block w-12 h-12 md:w-[50px] md:h-[50px] rounded-full transition ${
+              isActive ? 'ring-2 ring-primary ring-offset-2 ring-offset-surface' : ''
+            }`}
+            style={`background:${f.hex};box-shadow: inset 0 -8px 14px -10px rgba(0,0,0,.45), inset 0 6px 10px -8px rgba(255,255,255,.25);`}
+          ></span>
+          <span class={`text-[11px] font-bold ${isActive ? '' : 'opacity-60'}`}>{f.name}</span>
+        </button>
+      );
+    })}
+  </div>
+</div>
+
+<script>
+  // Aktif swatch ismini grup header'ında güncelle
+  document.querySelectorAll<HTMLElement>('[data-swatch-group]').forEach((group) => {
+    const label = group.querySelector<HTMLElement>('[data-fabric-name]');
+    if (!label) return;
+    group.addEventListener('click', (e) => {
+      const target = (e.target as HTMLElement).closest<HTMLElement>('[data-swatch]');
+      if (target && target.dataset.name) {
+        label.textContent = target.dataset.name;
+      }
+    });
+  });
+</script>

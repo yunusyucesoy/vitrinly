@@ -1,0 +1,28 @@
+---
+/**
+ * brand-guide "Horizontal Scrollers"
+ * Mobil benzer ürünler, atölye fotoğrafları, filter chip listesi.
+ * snap-x snap-mandatory. Slot çocuklarına min-w verilmesi gerekir.
+ */
+interface Props {
+  snap?: boolean;
+  gapClass?: string;
+  paddingClass?: string;
+  class?: string;
+}
+
+const {
+  snap = true,
+  gapClass = 'gap-3 md:gap-4',
+  paddingClass = 'px-5 md:px-12',
+  class: extraClass = '',
+} = Astro.props;
+---
+
+<div
+  class={`overflow-x-auto no-scrollbar ${snap ? 'snap-x snap-mandatory' : ''} ${extraClass}`}
+>
+  <div class={`flex ${gapClass} ${paddingClass} pb-2`}>
+    <slot />
+  </div>
+</div>
