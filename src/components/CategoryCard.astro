@@ -4,6 +4,7 @@
  * Tam-bleed image + gradient overlay + alt yazı.
  */
 import type { Category } from '@lib/schema';
+import { withBase } from '@lib/url';
 
 interface Props {
   category: Category;
@@ -23,7 +24,7 @@ const headingSize = size === 'lg' ? 'text-[36px] md:text-[44px]' : size === 'md'
 ---
 
 <a
-  href={`/kategori/${category.slug}`}
+  href={withBase(`/kategori/${category.slug}`)}
   class={`group relative ${aspectMap[size]} rounded-2xl overflow-hidden ambient block ${extraClass}`}
 >
   <img

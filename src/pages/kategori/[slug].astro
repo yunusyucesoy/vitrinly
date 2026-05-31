@@ -13,6 +13,7 @@ import DisplayHeading from '@components/DisplayHeading.astro';
 import WhatsAppCTAStrip from '@components/WhatsAppCTAStrip.astro';
 import WhatsAppFAB from '@components/WhatsAppFAB.astro';
 import { getCategories, getCategory, getProductsByCategory, getCustomer } from '@lib/data';
+import { withBase } from '@lib/url';
 
 export async function getStaticPaths() {
   return getCategories().map((c) => ({ params: { slug: c.slug } }));
@@ -41,9 +42,9 @@ const insertArtisanAt = Math.min(4, visibleProducts.length); // 5. karttan önce
   <main id="main-content" class="pb-16 md:pb-24">
     {/* Breadcrumb */}
     <nav class="max-w-[1320px] mx-auto px-5 md:px-12 pt-6 text-[11px] uppercase tracking-widest text-on-surface-v">
-      <a href="/" class="hover:text-primary transition">Ana sayfa</a>
+      <a href={withBase('/')} class="hover:text-primary transition">Ana sayfa</a>
       <span class="mx-2 opacity-50">/</span>
-      <a href="/kategoriler" class="hover:text-primary transition">Koleksiyonlar</a>
+      <a href={withBase('/kategoriler')} class="hover:text-primary transition">Koleksiyonlar</a>
       <span class="mx-2 opacity-50">/</span>
       <span class="text-primary">{category.name} {category.italicWord ?? ''}</span>
     </nav>
@@ -72,7 +73,7 @@ const insertArtisanAt = Math.min(4, visibleProducts.length); // 5. karttan önce
       <div class="max-w-[1320px] mx-auto px-5 md:px-12 py-3 md:py-4 flex items-center justify-between gap-4">
         <div class="overflow-x-auto no-scrollbar flex-1">
           <div class="flex gap-2 md:gap-3 min-w-max">
-            <a href="/kategoriler" class="shrink-0 bg-surface-c-low hover:bg-surface-c px-3 md:px-4 py-2 rounded-full text-[10px] md:text-[11px] uppercase tracking-widest font-bold transition">
+            <a href={withBase('/kategoriler')} class="shrink-0 bg-surface-c-low hover:bg-surface-c px-3 md:px-4 py-2 rounded-full text-[10px] md:text-[11px] uppercase tracking-widest font-bold transition">
               ← Tüm koleksiyonlar
             </a>
             <span class="shrink-0 bg-primary text-on-primary px-3 md:px-4 py-2 rounded-full text-[10px] md:text-[11px] uppercase tracking-widest font-bold">

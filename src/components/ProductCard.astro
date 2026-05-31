@@ -4,6 +4,7 @@
  * brand-guide "Cards (Product Gallery)" + "3D Badge"
  */
 import type { Product } from '@lib/schema';
+import { withBase } from '@lib/url';
 
 interface Props {
   product: Product;
@@ -24,7 +25,7 @@ const dimText = product.dimensions.w > 0
 const aspectClass = featured ? 'aspect-[4/5]' : 'aspect-[3/4]';
 ---
 
-<a href={`/urun/${product.slug}`} class={`card-3d group block ${extraClass}`}>
+<a href={withBase(`/urun/${product.slug}`)} class={`card-3d group block ${extraClass}`}>
   <div class={`${aspectClass} rounded-2xl overflow-hidden bg-surface-c relative mb-4`}>
     <img
       loading="lazy"

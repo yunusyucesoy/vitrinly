@@ -5,6 +5,7 @@
  * Active link: nav-link.active sınıfı (.active::after underline).
  */
 import { getCustomer, buildWhatsAppLink } from '@lib/data';
+import { withBase } from '@lib/url';
 
 interface Props {
   /** Hangi link aktif olsun */
@@ -16,18 +17,19 @@ const customer = getCustomer();
 const waLink = buildWhatsAppLink(customer.contact.whatsapp);
 
 const links = [
-  { key: 'home', href: '/', label: 'Ana sayfa' },
-  { key: 'kategoriler', href: '/kategoriler', label: 'Koleksiyonlar' },
-  { key: 'showroom', href: '/iletisim#showroom', label: 'Showroom' },
-  { key: 'hakkimizda', href: '/hakkimizda', label: 'Hakkımızda' },
-  { key: 'iletisim', href: '/iletisim', label: 'İletişim' },
+  { key: 'home', href: withBase('/'), label: 'Ana sayfa' },
+  { key: 'kategoriler', href: withBase('/kategoriler'), label: 'Koleksiyonlar' },
+  { key: 'showroom', href: withBase('/iletisim#showroom'), label: 'Showroom' },
+  { key: 'hakkimizda', href: withBase('/hakkimizda'), label: 'Hakkımızda' },
+  { key: 'iletisim', href: withBase('/iletisim'), label: 'İletişim' },
 ];
+const homeHref = withBase('/');
 ---
 
 <header class="sticky top-0 z-40 bg-surface/85 backdrop-blur-xl border-b border-outline-v/30">
   <div class="max-w-[1320px] mx-auto px-5 md:px-12 h-14 md:h-16 flex items-center justify-between gap-4">
     {/* Logo */}
-    <a href="/" class="flex items-center gap-3 shrink-0" aria-label="Ana sayfa">
+    <a href={homeHref} class="flex items-center gap-3 shrink-0" aria-label="Ana sayfa">
       <span class="block w-2 h-2 rounded-full bg-primary"></span>
       <span class="font-display italic text-[18px] md:text-[22px] tracking-tight">{customer.brand.name}</span>
     </a>

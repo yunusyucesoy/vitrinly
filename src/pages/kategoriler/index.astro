@@ -12,6 +12,7 @@ import DisplayHeading from '@components/DisplayHeading.astro';
 import ArtisanQuote from '@components/ArtisanQuote.astro';
 import WhatsAppFAB from '@components/WhatsAppFAB.astro';
 import { getCustomer, getCategories, getProducts } from '@lib/data';
+import { withBase } from '@lib/url';
 
 const customer = getCustomer();
 const categories = getCategories();
@@ -34,7 +35,7 @@ const inlineQuote = headerCategory.artisanQuote;
   <main id="main-content">
     {/* Breadcrumb */}
     <nav class="max-w-[1320px] mx-auto px-5 md:px-12 pt-6 text-[11px] uppercase tracking-widest text-on-surface-v">
-      <a href="/" class="hover:text-primary transition">Ana sayfa</a>
+      <a href={withBase('/')} class="hover:text-primary transition">Ana sayfa</a>
       <span class="mx-2 opacity-50">/</span>
       <span class="text-primary">Koleksiyonlar</span>
     </nav>
@@ -61,7 +62,7 @@ const inlineQuote = headerCategory.artisanQuote;
           </button>
           {categories.map((c) => (
             <a
-              href={`/kategori/${c.slug}`}
+              href={withBase(`/kategori/${c.slug}`)}
               class="shrink-0 bg-surface-c-low hover:bg-surface-c text-on-surface px-4 py-2.5 rounded-full text-[11px] uppercase tracking-widest font-bold transition"
             >
               {c.shortLabel} · {counts[c.slug]}
@@ -102,7 +103,7 @@ const inlineQuote = headerCategory.artisanQuote;
         {/* Custom production card */}
         {customCategory && (
           <a
-            href={`/kategori/${customCategory.slug}`}
+            href={withBase(`/kategori/${customCategory.slug}`)}
             class="group relative aspect-[4/5] rounded-2xl overflow-hidden bg-secondary-c text-on-secondary-c p-7 md:p-8 flex flex-col justify-between hover:bg-secondary-c/85 transition"
           >
             <div>

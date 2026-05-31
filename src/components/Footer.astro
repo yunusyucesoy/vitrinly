@@ -1,5 +1,6 @@
 ---
 import { getCustomer, getCategories, buildWhatsAppLink } from '@lib/data';
+import { withBase } from '@lib/url';
 
 const customer = getCustomer();
 const categories = getCategories().slice(0, 3);
@@ -32,9 +33,9 @@ const showroom = customer.locations.find((l) => l.type === 'showroom') ?? custom
     <div class="md:col-span-2">
       <div class="text-[10.5px] tracking-[0.25em] uppercase font-bold opacity-70 mb-4 md:mb-5">Kurumsal</div>
       <ul class="space-y-3 text-[14px]">
-        <li><a href="/hakkimizda" class="hover:opacity-70 transition">Hakkımızda</a></li>
-        <li><a href="/iletisim#showroom" class="hover:opacity-70 transition">Showroom</a></li>
-        <li><a href="/iletisim" class="hover:opacity-70 transition">İletişim</a></li>
+        <li><a href={withBase('/hakkimizda')} class="hover:opacity-70 transition">Hakkımızda</a></li>
+        <li><a href={withBase('/iletisim#showroom')} class="hover:opacity-70 transition">Showroom</a></li>
+        <li><a href={withBase('/iletisim')} class="hover:opacity-70 transition">İletişim</a></li>
       </ul>
     </div>
 
@@ -43,7 +44,7 @@ const showroom = customer.locations.find((l) => l.type === 'showroom') ?? custom
       <div class="text-[10.5px] tracking-[0.25em] uppercase font-bold opacity-70 mb-4 md:mb-5">Koleksiyon</div>
       <ul class="space-y-3 text-[14px]">
         {categories.map((c) => (
-          <li><a href={`/kategori/${c.slug}`} class="hover:opacity-70 transition">{c.shortLabel}</a></li>
+          <li><a href={withBase(`/kategori/${c.slug}`)} class="hover:opacity-70 transition">{c.shortLabel}</a></li>
         ))}
       </ul>
     </div>

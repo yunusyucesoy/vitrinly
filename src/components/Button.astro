@@ -8,7 +8,11 @@
  *   - icon → circular 44-48px
  *   - whatsapp → brand green pill
  *   - dark-ghost → primary bg üzerinde outline
+ *
+ * Not: href otomatik withBase() ile prefix'lenir (GitHub Pages /vitrinly/ subpath).
  */
+import { withBase } from '@lib/url';
+
 interface Props {
   href?: string;
   variant?: 'primary' | 'secondary' | 'ghost-underline' | 'icon' | 'whatsapp' | 'dark-ghost';
@@ -34,6 +38,7 @@ const {
 } = Astro.props;
 
 const Tag = href ? 'a' : 'button';
+const resolvedHref = href ? withBase(href) : undefined;
 
 const baseInteractive = 'inline-flex items-center justify-center gap-2 transition active:scale-95 select-none';
 const fontTracking = 'text-[11px] md:text-[12px] uppercase tracking-[0.22em] font-bold';
@@ -59,7 +64,7 @@ const iconSize = size === 'sm' ? 'text-[16px]' : size === 'md' ? 'text-[18px]' :
 
 <Tag
   class={cls}
-  href={href}
+  href={resolvedHref}
   type={!href ? type : undefined}
   aria-label={ariaLabel}
 >

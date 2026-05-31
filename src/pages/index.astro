@@ -16,6 +16,7 @@ import DisplayHeading from '@components/DisplayHeading.astro';
 import Button from '@components/Button.astro';
 import WhatsAppFAB from '@components/WhatsAppFAB.astro';
 import { getCustomer, getCategories, getProducts, getFeaturedProducts } from '@lib/data';
+import { withBase } from '@lib/url';
 
 const customer = getCustomer();
 const featured = getFeaturedProducts(4);
@@ -52,7 +53,7 @@ const heroDim = `${heroProduct.dimensions.w} × ${heroProduct.dimensions.d} × $
       <div class="lg:col-span-7 reveal d2 relative">
         <div class="absolute -top-8 -left-8 w-44 h-44 rounded-full bg-secondary-c/60 blur-3xl pointer-events-none"></div>
         <a
-          href={`/urun/${heroProduct.slug}`}
+          href={withBase(`/urun/${heroProduct.slug}`)}
           class="relative rounded-3xl overflow-hidden ambient-hero block"
           style="aspect-ratio: 5/6;"
         >

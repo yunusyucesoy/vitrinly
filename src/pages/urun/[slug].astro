@@ -27,6 +27,7 @@ import {
   getCategory,
   buildWhatsAppLink,
 } from '@lib/data';
+import { withBase } from '@lib/url';
 
 export async function getStaticPaths() {
   return getProductSlugs().map((slug) => ({ params: { slug } }));
@@ -81,13 +82,13 @@ const jsonLd = {
   <main id="main-content" class="pb-24 md:pb-16">
     {/* Breadcrumb */}
     <nav class="max-w-[1320px] mx-auto px-5 md:px-12 pt-6 text-[11px] uppercase tracking-widest text-on-surface-v">
-      <a href="/" class="hover:text-primary transition">Ana sayfa</a>
+      <a href={withBase('/')} class="hover:text-primary transition">Ana sayfa</a>
       <span class="mx-2 opacity-50">/</span>
-      <a href="/kategoriler" class="hover:text-primary transition">Koleksiyonlar</a>
+      <a href={withBase('/kategoriler')} class="hover:text-primary transition">Koleksiyonlar</a>
       {category && (
         <>
           <span class="mx-2 opacity-50">/</span>
-          <a href={`/kategori/${category.slug}`} class="hover:text-primary transition">{category.shortLabel}</a>
+          <a href={withBase(`/kategori/${category.slug}`)} class="hover:text-primary transition">{category.shortLabel}</a>
         </>
       )}
       <span class="mx-2 opacity-50">/</span>

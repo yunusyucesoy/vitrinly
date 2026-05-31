@@ -13,6 +13,7 @@ import EyebrowLabel from '@components/EyebrowLabel.astro';
 import DisplayHeading from '@components/DisplayHeading.astro';
 import WhatsAppFAB from '@components/WhatsAppFAB.astro';
 import { getCustomer } from '@lib/data';
+import { withBase } from '@lib/url';
 
 const customer = getCustomer();
 const yearsActive = new Date().getFullYear() - customer.brand.foundedYear;
@@ -141,7 +142,7 @@ const yearsActive = new Date().getFullYear() - customer.brand.foundedYear;
     {/* CTA pair */}
     <section class="max-w-[1320px] mx-auto px-5 md:px-12 mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
       <a
-        href="/iletisim#showroom"
+        href={withBase('/iletisim#showroom')}
         class="group bg-primary text-on-primary rounded-3xl p-8 md:p-10 ambient flex flex-col justify-between gap-6 min-h-[200px]"
       >
         <div>
@@ -156,7 +157,7 @@ const yearsActive = new Date().getFullYear() - customer.brand.foundedYear;
         </span>
       </a>
       <a
-        href="/kategoriler"
+        href={withBase('/kategoriler')}
         class="group bg-secondary-c text-on-secondary-c rounded-3xl p-8 md:p-10 ambient flex flex-col justify-between gap-6 min-h-[200px]"
       >
         <div>
